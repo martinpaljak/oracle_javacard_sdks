@@ -1,0 +1,634 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-US">
+<head>
+<!-- Copyright (c) 1998, 2010, Oracle and/or its affiliates. All rights reserved. Use is subject to license terms. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="en-US">
+  <title>Release Notes - Classic Edition Development Kit, Java Card
+Patform, Version 3.0.3</title>
+  <link rel="stylesheet" href="document.css" type="text/css">
+</head>
+<body>
+<div class="MastheadPane">
+<table class="MastheadTable"
+ summary="This table is for formatting purposes only." width="100%">
+  <tbody>
+    <tr class="titlebar">
+      <th id="c1">
+      <h2 class="DocTitle">Release Notes</h2>
+      </th>
+      <th id="c2" class="smallLogo"><a href="http://www.oracle.com"><img
+ src="shared/smallOracleLogo.gif" alt="Oracle logo"></a></th>
+    </tr>
+  </tbody>
+</table>
+</div>
+<hr class="red">
+<div class="MastheadDateBuild">
+<table summary="This table is for formatting purposes only."
+ width="100%">
+  <tbody>
+    <tr valign="top">
+      <th id="c5">
+      <h2 class="DocTitle">Development Kit for the Java Card 3 Platform<br>
+      </h2>
+      </th>
+      <th id="c4" rowspan="3" class="smallLogo"><img
+ src="shared/Java_clr_hori_interval.gif" alt="Java coffee cup logo"></th>
+    </tr>
+    <tr valign="top">
+      <th id="c3">
+      <h3 class="SubTitle">Version 3.0.3, Classic Edition<br>
+      </h3>
+      </th>
+    </tr>
+    <tr valign="top">
+      <td headers="c3">
+      <h4 class="TitleDate">November 2010<br>
+      </h4>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="BodyStyle"> <a name="top"></a>
+<p class="navtop"><a class="top" href="#_maincontent">Skip TOC&nbsp;<img
+ src="shared/downicon.gif" alt="skip TOC"></a></p>
+<h2>Table of Contents</h2>
+<div class="embeddedtoc">
+<p class="level1"><a href="#Overview">1. Overview</a></p>
+<p class="level1"><a href="#Prerequisites">2. Prerequisites</a></p>
+<p class="level1"><a href="#Install">3. Installation Instructions</a></p>
+<p class="level1"><a href="#Using">4. Setting System Variables and Paths<br>
+</a></p>
+<p class="level1"><a href="#Known">5. Known Bugs </a></p>
+<p class="level1"><a href="#Feedback">6. Product Information and
+Feedback</a><br>
+</p>
+</div>
+<a name="top"></a> <a name="Overview"></a>
+<h2>1. Overview</h2>
+<p>These release notes describe the development kit for the Java Card 3
+Platform, Version 3.0.3, Classic Edition. This version
+of the development kit is a maintenance release and includes bug fixes.
+It also supports a new tool, the trimming tool, which is
+designed to minimize the code footprint of an application before it is
+deployed to a smartcard. The trimming tool is available in a separate
+download bundle for licensees only. <br>
+</p>
+<p>Java Card technology combines a subset of the Java programming
+language with a runtime environment optimized for smart cards and
+similar small-memory embedded devices. The goal of Java Card technology
+is to bring many of the benefits of the Java programming language to
+the resource-constrained world of smart cards. The Java Card API is
+compatible with international standards such as ISO 7816, and
+industry-specific standards such as Europay, Master Card, and Visa
+(EMV).<br>
+</p>
+<p>Java Card platform version 3.0.3 is the latest evolution of Java
+Card technology. This development kit is based on version 3.0.1 of the
+Java Card specifications, which includes their errata sheets located at
+<a
+ href="http://www.oracle.com/technetwork/java/javacard/jc-classic-spec-errata-140181.html">http://www.oracle.com/technetwork/java/javacard/jc-classic-spec-errata-140181.html</a>.
+The
+Java
+Card
+3
+platform
+consists
+of version 3.0 and 3.0.1 of the
+specifications and versions 3.0.1, 3.0.2, and 3.0.3 of the development
+kit.<br>
+</p>
+<p>The Java Card platform is available in two
+editions, both of which are backward compatible with previous versions
+and share key security features:<br>
+</p>
+<ul>
+  <li>Classic Edition is based on an evolution of the Java Card
+Platform,
+Version 2.2.2, architecture. This edition targets more
+resource-constrained devices than the Connected Edition. These release
+notes are for the Classic Edition.<br>
+  </li>
+  <li>Connected Edition contains a new architecture compared to the
+Java
+Card technology released in version 2.2.2, which is now knows as the
+"Classic Edition." The Connected Edition enables the integration of
+smart cards within IP networks and web services architectures. To do
+so., it features a significantly enhanced runtime environment and
+virtual machine (VM), and it includes new network-oriented features,
+such as support for Java Servlet APIs and Java Card applets with
+extended and advanced capabilities.<br>
+  </li>
+</ul>
+<p class="navtop"><a href="#top">Top&nbsp;<img src="shared/topicon.gif"
+ alt="go to TOC"></a></p>
+<a name="Prerequisites"></a>
+<h2>2. Prerequisites</h2>
+<h3>Required Operating System</h3>
+<ul>
+  <li>This release is targeted for use on the Microsoft Windows XP SP3
+operating system.<br>
+  </li>
+</ul>
+<h3>Required Software</h3>
+<p>The following software must be installed for the Java Card
+development
+kit to work:</p>
+<ul>
+  <li><span style="font-weight: bold;">Java Development Kit.</span> The
+commercial version of Java
+Development Kit (JDK™) version 6, Update 10 or <span
+ style="font-family: monospace;"></span>later is required. You
+can download the supported JDK software, JDK 6 Update 10 or later, from
+    <a
+ href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+ target="top">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.</li>
+  <li><span style="font-weight: bold;">GCC Compiler.</span> To build
+the VM, this release
+requires Minimal GNU for Windows (MinGW) version 5.1.4 or later. MinGW
+can be
+obtained from <a href="http://prdownloads.sourceforge.net/mingw"
+ target="top">http://prdownloads.sourceforge.net/mingw</a>. For
+information on
+MinGW go to <a href="http://www.mingw.org/" target="top">http://www.mingw.org</a>.</li>
+  <li><span style="font-weight: bold;">Apache Ant.</span> Apache Ant
+version 1.6.5 or later is
+required. Latest version of Apache Ant can be obtained <a
+ href="http://ant.apache.org/" target="top">http://ant.apache.org</a>.</li>
+</ul>
+<p><span style="font-weight: bold;">Note: </span>Do not
+install any software in a directory that
+contains a space in its name. For example, do not install software in
+any subdirectory of <code>c:\program files</code> because of the space
+in the <code>program files</code> element<br>
+</p>
+<p><span style="font-weight: bold;">Note: </span>The trimming tool
+bundle and the bundle containing the specifications must
+be
+downloaded separately.The bundle containing the trimming tool MUST be
+installed into a directory separate from this development kit directory.</p>
+<ul>
+</ul>
+<h3>Contents of This Release</h3>
+<p>This release contains both binary and source
+code. Note that neither the new trimming tool nor the Java Card
+specifications are included in this
+development kit release bundle.&nbsp;</p>
+<p><span style="font-weight: bold;">Note: </span>This release fixes
+the off-card verifier verification problem, recently reported by THALES
+Information Systems Security, which is related to verification of
+multiple execution paths with changed local variable types.</p>
+<p>This release contains features required to support classic Java Card
+applet applications on the card. Specifically, this release includes
+the following:</p>
+<ul>
+  <li>Java Card runtime environment (<code>cref.exe</code>)</li>
+  <li>Uninstaller tool<br>
+  </li>
+  <li>Normalizer tool (<span style="font-family: monospace;">normalizer.bat</span>)<br>
+  </li>
+  <li>APDU tool (<code>apdutool.bat</code>)</li>
+  <li>capdump tool<br>
+  </li>
+  <li>capgen tool<br>
+  </li>
+  <li>Converter tool (<code>converter.bat</code>)</li>
+  <li>exp2text tool<br>
+  </li>
+  <li>on-card installer</li>
+  <li>maskgen tool<br>
+  </li>
+  <li>off-card verifier tool<br>
+  </li>
+  <li>scriptgen tool<br>
+  </li>
+  <li>optional Ant tasks<br>
+  </li>
+  <li>Sample applications</li>
+  <li>User's guide for this release in <span
+ style="font-style: italic;">Development Kit User's Guide for
+the Java Card Platform, Version 3.0.3, Classic Edition</span></li>
+</ul>
+<p><span style="font-weight: bold;">Note</span>: The debugging tool <span
+ style="font-family: monospace;">jcwde</span>, which was in previous
+releases, is no longer included. To develop and debug your classic
+applets, you might want to use the Connected Edition development kit
+and the NetBeans IDE, version 6.8 or higher, along with its Java Card
+technology-specific plugin.<span style="font-style: italic;"></span></p>
+<a name="Install"></a><br>
+<p class="navtop"><a href="#top">Top&nbsp;<img src="shared/topicon.gif"
+ alt="go to TOC"></a></p>
+<h2>3. Installation Instructions</h2>
+<p>For a more thorough description of the installation, contents and
+use of the development kit, see <span style="font-style: italic;">Development
+User's
+Guide,
+Java
+Card
+Platform, Version 3.0.3, Classic Edition</span>
+included in the download bundle for this release.</p>
+<p>An automatic installer tool can be used to unpack the download file
+containing this release. During download, you can choose to let the
+installer tool unpack the download file into a directory of your choice
+on your system or you can save the download file itself to your system.<br>
+</p>
+<p><span style="font-weight: bold;">Note</span>: Do not
+install the development kit software in any
+directory that has a space in its name. For example, on a Windows
+platform, do not install software in the <code>c:\program files</code>
+directory, or any subdirectory of <code>c:\program files</code>,
+because the <code>program files</code> element contains a space.<br>
+</p>
+<p><span style="font-weight: bold;">Note</span>: Do not
+install the trimming tool bundle into the directory containing this
+development kit. The trimming tool must be installed into a separate
+folder that is not within the installed development kit's folder.
+</p>
+<p><span style="font-weight: bold;">Note</span>: Do not install this
+version of the Java Card
+development kit or trimming tool into an existing directory for an
+older version. You must first uninstall the
+previously installed version of the Java Card
+development kit or trimming tool prior to installing this version into
+the old
+directory. Installing into the same directory without first
+uninstalling could result in unpredictable behavior.</p>
+<p>To install the Java Card development kit and associated software,
+follow these steps:</p>
+<ol>
+  <li> <b>Install the JDK version 6, Update 10</b> or later. This JDK
+is
+available from: <a
+ href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+ target="top">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.
+
+
+
+  </li>
+  <li> <b>Install Apache Ant version 1.6.5 or later</b>. The latest
+version is available at: <a href="http://ant.apache.org/" target="top">http://ant.apache.org/</a>.
+
+
+
+  </li>
+  <li><span style="font-weight: bold;">Install the GCC compiler</span>.
+The compiler Minimal GNU for Windows (MinGW), version 5.1.4 is
+required.&nbsp; It is available at <a
+ href="http://sourceforge.net/projects/mingw">http://sourceforge.net/projects/mingw</a>,
+while
+its
+installation
+information is at <a href="http://www.mingw.org/">http://www.mingw.org</a>.</li>
+  <li><b>Download the Java Card development kit</b>. Download and
+store the development kit Java Archive (JAR) file in a
+directory of your choice. </li>
+  <li> <b>Run the development kit installer or use the command line</b>.
+Double
+click
+the
+JAR
+file
+on
+your system. <font style="color: rgb(0, 0, 0);" color="#ff0000">If
+the
+JDK
+is installed correctly, the jar file is recognized as an executable
+jar and t</font>he automatic installer will
+launch to step you through the remainder of the installation process. <code><br>
+    </code> </li>
+</ol>
+<p style="margin-left: 40px;">Alternatively, you can use the command
+line to unpack the JAR file using the following command:</p>
+<blockquote>
+  <div style="margin-left: 40px;"><code>java -jar</code> <i>Bundle-Filename</i><br>
+  <br>
+  </div>
+Where <i>Bundle-Filename</i> is the downloaded development kit
+JAR file. </blockquote>
+<p> By default, the development kit is installed in <code>C:\JCDK3.0.3_ClassicEdition_RR</code>
+and its associated sub-directories. You can specify a different
+directory if you wish. <br>
+</p>
+<p>The directory <code>C:\JCDK3.0.3_ClassicEdition_RR</code> (or
+the alternate directory you specify during installation) is referred to
+as <code style="font-style: italic;">JC_CLASSIC_HOME</code> in these
+release notes. When the development
+kit installation is complete, <code style="font-style: italic;">JC_CLASSIC_HOME</code>
+contains the following:<br>
+</p>
+<br>
+<table summary="top-level file and
+
+
+directory structure" width="100%"
+ border="0" cellpadding="3">
+  <tbody>
+    <tr>
+      <td style="font-style: italic;" width="15%"> <code>JC_CLASSIC_HOME</code>
+      </td>
+      <td width="85%"> <code></code>These
+release
+notes. <br>
+Copyright files.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs</code></td>
+      <td style="vertical-align: top;"><code>JCDevKitUG-Classic-3_0_3.pdf</code>&nbsp;
+
+
+
+      <span style="font-style: italic;">Development Kit User's Guide
+for
+the Java Card Platform, Version 3.0.3, Classic Edition.</span><span
+ style="font-style: italic;"><br>
+      </span><code></code><span style="font-family: monospace;"></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs\html</code></td>
+      <td style="vertical-align: top;">The HTML version of <span
+ style="font-style: italic;">Development Kit User's Guide
+for
+the Java Card Platform, Version 3.0.3, Classic Edition.</span><span
+ style="font-style: italic;"><br>
+      </span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs\apduio</code></td>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;"></span>Javadoc
+tool files for use with APDU I/O described in the user's guide.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs\rmiclient</code></td>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;"></span>Javadoc
+tool files for use with optional RMI implementation described in the
+user's guide.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>docs\api</code></td>
+      <td style="vertical-align: top;">Javadoc tool files for the API.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>api_export_files</code></td>
+      <td style="vertical-align: top;">Contains <span
+ style="font-family: monospace;">java</span>, <span
+ style="font-family: monospace;">javacard</span>, and <span
+ style="font-family: monospace;">javacardx </span>directories of API
+export files.<br>
+      </td>
+    </tr>
+    <tr>
+      <td> <code>bin</code> </td>
+      <td>Development kit executable files. </td>
+    </tr>
+    <tr>
+      <td> <code>samples\classic_applets</code> </td>
+      <td>Samples of basic classic applets, such as HelloWorld.<code></code><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>samples\reference_apps</code></td>
+      <td style="vertical-align: top;">Samples of more robust classic
+applets.<br>
+      </td>
+    </tr>
+    <tr>
+      <td> <code>lib</code> </td>
+      <td>Configuration and JAR files for the API, tools.<br>
+Third-party
+libraries. </td>
+    </tr>
+    <tr>
+      <td> <code>src</code> </td>
+      <td>Development kit source files. AVAILABLE ONLY IF YOU HAVE A
+SOURCE BUNDLE.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>Uninstaller\uninstaller.jar</code></td>
+      <td style="vertical-align: top;">Uninstalls the development kit.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>legal</code></td>
+      <td style="vertical-align: top;">License files.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<a name="Using"></a>
+<p class="navtop"><a href="#top">Top&nbsp;<img src="shared/topicon.gif"
+ alt="go to TOC"></a></p>
+<h2>4. Setting System Variables and Paths</h2>
+System variables and paths must be set before
+running the development kit. See the <span style="font-style: italic;">Development
+Kit
+User's
+Guide</span> more details on how to set them.
+Note that if you choose to set the variables
+and paths each time you run the development kit rather than
+permanently in your system, you can place the appropriate commands in a
+batch file.
+<ul>
+  <li><b><code>JAVA_HOME</code></b>. You must set the <code>JAVA_HOME</code>
+system variable to the JDK root directory before running the
+development kit
+    <ul>
+      <li> To temporarily set <code>JAVA_HOME</code> from the command
+line, enter the
+command: <code>set JAVA_HOME=c:\<i>path</i></code> before running the
+development kit. For example, if the Java platform software is stored
+in your <code>c:\jdk6</code> directory, enter <code>set </code><code></code><code>JAVA_HOM</code><code>E</code><code>=c:\jdk6</code>
+before running the development kit.</li>
+    </ul>
+    <b><code></code></b></li>
+  <li><b><code>JC_CLASSIC_HOME</code></b>.&nbsp;<font
+ style="color: rgb(0, 0, 0);" color="#ff0000">You must set the&nbsp; </font><font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font><code><font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;">JC_CLASSIC_HOME</span></font></code><font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font><font
+ style="color: rgb(0, 0, 0);" color="#ff0000">
+system variable to the directory in which the development kit is
+installed before running the development kit.&nbsp;</font>&nbsp;<font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font></li>
+  <ul>
+    <li> To temporarily set <code>JC_CLASSIC_HOME</code> from the
+command
+line, enter the
+command: <code>set JC_CLASSIC_HOME=c:\<i>path</i></code> before
+running the
+development kit. For example, if the Java Card development kit is
+stored
+in your <code>c:\</code><code>JCDK3.0.3_ClassicEdition_RR</code><code></code>
+directory, enter <code>set </code><code></code><code>JC_CLASSIC_HOM</code><code>E</code><code>=c:\</code><code>JCDK3.0.3_ClassicEdition_RR</code>
+before running the development kit.&nbsp;<font
+ style="color: rgb(0, 0, 0);" color="#ff0000"><span
+ style="font-family: monospace;"></span></font></li>
+  </ul>
+</ul>
+<ul>
+  <li><span style="font-weight: bold;">Apache Ant. </span>You
+must set the <span style="font-family: monospace;">ANT_HOME</span>
+system variable to the Apache Ant directory
+before running the samples.<br>
+  </li>
+  <ul>
+    <li> To temporarily set <code>ANT_HOME</code> from the command
+line, enter the
+command: <code>set PATH=c:\<i>path</i></code> before running the
+development kit. For example, if Apache Ant is stored
+in your <code>c:\</code><code>ant\apache-ant1.6.5</code><code></code>
+directory, enter <code>set </code><code></code><code>ANT_HOM</code><code>E</code><code>=</code><code>c:\</code><code>ant\apache-ant1.6.5</code><code></code><code></code><code></code>
+before running the development kit. <br>
+    </li>
+  </ul>
+</ul>
+<ul>
+  <li><span style="font-weight: bold;">MinGW</span>. You must set the
+path to the location of <code>MinGW </code>before running the
+development kit. Note that the path has to
+point to the <code>\bin</code> subdirectory of the <code>MinGW </code>installation
+directory
+where
+the
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <code>gcc.exe</code> file is located.&nbsp;
+    <ul>
+      <li>To temporarily set the path to MinGW, enter the command <code>set
+PATH=c:\<i>MinGW_path</i>;%PATH%</code>. For example, if MinGW is
+installed in <code>c:\MinGW</code>, enter the command <code>set
+PATH=c:\MinGW\bin;%PATH%</code> before running the development kit.</li>
+    </ul>
+  </li>
+</ul>
+<p><span style="font-weight: bold;">Configuring the Java Card Runtime
+Environment for the Samples<br>
+</span></p>
+<p>Note that the Java Card RE (<span style="font-family: monospace;">cref</span>)
+implementation
+is
+not
+optimized
+for
+memory
+or
+performance
+and, therefore, requires
+more memory than an actual optimized implementation on a card. To run
+the Java Card RE, you can use the default executable, <span
+ style="font-family: monospace;">cref.bat</span>, using the command
+line as follows:<br>
+</p>
+<p><code style="font-family: monospace;"><span
+ style="font-style: italic;">JC_CLASSIC_HOME</span>\bin\</code><span
+ style="font-family: monospace;">cref.bat</span><span
+ style="font-weight: bold;"><br>
+</span></p>
+<p class="navtop"><a href="#top">Top&nbsp;<img src="shared/topicon.gif"
+ alt="go to TOC"></a></p>
+<a name="Known"></a>
+<h2><b>5. Known Bugs</b></h2>
+For issues related to the new
+trimming
+tool, see its release notes in the separate trimming tool download
+bundle.<br>
+<br>
+<table style="width: 100%;">
+  <thead><tr>
+    <td style="vertical-align: top;">6903384<br>
+    </td>
+    <td style="vertical-align: top;">Converter fails to generate cap
+file if an applet imports some.other.package.Shareable interface.<br>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top;">6994105<br>
+    </td>
+    <td style="vertical-align: top;">Transaction does't work in
+RandomData.generateData() with the ALG_PSEUDO_RANDOM algorithm.</td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top;">6997670</td>
+    <td style="vertical-align: top;">Verifier error with -debug:
+Invalid variable count for non-abstract method XXX in class XYZ.</td>
+  </tr>
+  </thead>
+</table>
+<br>
+<p class="navtop"><a href="#top">Top&nbsp;<img src="shared/topicon.gif"
+ alt="go to TOC"></a></p>
+<a name="Feedback"></a><br>
+<h2><b>6. Product Information and Feedback<br>
+</b></h2>
+<p>The public Java Card technology web site is <a
+ href="http://www.oracle.com/technetwork/java/javacard">http://www.oracle.com/technetwork/java/javacard</a>.
+The
+developer
+collaboration
+web
+site
+also
+contains
+information
+about
+Java
+Card
+technology
+at
+<a href="http://kenai.com/projects/javacard/pages/HOME">http://kenai.com/projects/javacard/pages/HOME</a>.</p>
+<p>If you are a Licensee, visit the product web site at <a
+ href="https://java-partner.sun.com/portal/service/ent/platform/javacardgroup"
+ target="top">https://java-partner.sun.com/portal/service/ent/platform/javacardgroup</a>
+This site has the most up-to-date information on the following: </p>
+<ul>
+  <li>Product news and reviews </li>
+  <li>Release notes and product documentation </li>
+  <li>Technical support contact information </li>
+</ul>
+<p>We greatly appreciate your feedback on this reference
+Implementation. Please send all feedback to
+<a href="mailto:jc3-ri-feedback@sun.com">jc3-ri-feedback@sun.com</a>.</p>
+<p class="navtop"><a href="#top">Top&nbsp;<img src="shared/topicon.gif"
+ alt="go to TOC"></a></p>
+</div>
+<hr class="light">
+<p> <a href="COPYRIGHT.html">Copyright</a> © 1998, 2010, Oracle
+and/or
+its affiliates. All rights reserved.<br>
+</p>
+</body>
+</html>
