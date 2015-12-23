@@ -1,0 +1,81 @@
+                         Java Card(TM) v2.1.2 Development Kit                          
+                                     Release Notes
+                         =========================================
+                        
+Last updated: 01/04/05
+
+This document contains the following:
+
+  1.  GENERAL INFORMATION   
+  2.  NEW IN THIS RELEASE
+       o  Converter tool      
+	    - Support for binary compatible CAP file upgrade.
+       o  Verifier tool
+            - New tool to verify integrity of CAP file and export file.
+       o  C-JCRE ("C" language Java Card Runtime Environment)
+            - New implementation of the Java Card VM and native methods.
+       o  Bug Fixes
+       o  Script files for building the Sample applets.
+  3.  LIMITATIONS
+       o  Remaining Bugs  
+
+1.  GENERAL INFORMATION
+    ===================
+
+	The Java Card 2.1.2 Development Kit tools run on a workstation using a 
+	Java Virtual Machine (VM). The Java Card 2.1.2 Virtual Machine in "C"
+	language runs on a workstation. Separate bundles for the Solaris and 
+	Windows NT versions are available for this release.
+
+	For more details on the reference implementation, please refer to the 
+	Java Card 2.1.2 Development Kit User's Guide.
+
+2.  NEW IN THIS RELEASE
+    ===================
+   o  Converter tool
+      --------------
+        -  Support for binary compatible update of Java Card package CAP file. 
+
+   o  Verifier tool
+      -------------
+        -  New tool which runs on workstation.
+        -  The tool is used to protect the integrity of the VM and applets.
+        -  The CAP file can be verified to be:
+	    - internally consistent.
+            - consistent with its export file.
+            - consistent with referenced export files.
+        -  The export file can be verified to be:
+            - internally consistent.
+	    - semantically equal to another export file
+            - binary compatible with another export file 
+
+   o  C-JCRE "C" language Java Card Runtime Environment
+      -------------------------------------------------
+	-  New implementation with the following features
+            - no dependency on third party API
+            - compact and portable implementation
+            - realistic transaction model
+            - runs on Windows NT and Solaris
+
+   o  Bug Fixes
+      ---------
+      -  All priority 1,2 and 3 bugs against the tools and API have been fixed.
+
+   o  Script files for building the Sample applets
+      --------------------------------------------
+      -  Script files for building the Sample applets and Demo script
+	 (demo2.scr) are included. There are separate script files for the NT
+	 and Solaris platforms.
+
+3.  LIMITATIONS
+    ===========
+   o  Remaining Bugs
+      -  Few low priority and "Request for Enhancement" type bugs only.
+        
+End of RELEASENOTES
+
+# Copyright © 2001 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+ 
+
+
