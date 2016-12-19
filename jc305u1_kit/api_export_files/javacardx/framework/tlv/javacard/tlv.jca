@@ -1,0 +1,3707 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:01 PDT 2015
+
+.package javacardx/framework/tlv {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x3;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef BERTag BERTLV/theBERTag;
+		// 1
+		instanceFieldRef BERTLV[] BERTLV/berTLV;
+		// 2
+		instanceFieldRef byte[] BERTLV/theValue;
+		// 3
+		instanceFieldRef boolean BERTLV/emptyTLV;
+		// 4
+		instanceFieldRef short BERTLV/numTLVs;
+		// 5
+		instanceFieldRef short BERTLV/valueLength;
+		// 6
+		instanceFieldRef short BERTLV/numDeletedTLVs;
+		// 7
+		instanceFieldRef boolean BERTag/emptyTag;
+		// 8
+		instanceFieldRef byte BERTag/tagSizeInBytes;
+		// 9
+		instanceFieldRef byte BERTag/tagClass;
+		// 10
+		instanceFieldRef boolean BERTag/tagPC;
+		// 11
+		instanceFieldRef short BERTag/tagNumber;
+		// 12
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 13
+		virtualMethodRef BERTLV/getLength()S;
+		// 14
+		virtualMethodRef BERTag/size()B;
+		// 15
+		staticMethodRef BERTLV/getValueLengthSize(S)S;
+		// 16
+		virtualMethodRef BERTag/toBytes([BS)S;
+		// 17
+		staticMethodRef 2.16.6([BSS)S;		// javacard/framework/Util.setShort([BSS)S
+		// 18
+		virtualMethodRef BERTag/isConstructed()Z;
+		// 19
+		staticMethodRef 1.5.75([BSS)V;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+		// 20
+		virtualMethodRef BERTLV/toBytes([BS)S;
+		// 21
+		staticMethodRef 2.16.1([BS[BSS)S;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+		// 22
+		virtualMethodRef BERTLV/getLengthInternal(Z)S;
+		// 23
+		staticMethodRef BERTLV/verifyFormat([BSS)Z;
+		// 24
+		.classRef TLVException;
+		// 25
+		staticMethodRef BERTLV/verifyFormatInternal([BSS)S;
+		// 26
+		staticMethodRef BERTLV/getLength([BS)S;
+		// 27
+		staticMethodRef BERTLV/getValueOffsetInternal([BS)S;
+		// 28
+		staticMethodRef BERTag/isConstructed([BS)Z;
+		// 29
+		staticMethodRef BERTLV/verifyTagAndLength([BS)S;
+		// 30
+		staticMethodRef BERTLV/getLengthOffset([BS)S;
+		// 31
+		staticMethodRef 2.16.4([BS)S;		// javacard/framework/Util.getShort([BS)S
+		// 32
+		staticMethodRef BERTag/verifyFormatInternal([BS)S;
+		// 33
+		staticMethodRef BERTag/getTagSize(S)S;
+		// 34
+		staticMethodRef TLVException/throwIt(S)V;
+		// 35
+		virtualMethodRef BERTLV/size()S;
+		// 36
+		virtualMethodRef 0.0.0(Ljava/lang/Object;)Z;		// equals(Ljava/lang/Object;)Z
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 37
+		virtualMethodRef BERTLV/contains(Ljavacardx/framework/tlv/BERTLV;)Z;
+		// 38
+		.classRef ConstructedBERTLV;
+		// 39
+		.classRef ConstructedBERTag;
+		// 40
+		staticMethodRef ConstructedBERTag/<init>()V;
+		// 41
+		virtualMethodRef BERTag/init([BS)V;
+		// 42
+		.classRef PrimitiveBERTag;
+		// 43
+		staticMethodRef PrimitiveBERTag/<init>()V;
+		// 44
+		staticMethodRef ConstructedBERTLV/<init>(S)V;
+		// 45
+		virtualMethodRef BERTLV/init([BSS)S;
+		// 46
+		.classRef PrimitiveBERTLV;
+		// 47
+		staticMethodRef PrimitiveBERTLV/<init>(S)V;
+		// 48
+		virtualMethodRef BERTag/tagClass()B;
+		// 49
+		virtualMethodRef BERTag/tagNumber()S;
+		// 50
+		.classRef BERTag;
+		// 51
+		virtualMethodRef BERTag/equals(Ljavacardx/framework/tlv/BERTag;)Z;
+		// 52
+		.classRef 0.2;		// java/lang/Exception
+		// 53
+		staticMethodRef BERTLV/<init>()V;
+		// 54
+		.classRef BERTLV;
+		// 55
+		staticMethodRef ConstructedBERTLV/sharedBeginInit([BSSS)V;
+		// 56
+		staticMethodRef 2.8.18()V;		// javacard/framework/JCSystem.requestObjectDeletion()V
+		// 57
+		staticMethodRef BERTag/getInstance([BS)Ljavacardx/framework/tlv/BERTag;;
+		// 58
+		staticMethodRef BERTLV/getValueOffsetInternal([BS)S;
+		// 59
+		staticMethodRef ConstructedBERTLV/sharedEndInit([BSSSSS)S;
+		// 60
+		virtualMethodRef BERTLV/size()S;
+		// 61
+		virtualMethodRef BERTag/isConstructed()Z;
+		// 62
+		virtualMethodRef BERTLV/getLength()S;
+		// 63
+		staticMethodRef BERTLV/getValueLengthSize(S)S;
+		// 64
+		staticMethodRef BERTLV/getLength([BS)S;
+		// 65
+		staticMethodRef BERTag/tagNumber([BS)S;
+		// 66
+		staticMethodRef BERTLV/getLengthOffset([BS)S;
+		// 67
+		staticMethodRef ConstructedBERTLV/findInternal([BSS[BSS)S;
+		// 68
+		staticMethodRef BERTag/tagClass([BS)B;
+		// 69
+		staticMethodRef BERTag/<init>()V;
+		// 70
+		virtualMethodRef BERTag/sharedInit(BS)V;
+		// 71
+		staticMethodRef BERTag/tagNumber([BS)S;
+		// 72
+		virtualMethodRef ConstructedBERTag/init(BS)V;
+		// 73
+		staticMethodRef BERTLV/getLength([BS)S;
+		// 74
+		staticMethodRef BERTLV/getValueOffsetInternal([BS)S;
+		// 75
+		staticMethodRef PrimitiveBERTLV/sharedValueInit([BSS)V;
+		// 76
+		virtualMethodRef BERTLV/size()S;
+		// 77
+		staticMethodRef PrimitiveBERTLV/setValue([BSSB)S;
+		// 78
+		staticMethodRef BERTLV/getValueLengthSize(S)S;
+		// 79
+		staticMethodRef BERTLV/verifyTagAndLength([BS)S;
+		// 80
+		staticMethodRef PrimitiveBERTLV/getValueOffset([BS)S;
+		// 81
+		staticMethodRef BERTLV/getLengthOffset([BS)S;
+		// 82
+		virtualMethodRef BERTag/sharedInit(BS)V;
+		// 83
+		staticMethodRef BERTag/tagNumber([BS)S;
+		// 84
+		virtualMethodRef PrimitiveBERTag/init(BS)V;
+		// 85
+		staticMethodRef 2.5.0(S)V;		// javacard/framework/CardRuntimeException.<init>(S)V
+		// 86
+		staticFieldRef TLVException TLVException/systemInstance;
+		// 87
+		staticMethodRef 1.12.19()B;		// com/sun/javacard/impl/PrivAccess.getCurrentAppID()B
+		// 88
+		staticMethodRef 1.12.2()Lcom/sun/javacard/impl/PrivAccess;;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+			.descriptor	Lcom/sun/javacard/impl/PrivAccess;	1.12;
+
+		// 89
+		virtualMethodRef 1.12.15()V;		// initTLVException()V
+		// 90
+		virtualMethodRef 2.5.2(S)V;		// setReason(S)V
+	}
+
+	.class public abstract BERTLV 0 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			 BERTag theBERTag 0;		// Ljavacardx/framework/tlv/BERTag;
+			 BERTLV[] berTLV 1;		// [Ljavacardx/framework/tlv/BERTLV;
+			 byte[] theValue 2;		// [B
+			 short numTLVs 3;		// S
+			 short numDeletedTLVs 4;		// S
+			 short valueLength 5;		// S
+			 boolean emptyTLV 6;		// Z
+			static final byte PRIMITIVE_TLV = 0;		// B
+			static final byte CONSTRUCTED_TLV = 32;		// B
+			static final byte MORE_BYTES_CHECK = -128;		// B
+			static final byte LENGTH_VALUE_MASK = 127;		// B
+			static final byte TAG_MASK = 31;		// B
+			static final byte EXTENDED_FORMAT = -128;		// B
+			static final byte INDEFINITE_FORMAT = -128;		// B
+			static final byte MAX_TAG_SIZE = 3;		// B
+			static final byte MAX_ONE_BYTE_LENGTH = 127;		// B
+			static final byte FIRST_BYTE_LONG_LENGTH = -126;		// B
+			static final byte TLV_ARRAY_EXPANSION_INCREMENT = 8;		// B
+			static final byte VALUE_INCREMENT = 4;		// B
+			static final byte APPEND = 1;		// B
+			static final byte REPLACE = 2;		// B
+			static final byte MALFORMED_LENGTH = -3;		// B
+			static final byte LENGTH_NOT_IN_LIMITS = -4;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			toBytes([BS)S;
+			getTag()Ljavacardx/framework/tlv/BERTag;;
+			getLength()S;
+			size()S;
+			init([BSS)S;
+		}
+
+		.packageMethodTable 0 {
+			getLengthInternal(Z)S;
+			contains(Ljavacardx/framework/tlv/BERTLV;)Z;
+		}
+
+		.method protected <init>()V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 12;		// java/lang/Object.<init>()V
+					aload_0;
+					aconst_null;
+					putfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_0;
+					aconst_null;
+					putfield_a 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					aload_0;
+					aconst_null;
+					putfield_a 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					return;
+		}
+
+		.method public static getInstance([BSS)Ljavacardx/framework/tlv/BERTLV; 1 {
+			.stack 4;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_3;
+					aload_0;
+					sload_1;
+					sload_2;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					sload_2;
+					invokestatic 23;		// javacardx/framework/tlv/BERTLV.verifyFormat([BSS)Z
+					ifne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_0;
+					sload_1;
+					baload;
+					bspush 32;
+					sand;
+					ifeq L4;
+				L3:	new 38;		// javacardx/framework/tlv/ConstructedBERTLV
+					dup;
+					bspush 8;
+					invokespecial 44;		// javacardx/framework/tlv/ConstructedBERTLV.<init>(S)V
+					astore_3;
+					aload_3;
+					aload_0;
+					sload_1;
+					sload_2;
+					invokevirtual 45;		// init([BSS)S
+					pop;
+					goto L5;
+				L4:	new 46;		// javacardx/framework/tlv/PrimitiveBERTLV
+					dup;
+					sload_2;
+					invokespecial 47;		// javacardx/framework/tlv/PrimitiveBERTLV.<init>(S)V
+					astore_3;
+					aload_3;
+					aload_0;
+					sload_1;
+					sload_2;
+					invokevirtual 45;		// init([BSS)S
+					pop;
+				L5:	aload_3;
+					areturn;
+		}
+
+		.method public toBytes([BS)S 1 {
+			.stack 5;
+			.locals 4;
+
+				L0:	getfield_b_this 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					ifeq L2;
+				L1:	sconst_4;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_0;
+					invokevirtual 13;		// getLength()S
+					sstore_3;
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sload_3;
+					sadd;
+					sload_3;
+					invokestatic 15;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sstore 4;
+					aload_1;
+					sload_2;
+					sload_3;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sload 4;
+					ifge L4;
+				L3:	bspush 10;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	sload_2;
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_1;
+					sload_2;
+					invokevirtual 16;		// toBytes([BS)S
+					sadd;
+					sstore 5;
+					sload_3;
+					bspush 127;
+					if_scmple L6;
+				L5:	aload_1;
+					sload 5;
+					bspush -126;
+					bastore;
+					sinc 5 3;
+					aload_1;
+					sload 5;
+					sload_3;
+					invokestatic 17;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					goto L7;
+				L6:	aload_1;
+					sload 5;
+					sload_3;
+					s2b;
+					bastore;
+					sinc 5 1;
+				L7:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 18;		// isConstructed()Z
+					ifeq L14;
+				L8:	sconst_0;
+					sstore 6;
+				L9:	sload 6;
+					getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					if_scmpge L13;
+				L10:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					ifnull L12;
+				L11:	sload 5;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					aload_1;
+					sload 5;
+					invokevirtual 20;		// toBytes([BS)S
+					sadd;
+					sstore 5;
+				L12:	sinc 6 1;
+					goto L9;
+				L13:	sload 5;
+					sload_2;
+					ssub;
+					sreturn;
+				L14:	getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sconst_0;
+					aload_1;
+					sload 5;
+					sload_3;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					sload 5;
+					sload_3;
+					sadd;
+					sload_2;
+					ssub;
+					sreturn;
+		}
+
+		.method public getTag()Ljavacardx/framework/tlv/BERTag; 2 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_b_this 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					ifeq L2;
+				L1:	sconst_4;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					areturn;
+		}
+
+		.method public getLength()S 3 {
+			.stack 2;
+			.locals 1;
+
+				L0:	sconst_0;
+					sstore_1;
+					getfield_b_this 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					ifeq L2;
+				L1:	sconst_4;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 18;		// isConstructed()Z
+					ifeq L4;
+				L3:	aload_0;
+					sconst_0;
+					invokevirtual 22;		// getLengthInternal(Z)S
+					sstore_1;
+					goto L5;
+				L4:	getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					sstore_1;
+				L5:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sload_1;
+					sadd;
+					sload_1;
+					invokestatic 15;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					ifge L7;
+				L6:	bspush 10;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L7:	sload_1;
+					sreturn;
+		}
+
+		.method public size()S 4 {
+			.stack 2;
+			.locals 1;
+
+				L0:	sconst_0;
+					sstore_1;
+					getfield_b_this 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					ifeq L2;
+				L1:	sconst_4;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 18;		// isConstructed()Z
+					ifeq L4;
+				L3:	aload_0;
+					invokevirtual 13;		// getLength()S
+					sstore_1;
+					goto L5;
+				L4:	getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					sstore_1;
+				L5:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sload_1;
+					sadd;
+					sload_1;
+					invokestatic 15;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sstore_1;
+					sload_1;
+					ifge L7;
+				L6:	bspush 10;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L7:	sload_1;
+					sreturn;
+		}
+
+		.method public static verifyFormat([BSS)Z 2 {
+			.stack 3;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					invokestatic 25;		// javacardx/framework/tlv/BERTLV.verifyFormatInternal([BSS)S
+					ifge L3;
+				L1:	sconst_0;
+				L2:	sreturn;
+				L3:	sconst_1;
+				L4:	sreturn;
+				L5:	astore_3;
+					sconst_0;
+					sreturn;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L0 L2 L5 24;
+				L3 L4 L5 24;
+			}
+		}
+
+		.method static verifyFormatInternal([BSS)S {
+			.stack 3;
+			.locals 5;
+
+				L0:	sconst_0;
+					sstore 4;
+					aload_0;
+					sload_1;
+					sload_2;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sload_1;
+					sstore_3;
+					sload_2;
+					sconst_2;
+					if_scmpge L2;
+				L1:	bspush -3;
+					sreturn;
+				L2:	aload_0;
+					sload_3;
+					invokestatic 26;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 5;
+					aload_0;
+					sload_3;
+					invokestatic 27;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					pop;
+					sload 5;
+					sconst_1;
+					if_scmpne L5;
+				L3:	aload_0;
+					sload_1;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifeq L5;
+				L4:	bspush -3;
+					sreturn;
+				L5:	sload_2;
+					sconst_2;
+					if_scmpne L8;
+				L6:	sload 5;
+					ifle L8;
+				L7:	bspush -3;
+					sreturn;
+				L8:	sload_3;
+					sload_2;
+					sload_1;
+					sadd;
+					if_scmpge L28;
+				L9:	aload_0;
+					sload_3;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifeq L23;
+				L10:	aload_0;
+					sload_3;
+					invokestatic 26;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 6;
+					sload 6;
+					sconst_1;
+					if_scmpne L12;
+				L11:	bspush -3;
+					sreturn;
+				L12:	aload_0;
+					sload_3;
+					invokestatic 29;		// javacardx/framework/tlv/BERTLV.verifyTagAndLength([BS)S
+					sstore_3;
+					sload_3;
+					ifge L14;
+				L13:	sload_3;
+					sreturn;
+				L14:	sload_2;
+					sload_1;
+					sadd;
+					sload_3;
+					if_scmpge L16;
+				L15:	bspush -3;
+					sreturn;
+				L16:	sload_3;
+					sstore 7;
+					sload_2;
+					sload_1;
+					sadd;
+					sload_3;
+					sload 5;
+					sadd;
+					if_scmpeq L22;
+				L17:	sload_3;
+					sload 6;
+					sload 7;
+					sadd;
+					if_scmpge L22;
+				L18:	aload_0;
+					sload_3;
+					invokestatic 29;		// javacardx/framework/tlv/BERTLV.verifyTagAndLength([BS)S
+					sstore_3;
+					sload_3;
+					ifge L20;
+				L19:	sload_3;
+					sreturn;
+				L20:	sload_2;
+					sload_1;
+					sadd;
+					sload_3;
+					if_scmpge L17;
+				L21:	bspush -3;
+					sreturn;
+				L22:	goto L27;
+				L23:	aload_0;
+					sload_3;
+					invokestatic 29;		// javacardx/framework/tlv/BERTLV.verifyTagAndLength([BS)S
+					sstore_3;
+					sload_3;
+					ifge L25;
+				L24:	sload_3;
+					sreturn;
+				L25:	sload_2;
+					sload_1;
+					sadd;
+					sload_3;
+					if_scmpge L27;
+				L26:	bspush -3;
+					sreturn;
+				L27:	sinc 4 1;
+					goto L8;
+				L28:	sload 4;
+					sconst_1;
+					ssub;
+					sreturn;
+		}
+
+		.method public static getTag([BS[BS)S 3 {
+			.stack 5;
+			.locals 2;
+
+				L0:	aload_0;
+					sload_1;
+					aload_0;
+					arraylength;
+					sload_1;
+					ssub;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_2;
+					sload_3;
+					aload_2;
+					arraylength;
+					sload_3;
+					ssub;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					invokestatic 29;		// javacardx/framework/tlv/BERTLV.verifyTagAndLength([BS)S
+					sstore 4;
+					sload 4;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L8;
+				L2:	sload 4;
+					bspush -2;
+					if_scmpne L4;
+				L3:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L8;
+				L4:	sload 4;
+					bspush -3;
+					if_scmpne L6;
+				L5:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L8;
+				L6:	sload 4;
+					bspush -4;
+					if_scmpne L8;
+				L7:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L8:	aload_2;
+					sload_3;
+					aload_0;
+					sload_1;
+					baload;
+					bastore;
+					sconst_1;
+					sstore 5;
+					aload_0;
+					sload_1;
+					baload;
+					bspush 31;
+					sand;
+					bspush 31;
+					if_scmpne L11;
+				L9:	aload_2;
+					sload_3;
+					sload 5;
+					sadd;
+					aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					bastore;
+					sinc 5 1;
+					aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					sconst_1;
+					ssub;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne L11;
+				L10:	aload_2;
+					sload_3;
+					sload 5;
+					sadd;
+					aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					bastore;
+					sinc 5 1;
+				L11:	sload 5;
+					sreturn;
+		}
+
+		.method public static getLength([BS)S 4 {
+			.stack 4;
+			.locals 4;
+
+				L0:	aload_0;
+					sload_1;
+					aload_0;
+					arraylength;
+					sload_1;
+					ssub;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					invokestatic 29;		// javacardx/framework/tlv/BERTLV.verifyTagAndLength([BS)S
+					sstore_2;
+					sload_2;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L8;
+				L2:	sload_2;
+					bspush -2;
+					if_scmpne L4;
+				L3:	bspush 11;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L8;
+				L4:	sload_2;
+					bspush -3;
+					if_scmpne L6;
+				L5:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L8;
+				L6:	sload_2;
+					bspush -4;
+					if_scmpne L8;
+				L7:	aload_0;
+					sload_1;
+					aload_0;
+					arraylength;
+					sconst_1;
+					sadd;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+				L8:	aload_0;
+					sload_1;
+					invokestatic 30;		// javacardx/framework/tlv/BERTLV.getLengthOffset([BS)S
+					sstore_2;
+					aload_0;
+					sload_2;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne L13;
+				L9:	aload_0;
+					sload_2;
+					baload;
+					bspush 127;
+					sand;
+					sconst_1;
+					sadd;
+					sstore 5;
+					sload 5;
+					sconst_2;
+					if_scmple L11;
+				L10:	aload_0;
+					sload_2;
+					sload 5;
+					sadd;
+					sconst_2;
+					ssub;
+					invokestatic 31;		// javacard/framework/Util.getShort([BS)S
+					sstore 4;
+					goto L12;
+				L11:	aload_0;
+					sload_2;
+					sconst_1;
+					sadd;
+					baload;
+					sspush 255;
+					sand;
+					sstore 4;
+				L12:	goto L14;
+				L13:	aload_0;
+					sload_2;
+					baload;
+					sstore 4;
+				L14:	sload 4;
+					sreturn;
+		}
+
+		.method static getValueLengthSize(S)S {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					bspush 127;
+					if_scmpge L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_3;
+				L3:	sreturn;
+		}
+
+		.method static getLengthOffset([BS)S {
+			.stack 3;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					baload;
+					bspush 31;
+					sand;
+					bspush 31;
+					if_scmpne L4;
+				L1:	aload_0;
+					sload_1;
+					sconst_1;
+					sadd;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne L3;
+				L2:	sconst_3;
+					sload_1;
+					sadd;
+					sstore_2;
+					goto L5;
+				L3:	sconst_2;
+					sload_1;
+					sadd;
+					sstore_2;
+					goto L5;
+				L4:	sconst_1;
+					sload_1;
+					sadd;
+					sstore_2;
+				L5:	sload_2;
+					sreturn;
+		}
+
+		.method static getValueOffsetInternal([BS)S {
+			.stack 2;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 30;		// javacardx/framework/tlv/BERTLV.getLengthOffset([BS)S
+					sstore_2;
+					aload_0;
+					sload_2;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne L2;
+				L1:	aload_0;
+					sload_2;
+					baload;
+					bspush 127;
+					sand;
+					sspush 255;
+					sand;
+					sload_2;
+					sadd;
+					sconst_1;
+					sadd;
+					sreturn;
+				L2:	sload_2;
+					sconst_1;
+					sadd;
+					sreturn;
+		}
+
+		.method static getSizeOfLength([BS)S {
+			.stack 2;
+			.locals 2;
+
+				L0:	sconst_0;
+					sstore_2;
+					aload_0;
+					sload_1;
+					invokestatic 30;		// javacardx/framework/tlv/BERTLV.getLengthOffset([BS)S
+					sstore_3;
+					aload_0;
+					sload_3;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne L2;
+				L1:	aload_0;
+					sload_3;
+					baload;
+					bspush 127;
+					sand;
+					sconst_1;
+					sadd;
+					sstore_2;
+					goto L3;
+				L2:	sconst_1;
+					sstore_2;
+				L3:	sload_2;
+					sreturn;
+		}
+
+		.method static verifyTagAndLength([BS)S {
+			.stack 5;
+			.locals 5;
+
+				L0:	sconst_0;
+					sstore 5;
+					aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore_3;
+					sload_3;
+					ifge L2;
+				L1:	sload_3;
+					sreturn;
+				L2:	sload_3;
+					invokestatic 33;		// javacardx/framework/tlv/BERTag.getTagSize(S)S
+					sstore 5;
+					aload_0;
+					arraylength;
+					sload_1;
+					sload 5;
+					sadd;
+					if_scmpge L4;
+				L3:	bspush -4;
+					sreturn;
+				L4:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					sconst_m1;
+					if_scmpeq L6;
+				L5:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					bspush -128;
+					if_scmpne L7;
+				L6:	bspush -3;
+					sreturn;
+				L7:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne_w L24;
+				L8:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					bspush 127;
+					sand;
+					sspush 255;
+					sand;
+					sconst_1;
+					sadd;
+					sstore_2;
+					aload_0;
+					arraylength;
+					sload_1;
+					sload 5;
+					sadd;
+					sload_2;
+					sadd;
+					if_scmpge L10;
+				L9:	bspush -4;
+					sreturn;
+				L10:	sload_2;
+					sconst_3;
+					if_scmple L16;
+				L11:	sconst_1;
+					sstore 6;
+				L12:	sload 6;
+					sload_2;
+					sconst_2;
+					ssub;
+					if_scmpge L16;
+				L13:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					sload 6;
+					sadd;
+					baload;
+					ifeq L15;
+				L14:	bspush -2;
+					sreturn;
+				L15:	sinc 6 1;
+					goto L12;
+				L16:	sload_2;
+					sconst_2;
+					if_scmple L18;
+				L17:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					sload_2;
+					sadd;
+					sconst_2;
+					ssub;
+					invokestatic 31;		// javacard/framework/Util.getShort([BS)S
+					sstore 6;
+					goto L19;
+				L18:	aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					sconst_1;
+					sadd;
+					baload;
+					sspush 255;
+					sand;
+					sstore 6;
+				L19:	sload 6;
+					ifge L21;
+				L20:	bspush -2;
+					sreturn;
+				L21:	aload_0;
+					sload_1;
+					baload;
+					bspush 32;
+					sand;
+					ifeq L23;
+				L22:	sload 5;
+					sload_2;
+					sadd;
+					sstore 5;
+					goto L27;
+				L23:	sload 5;
+					sload_2;
+					sload 6;
+					sadd;
+					sadd;
+					sstore 5;
+					goto L27;
+				L24:	aload_0;
+					sload_1;
+					baload;
+					bspush 32;
+					sand;
+					ifeq L26;
+				L25:	sinc 5 1;
+					goto L27;
+				L26:	sload 5;
+					sconst_1;
+					aload_0;
+					sload_1;
+					sload 5;
+					sadd;
+					baload;
+					sadd;
+					sadd;
+					sstore 5;
+				L27:	sload_1;
+					sload 5;
+					sadd;
+					sreturn;
+		}
+
+		.method  getLengthInternal(Z)S 128 {
+			.stack 3;
+			.locals 3;
+
+				L0:	getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					sstore_2;
+					sconst_0;
+					sstore_3;
+					sconst_0;
+					sstore 4;
+				L1:	sload 4;
+					sload_2;
+					if_scmpge L7;
+				L2:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 4;
+					aaload;
+					ifnull L6;
+				L3:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 4;
+					aaload;
+					instanceof 0 38;		// T_CLASSORINTERFACE javacardx/framework/tlv/ConstructedBERTLV
+					ifeq L5;
+				L4:	sload_3;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 4;
+					aaload;
+					sconst_1;
+					invokevirtual 22;		// getLengthInternal(Z)S
+					sadd;
+					sstore_3;
+					goto L6;
+				L5:	sload_3;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 4;
+					aaload;
+					invokevirtual 35;		// size()S
+					sadd;
+					sstore_3;
+				L6:	sinc 4 1;
+					goto L1;
+				L7:	sload_1;
+					ifeq L9;
+				L8:	sload_3;
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sload_3;
+					invokestatic 15;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sadd;
+					sstore_3;
+				L9:	sload_3;
+					sreturn;
+		}
+
+		.method  contains(Ljavacardx/framework/tlv/BERTLV;)Z 129 {
+			.stack 2;
+			.locals 2;
+
+				L0:	getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					sstore_2;
+					aload_0;
+					aload_1;
+					invokevirtual 36;		// equals(Ljava/lang/Object;)Z
+					ifeq L2;
+				L1:	sconst_1;
+					sreturn;
+				L2:	sconst_0;
+					sstore_3;
+				L3:	sload_3;
+					sload_2;
+					if_scmpge L11;
+				L4:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					ifnull L10;
+				L5:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					instanceof 0 38;		// T_CLASSORINTERFACE javacardx/framework/tlv/ConstructedBERTLV
+					ifeq L8;
+				L6:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					aload_1;
+					invokevirtual 37;		// contains(Ljavacardx/framework/tlv/BERTLV;)Z
+					ifeq L10;
+				L7:	sconst_1;
+					sreturn;
+				L8:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					aload_1;
+					invokevirtual 36;		// equals(Ljava/lang/Object;)Z
+					ifeq L10;
+				L9:	sconst_1;
+					sreturn;
+				L10:	sinc 3 1;
+					goto L3;
+				L11:	sconst_0;
+					sreturn;
+		}
+
+		.method public abstract init([BSS)S 5 {
+		}
+
+	}
+
+	.class public abstract BERTag 1 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			private short tagNumber 0;		// S
+			private byte tagClass 1;		// B
+			private byte tagSizeInBytes 2;		// B
+			 boolean tagPC 3;		// Z
+			private boolean emptyTag 4;		// Z
+			public static final byte BER_TAG_CLASS_MASK_UNIVERSAL = 0;		// B
+			public static final byte BER_TAG_CLASS_MASK_APPLICATION = 1;		// B
+			public static final byte BER_TAG_CLASS_MASK_CONTEXT_SPECIFIC = 2;		// B
+			public static final byte BER_TAG_CLASS_MASK_PRIVATE = 3;		// B
+			public static final boolean BER_TAG_TYPE_CONSTRUCTED = 1;		// Z
+			public static final boolean BER_TAG_TYPE_PRIMITIVE = 0;		// Z
+			private static final short MAX_TAG_SIZE_SUPPORTED = 3;		// S
+			private static final byte PRIMITIVE_TAG = 0;		// B
+			static final byte CONSTRUCTED_TAG = 32;		// B
+			static final byte MALFORMED_TAG_VALUE = -1;		// B
+			static final byte ILLEGAL_SIZE_VALUE = -2;		// B
+			static final byte MORE_BYTES_CHECK = -128;		// B
+			static final byte MORE_THAN_ONE_BYTE_TAG_MASK = 31;		// B
+			static final byte TAG_MASK = 127;		// B
+			static final byte TAG_CLASS_MASK = 3;		// B
+			static final byte TAG_CLASS_SHIFT = 6;		// B
+			static final short ONE_BYTE_TAG_MAX = 30;		// S
+			static final short TWO_BYTE_TAG_MAX = 127;		// S
+			static final short THREE_BYTE_TAG_MAX = 16383;		// S
+			static final byte TAG_BYTE_ONE = 1;		// B
+			static final byte TAG_BYTE_TWO = 2;		// B
+			static final byte TAG_BYTE_THREE = 3;		// B
+		}
+
+		.publicMethodTable 0 {
+			equals(Ljava/lang/Object;)Z;
+			size()B;
+			toBytes([BS)S;
+			tagNumber()S;
+			isConstructed()Z;
+			tagClass()B;
+			equals(Ljavacardx/framework/tlv/BERTag;)Z;
+			init([BS)V;
+		}
+
+		.packageMethodTable 0 {
+			sharedInit(BS)V;
+		}
+
+		.method protected <init>()V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 12;		// java/lang/Object.<init>()V
+					aload_0;
+					sconst_1;
+					putfield_b 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					return;
+		}
+
+		.method public static getInstance([BS)Ljavacardx/framework/tlv/BERTag; 1 {
+			.stack 3;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_2;
+					aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sconst_m1;
+					if_scmpne L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	bspush 32;
+					aload_0;
+					sload_1;
+					baload;
+					sand;
+					ifeq L4;
+				L3:	new 39;		// javacardx/framework/tlv/ConstructedBERTag
+					dup;
+					invokespecial 40;		// javacardx/framework/tlv/ConstructedBERTag.<init>()V
+					astore_2;
+					aload_2;
+					aload_0;
+					sload_1;
+					invokevirtual 41;		// init([BS)V
+					goto L5;
+				L4:	new 42;		// javacardx/framework/tlv/PrimitiveBERTag
+					dup;
+					invokespecial 43;		// javacardx/framework/tlv/PrimitiveBERTag.<init>()V
+					astore_2;
+					aload_2;
+					aload_0;
+					sload_1;
+					invokevirtual 41;		// init([BS)V
+				L5:	aload_2;
+					areturn;
+		}
+
+		.method public size()B 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_b_this 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_b_this 8;		// byte javacardx/framework/tlv/BERTag.tagSizeInBytes
+					sreturn;
+		}
+
+		.method public toBytes([BS)S 2 {
+			.stack 4;
+			.locals 0;
+
+				L0:	getfield_b_this 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_1;
+					sload_2;
+					getfield_b_this 8;		// byte javacardx/framework/tlv/BERTag.tagSizeInBytes
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_1;
+					sload_2;
+					getfield_b_this 9;		// byte javacardx/framework/tlv/BERTag.tagClass
+					bspush 6;
+					sshl;
+					s2b;
+					bastore;
+					getfield_b_this 10;		// boolean javacardx/framework/tlv/BERTag.tagPC
+					sconst_1;
+					if_scmpne L4;
+				L3:	aload_1;
+					sload_2;
+					dup2;
+					baload;
+					bspush 32;
+					sor;
+					bastore;
+				L4:	getfield_b_this 8;		// byte javacardx/framework/tlv/BERTag.tagSizeInBytes
+					stableswitch L8 1 3 L5 L6 L7;
+				L5:	aload_1;
+					sload_2;
+					dup2;
+					baload;
+					getfield_s_this 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					s2b;
+					sor;
+					bastore;
+					goto L9;
+				L6:	aload_1;
+					sload_2;
+					dup2;
+					baload;
+					bspush 31;
+					sor;
+					bastore;
+					aload_1;
+					sload_2;
+					sconst_1;
+					sadd;
+					getfield_s_this 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					s2b;
+					bastore;
+					goto L9;
+				L7:	aload_1;
+					sload_2;
+					dup2;
+					baload;
+					bspush 31;
+					sor;
+					bastore;
+					aload_1;
+					sload_2;
+					sconst_1;
+					sadd;
+					getfield_s_this 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					bspush 7;
+					sshr;
+					bspush 127;
+					sand;
+					bspush -128;
+					sor;
+					s2b;
+					bastore;
+					aload_1;
+					sload_2;
+					sconst_2;
+					sadd;
+					getfield_s_this 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					bspush 127;
+					sand;
+					s2b;
+					bastore;
+					goto L9;
+				L8:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L9:	getfield_b_this 8;		// byte javacardx/framework/tlv/BERTag.tagSizeInBytes
+					sreturn;
+		}
+
+		.method public tagNumber()S 3 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_b_this 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_s_this 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					sreturn;
+		}
+
+		.method public isConstructed()Z 4 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_b_this 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_b_this 10;		// boolean javacardx/framework/tlv/BERTag.tagPC
+					sreturn;
+		}
+
+		.method public tagClass()B 5 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_b_this 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_b_this 9;		// byte javacardx/framework/tlv/BERTag.tagClass
+					sreturn;
+		}
+
+		.method public equals(Ljavacardx/framework/tlv/BERTag;)Z 6 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_1;
+					ifnonnull L2;
+				L1:	sconst_0;
+					sreturn;
+				L2:	aload_1;
+					invokevirtual 48;		// tagClass()B
+					getfield_b_this 9;		// byte javacardx/framework/tlv/BERTag.tagClass
+					if_scmpne L6;
+				L3:	aload_1;
+					invokevirtual 18;		// isConstructed()Z
+					getfield_b_this 10;		// boolean javacardx/framework/tlv/BERTag.tagPC
+					if_scmpne L6;
+				L4:	aload_1;
+					invokevirtual 49;		// tagNumber()S
+					getfield_s_this 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					if_scmpne L6;
+				L5:	sconst_1;
+					goto L7;
+				L6:	sconst_0;
+				L7:	sreturn;
+		}
+
+		.method public equals(Ljava/lang/Object;)Z 0 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljava/lang/Object;	0.0;
+
+				L0:	aload_1;
+					instanceof 0 50;		// T_CLASSORINTERFACE javacardx/framework/tlv/BERTag
+					ifne L2;
+				L1:	sconst_0;
+					sreturn;
+				L2:	aload_0;
+					aload_1;
+					checkcast 0 50;		// T_CLASSORINTERFACE javacardx/framework/tlv/BERTag
+					invokevirtual 51;		// equals(Ljavacardx/framework/tlv/BERTag;)Z
+					sreturn;
+		}
+
+		.method public static toBytes(SZS[BS)S 2 {
+			.stack 5;
+			.locals 1;
+
+				L0:	sconst_0;
+					sstore 5;
+					sload_0;
+					iflt L3;
+				L1:	sload_0;
+					sconst_3;
+					if_scmpgt L3;
+				L2:	sload_2;
+					ifge L4;
+				L3:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	sload_2;
+					bspush 30;
+					if_scmpgt L6;
+				L5:	aload_3;
+					sload 4;
+					sconst_1;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sconst_1;
+					sstore 5;
+					aload_3;
+					sload 4;
+					sload_2;
+					s2b;
+					bastore;
+					goto L11;
+				L6:	sload_2;
+					bspush 127;
+					if_scmpgt L8;
+				L7:	aload_3;
+					sload 4;
+					sconst_2;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sconst_2;
+					sstore 5;
+					aload_3;
+					sload 4;
+					bspush 31;
+					bastore;
+					aload_3;
+					sload 4;
+					sconst_1;
+					sadd;
+					sload_2;
+					s2b;
+					bastore;
+					goto L11;
+				L8:	sload_2;
+					sspush 16383;
+					if_scmpgt L10;
+				L9:	aload_3;
+					sload 4;
+					sconst_3;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sconst_3;
+					sstore 5;
+					aload_3;
+					sload 4;
+					bspush 31;
+					bastore;
+					aload_3;
+					sload 4;
+					sconst_1;
+					sadd;
+					sload_2;
+					bspush 7;
+					sshr;
+					bspush 127;
+					sand;
+					bspush -128;
+					sor;
+					s2b;
+					bastore;
+					aload_3;
+					sload 4;
+					sconst_2;
+					sadd;
+					sload_2;
+					bspush 127;
+					sand;
+					s2b;
+					bastore;
+					goto L11;
+				L10:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L11:	aload_3;
+					sload 4;
+					dup2;
+					baload;
+					sload_0;
+					s2b;
+					bspush 6;
+					sshl;
+					s2b;
+					sor;
+					bastore;
+					sload_1;
+					sconst_1;
+					if_scmpne L13;
+				L12:	aload_3;
+					sload 4;
+					dup2;
+					baload;
+					bspush 32;
+					sor;
+					bastore;
+				L13:	sload 5;
+					sreturn;
+		}
+
+		.method public static size([BS)B 3 {
+			.stack 2;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore_2;
+					sload_2;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L4;
+				L2:	sload_2;
+					bspush -2;
+					if_scmpne L4;
+				L3:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	sload_2;
+					invokestatic 33;		// javacardx/framework/tlv/BERTag.getTagSize(S)S
+					s2b;
+					sreturn;
+		}
+
+		.method public static tagNumber([BS)S 4 {
+			.stack 2;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore_2;
+					sload_2;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L4;
+				L2:	sload_2;
+					bspush -2;
+					if_scmpne L4;
+				L3:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	sload_2;
+					sreturn;
+		}
+
+		.method public static isConstructed([BS)Z 5 {
+			.stack 3;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore_2;
+					sload_2;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	bspush 32;
+					aload_0;
+					sload_1;
+					baload;
+					sand;
+					ifeq L4;
+				L3:	sconst_1;
+					goto L5;
+				L4:	sconst_0;
+				L5:	sreturn;
+		}
+
+		.method public static tagClass([BS)B 6 {
+			.stack 2;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore_2;
+					sload_2;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L4;
+				L2:	sload_2;
+					bspush -2;
+					if_scmpne L4;
+				L3:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	aload_0;
+					sload_1;
+					baload;
+					bspush 6;
+					sshr;
+					sconst_3;
+					sand;
+					sreturn;
+		}
+
+		.method public static verifyFormat([BS)Z 7 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					ifge L2;
+				L1:	sconst_0;
+					sreturn;
+				L2:	sconst_1;
+					sreturn;
+		}
+
+		.method static verifyFormatInternal([BS)S {
+			.stack 4;
+			.locals 1;
+
+				L0:	aload_0;
+					sload_1;
+					sconst_1;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					baload;
+					bspush 31;
+					sand;
+					bspush 31;
+					if_scmpne L8;
+				L1:	aload_0;
+					sload_1;
+					sconst_2;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					sconst_1;
+					sadd;
+					baload;
+					bspush -128;
+					sand;
+					ifeq L6;
+				L2:	aload_0;
+					sload_1;
+					sconst_3;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					sconst_2;
+					sadd;
+					baload;
+					bspush -128;
+					sand;
+					ifeq L4;
+				L3:	bspush -2;
+					sreturn;
+				L4:	aload_0;
+					sload_1;
+					sconst_1;
+					sadd;
+					baload;
+					bspush 127;
+					sand;
+					bspush 7;
+					sshl;
+					sstore_2;
+					sload_2;
+					aload_0;
+					sload_1;
+					sconst_2;
+					sadd;
+					baload;
+					bspush 127;
+					sand;
+					sor;
+					sstore_2;
+					sload_2;
+					bspush 127;
+					if_scmpgt L9;
+				L5:	sconst_m1;
+					sreturn;
+				L6:	aload_0;
+					sload_1;
+					sconst_1;
+					sadd;
+					baload;
+					bspush 127;
+					sand;
+					sstore_2;
+					sload_2;
+					bspush 30;
+					if_scmpgt L9;
+				L7:	sconst_m1;
+					sreturn;
+				L8:	aload_0;
+					sload_1;
+					baload;
+					bspush 31;
+					sand;
+					sstore_2;
+				L9:	sload_2;
+					sreturn;
+		}
+
+		.method static getTagSize(S)S {
+			.stack 2;
+			.locals 1;
+
+				L0:	sconst_0;
+					sstore_1;
+					sload_0;
+					bspush 30;
+					if_scmpgt L2;
+				L1:	sconst_1;
+					sstore_1;
+					goto L7;
+				L2:	sload_0;
+					bspush 127;
+					if_scmpgt L4;
+				L3:	sconst_2;
+					sstore_1;
+					goto L7;
+				L4:	sload_0;
+					sspush 16383;
+					if_scmpgt L6;
+				L5:	sconst_3;
+					sstore_1;
+					goto L7;
+				L6:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L7:	sload_1;
+					sreturn;
+		}
+
+		.method  sharedInit(BS)V 128 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_1;
+					iflt L2;
+				L1:	sload_1;
+					sconst_3;
+					if_scmple L3;
+				L2:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L3:	aload_0;
+					sload_2;
+					invokestatic 33;		// javacardx/framework/tlv/BERTag.getTagSize(S)S
+					s2b;
+					putfield_b 8;		// byte javacardx/framework/tlv/BERTag.tagSizeInBytes
+					aload_0;
+					sload_1;
+					putfield_b 9;		// byte javacardx/framework/tlv/BERTag.tagClass
+					aload_0;
+					sload_2;
+					putfield_s 11;		// short javacardx/framework/tlv/BERTag.tagNumber
+					aload_0;
+					sconst_0;
+					putfield_b 7;		// boolean javacardx/framework/tlv/BERTag.emptyTag
+					return;
+		}
+
+		.method public abstract init([BS)V 7 {
+		}
+
+	}
+
+	.class public final ConstructedBERTLV 2 extends BERTLV {
+
+		.fields {
+			private static final short FIND = 1;		// S
+			private static final short FIND_NEXT = 2;		// S
+		}
+
+		.publicMethodTable 5 {
+			equals(Ljava/lang/Object;)Z;
+			toBytes([BS)S;
+			getTag()Ljavacardx/framework/tlv/BERTag;;
+			getLength()S;
+			size()S;
+			init([BSS)S;
+			init(Ljavacardx/framework/tlv/ConstructedBERTag;Ljavacardx/framework/tlv/BERTLV;)S;
+			init(Ljavacardx/framework/tlv/ConstructedBERTag;[BSS)S;
+			append(Ljavacardx/framework/tlv/BERTLV;)S;
+			delete(Ljavacardx/framework/tlv/BERTLV;S)S;
+			find(Ljavacardx/framework/tlv/BERTag;)Ljavacardx/framework/tlv/BERTLV;;
+			findNext(Ljavacardx/framework/tlv/BERTag;Ljavacardx/framework/tlv/BERTLV;S)Ljavacardx/framework/tlv/BERTLV;;
+		}
+
+		.packageMethodTable 2 {
+			getLengthInternal(Z)S;
+			contains(Ljavacardx/framework/tlv/BERTLV;)Z;
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 1;
+
+				L0:	aload_0;
+					invokespecial 53;		// javacardx/framework/tlv/BERTLV.<init>()V
+				L1:	aload_0;
+					sload_1;
+					anewarray 54;		// javacardx/framework/tlv/BERTLV
+					putfield_a 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+				L2:	goto L4;
+				L3:	astore_2;
+					sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	aload_0;
+					sconst_1;
+					putfield_b 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					aload_0;
+					sconst_0;
+					putfield_s 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					return;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L1 L2 L3 52;
+			}
+		}
+
+		.method public init([BSS)S 5 {
+			.stack 7;
+			.locals 4;
+
+				L0:	sconst_0;
+					sstore 5;
+					aload_1;
+					sload_2;
+					sload_3;
+					invokestatic 25;		// javacardx/framework/tlv/BERTLV.verifyFormatInternal([BSS)S
+					sstore 6;
+					aload_0;
+					aload_1;
+					sload_2;
+					sload_3;
+					sload 6;
+					invokespecial 55;		// javacardx/framework/tlv/ConstructedBERTLV.sharedBeginInit([BSSS)V
+					aload_1;
+					sload_2;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					ifnull L4;
+				L3:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L4:	aload_0;
+					aload_1;
+					sload_2;
+					invokestatic 57;		// javacardx/framework/tlv/BERTag.getInstance([BS)Ljavacardx/framework/tlv/BERTag;
+					putfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_1;
+					sload_2;
+					invokestatic 26;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 7;
+					aload_1;
+					sload_2;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sstore 4;
+					aload_0;
+					aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					sload 7;
+					sload 6;
+					invokespecial 59;		// javacardx/framework/tlv/ConstructedBERTLV.sharedEndInit([BSSSSS)S
+					sreturn;
+		}
+
+		.method public init(Ljavacardx/framework/tlv/ConstructedBERTag;Ljavacardx/framework/tlv/BERTLV;)S 6 {
+			.stack 3;
+			.locals 1;
+
+				L0:	aload_2;
+					aload_0;
+					invokevirtual 37;		// contains(Ljavacardx/framework/tlv/BERTLV;)Z
+					ifeq L2;
+				L1:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					ifnull L4;
+				L3:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L4:	aload_0;
+					aload_1;
+					putfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					ifle L9;
+				L5:	sconst_0;
+					sstore_3;
+				L6:	sload_3;
+					getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					if_scmpge L8;
+				L7:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aconst_null;
+					aastore;
+					sinc 3 1;
+					goto L6;
+				L8:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+					goto L10;
+				L9:	aload_0;
+					bspush 8;
+					anewarray 54;		// javacardx/framework/tlv/BERTLV
+					putfield_a 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L10:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sconst_0;
+					aload_2;
+					aastore;
+					aload_0;
+					sconst_1;
+					putfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					aload_0;
+					sconst_0;
+					putfield_s 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					aload_0;
+					sconst_0;
+					putfield_b 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					aload_0;
+					invokevirtual 60;		// size()S
+					sreturn;
+		}
+
+		.method public init(Ljavacardx/framework/tlv/ConstructedBERTag;[BSS)S 7 {
+			.stack 7;
+			.locals 3;
+
+				L0:	sconst_0;
+					sstore 5;
+					aload_2;
+					sload_3;
+					sload 4;
+					invokestatic 25;		// javacardx/framework/tlv/BERTLV.verifyFormatInternal([BSS)S
+					sstore 7;
+					sinc 7 1;
+					aload_1;
+					invokevirtual 61;		// isConstructed()Z
+					ifne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_0;
+					aload_2;
+					sload_3;
+					sload 4;
+					sload 7;
+					invokespecial 55;		// javacardx/framework/tlv/ConstructedBERTLV.sharedBeginInit([BSSS)V
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					ifnull L4;
+				L3:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L4:	aload_0;
+					aload_1;
+					putfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					sload_3;
+					sstore 6;
+					aload_0;
+					aload_2;
+					sload_3;
+					sload 4;
+					sload 6;
+					sconst_0;
+					sload 7;
+					invokespecial 59;		// javacardx/framework/tlv/ConstructedBERTLV.sharedEndInit([BSSSSS)S
+					sreturn;
+		}
+
+		.method private sharedBeginInit([BSSS)V {
+			.stack 3;
+			.locals 1;
+
+				L0:	sload 4;
+					sconst_m1;
+					if_scmpne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L6;
+				L2:	sload 4;
+					bspush -2;
+					if_scmpne L4;
+				L3:	sconst_2;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L6;
+				L4:	sload 4;
+					bspush -3;
+					if_scmpne L6;
+				L5:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L6:	sload 4;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					arraylength;
+					if_scmple L8;
+				L7:	aload_0;
+					sload 4;
+					bspush 8;
+					sadd;
+					anewarray 54;		// javacardx/framework/tlv/BERTLV
+					putfield_a 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+					goto L13;
+				L8:	getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					ifle L13;
+				L9:	sconst_0;
+					sstore 5;
+				L10:	sload 5;
+					getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					if_scmpge L12;
+				L11:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 5;
+					aconst_null;
+					aastore;
+					sinc 5 1;
+					goto L10;
+				L12:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L13:	return;
+		}
+
+		.method private sharedEndInit([BSSSSS)S {
+			.stack 5;
+			.locals 4;
+
+				L0:	sconst_0;
+					sstore 7;
+					sconst_0;
+					sstore 8;
+					sconst_0;
+					sstore 9;
+					sload 6;
+					ifne L2;
+				L1:	aload_0;
+					sconst_0;
+					putfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					aload_0;
+					sconst_0;
+					putfield_s 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					aload_0;
+					sconst_0;
+					putfield_b 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					sconst_0;
+					sreturn;
+				L2:	sconst_0;
+					sstore 10;
+				L3:	sload 10;
+					sload 6;
+					if_scmpge L8;
+				L4:	aload_1;
+					sload 4;
+					invokestatic 26;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					aload_1;
+					sload 4;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sadd;
+					sload 4;
+					ssub;
+					sstore 7;
+					aload_1;
+					sload 4;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifeq L6;
+				L5:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 10;
+					new 38;		// javacardx/framework/tlv/ConstructedBERTLV
+					dup;
+					bspush 8;
+					invokespecial 44;		// javacardx/framework/tlv/ConstructedBERTLV.<init>(S)V
+					aastore;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 10;
+					aaload;
+					aload_1;
+					sload 4;
+					sload 7;
+					invokevirtual 45;		// init([BSS)S
+					pop;
+					goto L7;
+				L6:	aload_1;
+					sload 4;
+					invokestatic 26;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 8;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 10;
+					new 46;		// javacardx/framework/tlv/PrimitiveBERTLV
+					dup;
+					sload 8;
+					invokespecial 47;		// javacardx/framework/tlv/PrimitiveBERTLV.<init>(S)V
+					aastore;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 10;
+					aaload;
+					aload_1;
+					sload 4;
+					sload 7;
+					invokevirtual 45;		// init([BSS)S
+					pop;
+				L7:	sload 4;
+					sload 7;
+					sadd;
+					sstore 4;
+					sload 9;
+					sload 7;
+					sadd;
+					sstore 9;
+					sinc 10 1;
+					goto L3;
+				L8:	sload 5;
+					ifeq L11;
+				L9:	sload 5;
+					sload 9;
+					if_scmpeq L11;
+				L10:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L11:	aload_0;
+					sload 6;
+					putfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					aload_0;
+					sconst_0;
+					putfield_s 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					aload_0;
+					sconst_0;
+					putfield_b 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sload 9;
+					sadd;
+					sload 9;
+					invokestatic 15;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sreturn;
+		}
+
+		.method public append(Ljavacardx/framework/tlv/BERTLV;)S 8 {
+			.stack 4;
+			.locals 3;
+
+				L0:	getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					sstore_3;
+					aload_1;
+					aload_0;
+					invokevirtual 37;		// contains(Ljavacardx/framework/tlv/BERTLV;)Z
+					ifeq L2;
+				L1:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	sload_3;
+					sconst_1;
+					sadd;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					arraylength;
+					if_scmple L7;
+				L3:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					astore 4;
+					aload_0;
+					getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					arraylength;
+					bspush 8;
+					sadd;
+					anewarray 54;		// javacardx/framework/tlv/BERTLV
+					putfield_a 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sconst_0;
+					sstore_2;
+				L4:	sload_2;
+					getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					if_scmpge L6;
+				L5:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_2;
+					aload 4;
+					sload_2;
+					aaload;
+					aastore;
+					sinc 2 1;
+					goto L4;
+				L6:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L7:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aload_1;
+					aastore;
+					aload_0;
+					dup;
+					getfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					sconst_1;
+					sadd;
+					putfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					aload_0;
+					invokevirtual 62;		// getLength()S
+					sstore 4;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sadd;
+					sload 4;
+					invokestatic 63;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sreturn;
+		}
+
+		.method public delete(Ljavacardx/framework/tlv/BERTLV;S)S 9 {
+			.stack 3;
+			.locals 4;
+
+				L0:	sconst_0;
+					sstore_3;
+					getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					sstore 4;
+					sconst_1;
+					sstore 5;
+					sload_2;
+					ifgt L2;
+				L1:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	sconst_0;
+					sstore 6;
+				L3:	sload 6;
+					sload 4;
+					if_scmpge L10;
+				L4:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					ifnull L9;
+				L5:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					aload_1;
+					invokevirtual 36;		// equals(Ljava/lang/Object;)Z
+					ifeq L9;
+				L6:	sload 5;
+					sload_2;
+					if_scmpne L8;
+				L7:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aconst_null;
+					aastore;
+					aload_0;
+					dup;
+					getfield_s 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sconst_1;
+					sadd;
+					putfield_s 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					aload_0;
+					dup;
+					getfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					sconst_1;
+					ssub;
+					putfield_s 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					sconst_1;
+					sstore_3;
+					goto L10;
+				L8:	sinc 5 1;
+				L9:	sinc 6 1;
+					goto L3;
+				L10:	sload_3;
+					ifne L12;
+				L11:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L12:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+					aload_0;
+					invokevirtual 62;		// getLength()S
+					sstore 6;
+					sload 6;
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sadd;
+					sload 6;
+					invokestatic 63;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sreturn;
+		}
+
+		.method public find(Ljavacardx/framework/tlv/BERTag;)Ljavacardx/framework/tlv/BERTLV; 10 {
+			.stack 2;
+			.locals 2;
+
+				L0:	getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					sstore_2;
+					aload_1;
+					ifnonnull L2;
+				L1:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sconst_0;
+					aaload;
+					areturn;
+				L2:	sconst_0;
+					sstore_3;
+				L3:	sload_3;
+					sload_2;
+					if_scmpge L8;
+				L4:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					ifnull L7;
+				L5:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					getfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_1;
+					invokevirtual 51;		// equals(Ljavacardx/framework/tlv/BERTag;)Z
+					ifeq L7;
+				L6:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload_3;
+					aaload;
+					areturn;
+				L7:	sinc 3 1;
+					goto L3;
+				L8:	aconst_null;
+					areturn;
+		}
+
+		.method public findNext(Ljavacardx/framework/tlv/BERTag;Ljavacardx/framework/tlv/BERTLV;S)Ljavacardx/framework/tlv/BERTLV; 11 {
+			.stack 2;
+			.locals 4;
+
+				L0:	getfield_s_this 4;		// short javacardx/framework/tlv/BERTLV.numTLVs
+					getfield_s_this 6;		// short javacardx/framework/tlv/BERTLV.numDeletedTLVs
+					sadd;
+					sstore 4;
+					sconst_0;
+					sstore 5;
+					sload_3;
+					ifgt L2;
+				L1:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	sconst_0;
+					sstore 6;
+				L3:	sload 6;
+					sload 4;
+					if_scmpge L16;
+				L4:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					ifnull L15;
+				L5:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					aload_2;
+					invokevirtual 36;		// equals(Ljava/lang/Object;)Z
+					ifeq L15;
+				L6:	sinc 5 1;
+					sload 5;
+					sload_3;
+					if_scmpne L15;
+				L7:	sload 6;
+					sconst_1;
+					sadd;
+					sstore 7;
+				L8:	sload 7;
+					sload 4;
+					if_scmpge L15;
+				L9:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 6;
+					aaload;
+					ifnull L14;
+				L10:	aload_1;
+					ifnonnull L12;
+				L11:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 7;
+					aaload;
+					areturn;
+				L12:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 7;
+					aaload;
+					getfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_1;
+					invokevirtual 51;		// equals(Ljavacardx/framework/tlv/BERTag;)Z
+					ifeq L14;
+				L13:	getfield_a_this 1;		// reference javacardx/framework/tlv/BERTLV.berTLV
+					sload 7;
+					aaload;
+					areturn;
+				L14:	sinc 7 1;
+					goto L8;
+				L15:	sinc 6 1;
+					goto L3;
+				L16:	sload 5;
+					sload_3;
+					if_scmpge L18;
+				L17:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L18:	aconst_null;
+					areturn;
+		}
+
+		.method public static append([BS[BS)S 1 {
+			.stack 5;
+			.locals 8;
+
+				L0:	sconst_0;
+					sstore 4;
+					sconst_0;
+					sstore 5;
+					aload_0;
+					sload_1;
+					invokestatic 64;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 6;
+					aload_0;
+					sload_1;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sstore 7;
+					sload 7;
+					sload 6;
+					sadd;
+					sload_1;
+					ssub;
+					sstore 8;
+					aload_0;
+					sload_1;
+					sload 8;
+					invokestatic 23;		// javacardx/framework/tlv/BERTLV.verifyFormat([BSS)Z
+					ifne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_2;
+					sload_3;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifne L4;
+				L3:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	aload_2;
+					sload_3;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sstore 7;
+					aload_2;
+					sload_3;
+					invokestatic 64;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 6;
+					aload_2;
+					sload_3;
+					sload 7;
+					sload 6;
+					sadd;
+					sload_3;
+					ssub;
+					invokestatic 23;		// javacardx/framework/tlv/BERTLV.verifyFormat([BSS)Z
+					ifeq_w L16;
+				L5:	aload_2;
+					sload_3;
+					invokestatic 65;		// javacardx/framework/tlv/BERTag.tagNumber([BS)S
+					sstore 9;
+					sload 9;
+					invokestatic 33;		// javacardx/framework/tlv/BERTag.getTagSize(S)S
+					sstore 4;
+					aload_2;
+					sload_3;
+					invokestatic 66;		// javacardx/framework/tlv/BERTLV.getLengthOffset([BS)S
+					sstore 10;
+					aload_2;
+					sload 10;
+					baload;
+					bspush -128;
+					sand;
+					ifeq L14;
+				L6:	sconst_1;
+					aload_2;
+					sload 10;
+					baload;
+					bspush 127;
+					sand;
+					sadd;
+					sstore 5;
+					sload 5;
+					sconst_2;
+					if_scmpne L8;
+				L7:	aload_2;
+					sload 10;
+					sconst_1;
+					sadd;
+					sload 6;
+					sload 8;
+					sadd;
+					s2b;
+					bastore;
+					goto L15;
+				L8:	sconst_1;
+					sstore 11;
+				L9:	sload 11;
+					sload 5;
+					sconst_2;
+					ssub;
+					if_scmpge L13;
+				L10:	aload_2;
+					sload 10;
+					sload 11;
+					sadd;
+					baload;
+					ifeq L12;
+				L11:	sload 6;
+					sload 8;
+					sadd;
+					sstore 6;
+					aload_2;
+					sload 10;
+					sload 11;
+					sadd;
+					sload 6;
+					invokestatic 17;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+				L12:	sinc 11 1;
+					goto L9;
+				L13:	goto L15;
+				L14:	aload_2;
+					sload 10;
+					sload 6;
+					sload 8;
+					sadd;
+					s2b;
+					bastore;
+					sconst_1;
+					sstore 5;
+				L15:	aload_0;
+					sload_1;
+					aload_2;
+					sload_3;
+					sload 6;
+					sadd;
+					sload 4;
+					sadd;
+					sload 5;
+					sadd;
+					sload 8;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					sload 6;
+					sload 8;
+					sload 4;
+					sadd;
+					sload 5;
+					sadd;
+					sadd;
+					sstore 6;
+					goto L17;
+				L16:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L17:	sload 6;
+					sreturn;
+		}
+
+		.method public static find([BS[BS)S 2 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_1;
+					aload_2;
+					sload_3;
+					sconst_1;
+					invokestatic 67;		// javacardx/framework/tlv/ConstructedBERTLV.findInternal([BSS[BSS)S
+					sreturn;
+		}
+
+		.method public static findNext([BSS[BS)S 3 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					aload_3;
+					sload 4;
+					sconst_2;
+					invokestatic 67;		// javacardx/framework/tlv/ConstructedBERTLV.findInternal([BSS[BSS)S
+					sreturn;
+		}
+
+		.method private static findInternal([BSS[BSS)S {
+			.stack 4;
+			.locals 3;
+
+				L0:	aload_0;
+					sload_1;
+					invokestatic 64;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 6;
+					sload 6;
+					ifne L2;
+				L1:	sconst_m1;
+					sreturn;
+				L2:	aload_0;
+					sload_1;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sstore 7;
+					aload_0;
+					sload_1;
+					sload 7;
+					sload 6;
+					sadd;
+					sload_1;
+					ssub;
+					invokestatic 23;		// javacardx/framework/tlv/BERTLV.verifyFormat([BSS)Z
+					ifeq_w L31;
+				L3:	aload_0;
+					sload_1;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifne L5;
+				L4:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L5:	aload_3;
+					ifnull L8;
+				L6:	aload_3;
+					sload 4;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					ifge L8;
+				L7:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L8:	sload 7;
+					sstore 8;
+					sload_2;
+					sload_1;
+					if_scmpeq L15;
+				L9:	sload 8;
+					sload 7;
+					sload 6;
+					sadd;
+					if_scmpge L13;
+				L10:	sload 8;
+					sload_2;
+					if_scmpne L12;
+				L11:	goto L13;
+				L12:	aload_0;
+					sload 8;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					aload_0;
+					sload 8;
+					invokestatic 64;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sadd;
+					sstore 8;
+					goto L9;
+				L13:	sload 8;
+					sload 7;
+					sload 6;
+					sadd;
+					if_scmpne L17;
+				L14:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L17;
+				L15:	sload 5;
+					sconst_2;
+					if_scmpne L17;
+				L16:	sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L17:	sload 5;
+					sconst_2;
+					if_scmpne L19;
+				L18:	aload_0;
+					sload_2;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					aload_0;
+					sload_2;
+					invokestatic 64;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sadd;
+					sstore 8;
+				L19:	aload_3;
+					ifnull L26;
+				L20:	sload 8;
+					sload 7;
+					sload 6;
+					sadd;
+					if_scmpge L30;
+				L21:	aload_3;
+					sload 4;
+					invokestatic 65;		// javacardx/framework/tlv/BERTag.tagNumber([BS)S
+					aload_0;
+					sload 8;
+					invokestatic 65;		// javacardx/framework/tlv/BERTag.tagNumber([BS)S
+					if_scmpne L25;
+				L22:	aload_3;
+					sload 4;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					aload_0;
+					sload 8;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					if_scmpne L25;
+				L23:	aload_3;
+					sload 4;
+					invokestatic 68;		// javacardx/framework/tlv/BERTag.tagClass([BS)B
+					aload_0;
+					sload 8;
+					invokestatic 68;		// javacardx/framework/tlv/BERTag.tagClass([BS)B
+					if_scmpne L25;
+				L24:	sload 8;
+					sreturn;
+				L25:	aload_0;
+					sload 8;
+					invokestatic 58;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					aload_0;
+					sload 8;
+					invokestatic 64;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sadd;
+					sstore 8;
+					goto L20;
+				L26:	sload 8;
+					sload 7;
+					sload 6;
+					sadd;
+					if_scmpne L29;
+				L27:	sload 5;
+					sconst_2;
+					if_scmpne L29;
+				L28:	sconst_m1;
+					sreturn;
+				L29:	sload 8;
+					sreturn;
+				L30:	goto L32;
+				L31:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L32:	sconst_m1;
+					sreturn;
+		}
+
+	}
+
+	.class public final ConstructedBERTag 3 extends BERTag {
+
+		.publicMethodTable 7 {
+			equals(Ljava/lang/Object;)Z;
+			size()B;
+			toBytes([BS)S;
+			tagNumber()S;
+			isConstructed()Z;
+			tagClass()B;
+			equals(Ljavacardx/framework/tlv/BERTag;)Z;
+			init([BS)V;
+			init(BS)V;
+		}
+
+		.packageMethodTable 1 {
+			sharedInit(BS)V;
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 69;		// javacardx/framework/tlv/BERTag.<init>()V
+					return;
+		}
+
+		.method public init(BS)V 8 {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					invokevirtual 70;		// sharedInit(BS)V
+					aload_0;
+					sconst_1;
+					putfield_b 10;		// boolean javacardx/framework/tlv/BERTag.tagPC
+					return;
+		}
+
+		.method public init([BS)V 7 {
+			.stack 3;
+			.locals 2;
+
+				L0:	aload_1;
+					sload_2;
+					baload;
+					bspush 32;
+					sand;
+					bspush 32;
+					if_scmpeq L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_1;
+					sload_2;
+					invokestatic 71;		// javacardx/framework/tlv/BERTag.tagNumber([BS)S
+					sstore_3;
+					aload_1;
+					sload_2;
+					baload;
+					bspush 6;
+					sshr;
+					sconst_3;
+					sand;
+					sstore 4;
+					aload_0;
+					sload 4;
+					sload_3;
+					invokevirtual 72;		// init(BS)V
+					return;
+		}
+
+	}
+
+	.class public PrimitiveBERTLV 4 extends BERTLV {
+
+		.publicMethodTable 5 {
+			equals(Ljava/lang/Object;)Z;
+			toBytes([BS)S;
+			getTag()Ljavacardx/framework/tlv/BERTag;;
+			getLength()S;
+			size()S;
+			init([BSS)S;
+			init(Ljavacardx/framework/tlv/PrimitiveBERTag;[BSS)S;
+			appendValue([BSS)S;
+			replaceValue([BSS)S;
+			getValue([BS)S;
+		}
+
+		.packageMethodTable 2 {
+			getLengthInternal(Z)S;
+			contains(Ljavacardx/framework/tlv/BERTLV;)Z;
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 1;
+
+				L0:	aload_0;
+					invokespecial 53;		// javacardx/framework/tlv/BERTLV.<init>()V
+				L1:	aload_0;
+					sload_1;
+					newarray 11;
+					putfield_a 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+				L2:	goto L4;
+				L3:	astore_2;
+					sconst_1;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	aload_0;
+					sload_1;
+					newarray 11;
+					putfield_a 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					aload_0;
+					sconst_0;
+					putfield_s 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					aload_0;
+					sconst_1;
+					putfield_b 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					return;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L1 L2 L3 52;
+			}
+		}
+
+		.method public init([BSS)S 5 {
+			.stack 4;
+			.locals 2;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_1;
+					sload_2;
+					sload_3;
+					invokestatic 23;		// javacardx/framework/tlv/BERTLV.verifyFormat([BSS)Z
+					ifne L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					ifnull L4;
+				L3:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L4:	aload_1;
+					sload_2;
+					invokestatic 73;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 4;
+					aload_1;
+					sload_2;
+					invokestatic 74;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sstore 5;
+					sload 5;
+					sload 4;
+					sadd;
+					sload_2;
+					sload_3;
+					sadd;
+					if_scmple L6;
+				L5:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L6:	aload_0;
+					aload_1;
+					sload_2;
+					invokestatic 57;		// javacardx/framework/tlv/BERTag.getInstance([BS)Ljavacardx/framework/tlv/BERTag;
+					putfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_0;
+					aload_1;
+					sload 5;
+					sload 4;
+					invokespecial 75;		// javacardx/framework/tlv/PrimitiveBERTLV.sharedValueInit([BSS)V
+					aload_0;
+					invokevirtual 76;		// size()S
+					sreturn;
+		}
+
+		.method public init(Ljavacardx/framework/tlv/PrimitiveBERTag;[BSS)S 6 {
+			.stack 4;
+			.locals 0;
+
+				L0:	aload_2;
+					sload_3;
+					sload 4;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					ifnull L2;
+				L1:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L2:	aload_0;
+					aload_1;
+					putfield_a 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					aload_0;
+					aload_2;
+					sload_3;
+					sload 4;
+					invokespecial 75;		// javacardx/framework/tlv/PrimitiveBERTLV.sharedValueInit([BSS)V
+					aload_0;
+					invokevirtual 76;		// size()S
+					sreturn;
+		}
+
+		.method private sharedValueInit([BSS)V {
+			.stack 5;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 18;		// isConstructed()Z
+					ifeq L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					arraylength;
+					sload_3;
+					if_scmpge L4;
+				L3:	aload_0;
+					sload_3;
+					sconst_4;
+					sadd;
+					newarray 11;
+					putfield_a 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L4:	aload_1;
+					sload_2;
+					getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sconst_0;
+					sload_3;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					aload_0;
+					sload_3;
+					putfield_s 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					aload_0;
+					sconst_0;
+					putfield_b 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					return;
+		}
+
+		.method public appendValue([BSS)S 7 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_0;
+					aload_1;
+					sload_2;
+					sload_3;
+					sconst_1;
+					invokespecial 77;		// javacardx/framework/tlv/PrimitiveBERTLV.setValue([BSSB)S
+					sreturn;
+		}
+
+		.method public replaceValue([BSS)S 8 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_0;
+					aload_1;
+					sload_2;
+					sload_3;
+					sconst_2;
+					invokespecial 77;		// javacardx/framework/tlv/PrimitiveBERTLV.setValue([BSSB)S
+					sreturn;
+		}
+
+		.method private setValue([BSSB)S {
+			.stack 5;
+			.locals 3;
+
+				L0:	sconst_0;
+					sstore 6;
+					aconst_null;
+					astore 7;
+					aload_1;
+					sload_2;
+					sload_3;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					getfield_b_this 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					ifeq L2;
+				L1:	sconst_4;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	sload 4;
+					sconst_1;
+					if_scmpne L4;
+				L3:	sload_3;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					sadd;
+					sstore 5;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					sstore 6;
+					goto L5;
+				L4:	sload_3;
+					sstore 5;
+				L5:	getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					arraylength;
+					sload 5;
+					if_scmpge L11;
+				L6:	sload 4;
+					sconst_1;
+					if_scmpne L8;
+				L7:	getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					arraylength;
+					newarray 11;
+					astore 7;
+					getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sconst_0;
+					aload 7;
+					sconst_0;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+				L8:	aload_0;
+					sload 5;
+					sconst_4;
+					sadd;
+					newarray 11;
+					putfield_a 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sload 4;
+					sconst_1;
+					if_scmpne L10;
+				L9:	aload 7;
+					sconst_0;
+					getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sconst_0;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+				L10:	invokestatic 56;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L11:	aload_1;
+					sload_2;
+					getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sload 6;
+					sload_3;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					aload_0;
+					sload 5;
+					putfield_s 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					getfield_a_this 0;		// reference javacardx/framework/tlv/BERTLV.theBERTag
+					invokevirtual 14;		// size()B
+					sadd;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					invokestatic 78;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sadd;
+					sreturn;
+		}
+
+		.method public getValue([BS)S 9 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					getfield_b_this 3;		// boolean javacardx/framework/tlv/BERTLV.emptyTLV
+					ifeq L2;
+				L1:	sconst_4;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	getfield_a_this 2;		// reference javacardx/framework/tlv/BERTLV.theValue
+					sconst_0;
+					aload_1;
+					sload_2;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					getfield_s_this 5;		// short javacardx/framework/tlv/BERTLV.valueLength
+					sreturn;
+		}
+
+		.method public static getValueOffset([BS)S 1 {
+			.stack 4;
+			.locals 1;
+
+				L0:	bspush 32;
+					aload_0;
+					sload_1;
+					baload;
+					sand;
+					ifeq L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_0;
+					sload_1;
+					aload_0;
+					arraylength;
+					sload_1;
+					ssub;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					invokestatic 79;		// javacardx/framework/tlv/BERTLV.verifyTagAndLength([BS)S
+					sstore_2;
+					sload_2;
+					sconst_m1;
+					if_scmpne L4;
+				L3:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L10;
+				L4:	sload_2;
+					bspush -2;
+					if_scmpne L6;
+				L5:	bspush 11;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L10;
+				L6:	sload_2;
+					bspush -3;
+					if_scmpne L8;
+				L7:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+					goto L10;
+				L8:	sload_2;
+					bspush -4;
+					if_scmpne L10;
+				L9:	aload_0;
+					sload_1;
+					aload_0;
+					arraylength;
+					sconst_1;
+					sadd;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+				L10:	aload_0;
+					sload_1;
+					invokestatic 27;		// javacardx/framework/tlv/BERTLV.getValueOffsetInternal([BS)S
+					sreturn;
+		}
+
+		.method public static toBytes([BS[BSS[BS)S 2 {
+			.stack 5;
+			.locals 5;
+
+				L0:	aload_0;
+					sload_1;
+					aload_0;
+					arraylength;
+					sload_1;
+					ssub;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_2;
+					sload_3;
+					sload 4;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sconst_0;
+					sstore 7;
+					sload 4;
+					invokestatic 15;		// javacardx/framework/tlv/BERTLV.getValueLengthSize(S)S
+					sstore 8;
+					sconst_0;
+					sstore 9;
+					aload_0;
+					sload_1;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore 10;
+					sload 10;
+					iflt L7;
+				L3:	sload 10;
+					invokestatic 33;		// javacardx/framework/tlv/BERTag.getTagSize(S)S
+					sstore 7;
+					sload 4;
+					sload 7;
+					sadd;
+					sload 8;
+					sadd;
+					sstore 9;
+					aload 5;
+					sload 6;
+					sload 9;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					aload 5;
+					sload 6;
+					sload 7;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					sload 6;
+					sload 7;
+					sadd;
+					sstore 11;
+					sload 4;
+					sspush 128;
+					if_scmpge L5;
+				L4:	aload 5;
+					sload 11;
+					sload 4;
+					s2b;
+					bastore;
+					sinc 11 1;
+					goto L6;
+				L5:	aload 5;
+					sload 11;
+					bspush -126;
+					bastore;
+					sinc 11 1;
+					aload 5;
+					sload 11;
+					sload 4;
+					invokestatic 17;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					sinc 11 2;
+				L6:	aload_2;
+					sload_3;
+					aload 5;
+					sload 11;
+					sload 4;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					goto L8;
+				L7:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L8:	sload 9;
+					sreturn;
+		}
+
+		.method public static appendValue([BS[BSS)S 3 {
+			.stack 5;
+			.locals 8;
+
+				L0:	sconst_0;
+					sstore 5;
+					sconst_0;
+					sstore 6;
+					sconst_0;
+					sstore 7;
+					sconst_0;
+					sstore 8;
+					sconst_0;
+					sstore 9;
+					aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					ifge L2;
+				L1:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_0;
+					sload_1;
+					invokestatic 28;		// javacardx/framework/tlv/BERTag.isConstructed([BS)Z
+					ifeq L4;
+				L3:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L4:	aload_0;
+					sload_1;
+					invokestatic 80;		// javacardx/framework/tlv/PrimitiveBERTLV.getValueOffset([BS)S
+					sstore 7;
+					aload_0;
+					sload_1;
+					invokestatic 73;		// javacardx/framework/tlv/BERTLV.getLength([BS)S
+					sstore 8;
+				L5:	goto L7;
+				L6:	astore 10;
+					bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L7:	aload_0;
+					sload_1;
+					invokestatic 32;		// javacardx/framework/tlv/BERTag.verifyFormatInternal([BS)S
+					sstore 10;
+					sload 10;
+					iflt L9;
+				L8:	sload 10;
+					invokestatic 33;		// javacardx/framework/tlv/BERTag.getTagSize(S)S
+					sstore 6;
+					goto L10;
+				L9:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L10:	sload 4;
+					sload 8;
+					sadd;
+					sspush 32767;
+					if_scmple L12;
+				L11:	bspush 10;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L12:	aload_0;
+					sload_1;
+					sload 7;
+					sload 8;
+					sadd;
+					sload_1;
+					ssub;
+					invokestatic 25;		// javacardx/framework/tlv/BERTLV.verifyFormatInternal([BSS)S
+					iflt_w L29;
+				L13:	aload_2;
+					sload_3;
+					sload 4;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_0;
+					sload_1;
+					invokestatic 81;		// javacardx/framework/tlv/BERTLV.getLengthOffset([BS)S
+					sstore 11;
+					sload 8;
+					sload 4;
+					sadd;
+					bspush 127;
+					if_scmple L18;
+				L14:	aload_0;
+					sload 11;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpeq L16;
+				L15:	sconst_2;
+					sstore 9;
+					goto L17;
+				L16:	sconst_1;
+					sstore 9;
+				L17:	aload_0;
+					sload 7;
+					sload 8;
+					sload 9;
+					sadd;
+					sload 4;
+					sadd;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					aload_2;
+					sload_3;
+					aload_0;
+					sload 7;
+					sload 8;
+					sadd;
+					sload 9;
+					sadd;
+					sload 4;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					aload_0;
+					sload 7;
+					aload_0;
+					sload 7;
+					sload 9;
+					sadd;
+					sload 8;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					aload_0;
+					sload 11;
+					bspush -126;
+					bastore;
+					sload 8;
+					sload 4;
+					sadd;
+					sstore 8;
+					aload_0;
+					sload 11;
+					sconst_1;
+					sadd;
+					sload 8;
+					invokestatic 17;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					sconst_3;
+					sstore 5;
+					goto L28;
+				L18:	aload_2;
+					sload_3;
+					aload_0;
+					sload 7;
+					sload 8;
+					sadd;
+					sload 4;
+					invokestatic 21;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					pop;
+					sload 8;
+					sload 4;
+					sadd;
+					sstore 8;
+					aload_0;
+					sload 11;
+					baload;
+					bspush -128;
+					sand;
+					bspush -128;
+					if_scmpne L27;
+				L19:	sconst_1;
+					aload_0;
+					sload 11;
+					baload;
+					bspush 127;
+					sand;
+					sadd;
+					sstore 5;
+					sload 5;
+					sconst_2;
+					if_scmpne L21;
+				L20:	aload_0;
+					sload 11;
+					sconst_1;
+					sadd;
+					sload 8;
+					s2b;
+					bastore;
+					goto L28;
+				L21:	sconst_1;
+					sstore 12;
+				L22:	sload 12;
+					sload 5;
+					sconst_2;
+					ssub;
+					if_scmpge L26;
+				L23:	aload_0;
+					sload 11;
+					sload 12;
+					sadd;
+					baload;
+					ifeq L25;
+				L24:	aload_0;
+					sload 11;
+					sload 12;
+					sadd;
+					sload 8;
+					invokestatic 17;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+				L25:	sinc 12 1;
+					goto L22;
+				L26:	goto L28;
+				L27:	aload_0;
+					sload 11;
+					sload 8;
+					s2b;
+					bastore;
+					sconst_1;
+					sstore 5;
+				L28:	goto L30;
+				L29:	bspush 6;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L30:	sload 5;
+					sload 8;
+					sadd;
+					sload 6;
+					sadd;
+					sreturn;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L4 L5 L6 52;
+			}
+		}
+
+	}
+
+	.class public final PrimitiveBERTag 5 extends BERTag {
+
+		.publicMethodTable 7 {
+			equals(Ljava/lang/Object;)Z;
+			size()B;
+			toBytes([BS)S;
+			tagNumber()S;
+			isConstructed()Z;
+			tagClass()B;
+			equals(Ljavacardx/framework/tlv/BERTag;)Z;
+			init([BS)V;
+			init(BS)V;
+		}
+
+		.packageMethodTable 1 {
+			sharedInit(BS)V;
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 69;		// javacardx/framework/tlv/BERTag.<init>()V
+					return;
+		}
+
+		.method public init(BS)V 8 {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					invokevirtual 82;		// sharedInit(BS)V
+					aload_0;
+					sconst_0;
+					putfield_b 10;		// boolean javacardx/framework/tlv/BERTag.tagPC
+					return;
+		}
+
+		.method public init([BS)V 7 {
+			.stack 3;
+			.locals 2;
+
+				L0:	aload_1;
+					sload_2;
+					baload;
+					bspush 32;
+					sand;
+					bspush 32;
+					if_scmpne L2;
+				L1:	sconst_5;
+					invokestatic 34;		// javacardx/framework/tlv/TLVException.throwIt(S)V
+				L2:	aload_1;
+					sload_2;
+					invokestatic 83;		// javacardx/framework/tlv/BERTag.tagNumber([BS)S
+					sstore_3;
+					aload_1;
+					sload_2;
+					baload;
+					bspush 6;
+					sshr;
+					sconst_3;
+					sand;
+					sstore 4;
+					aload_0;
+					sload 4;
+					sload_3;
+					invokevirtual 84;		// init(BS)V
+					return;
+		}
+
+	}
+
+	.class public TLVException 6 extends 2.5 {		// extends javacard/framework/CardRuntimeException
+
+		.fields {
+			public static final short INVALID_PARAM = 1;		// S
+			public static final short ILLEGAL_SIZE = 2;		// S
+			public static final short EMPTY_TAG = 3;		// S
+			public static final short EMPTY_TLV = 4;		// S
+			public static final short MALFORMED_TAG = 5;		// S
+			public static final short MALFORMED_TLV = 6;		// S
+			public static final short INSUFFICIENT_STORAGE = 7;		// S
+			public static final short TAG_SIZE_GREATER_THAN_127 = 8;		// S
+			public static final short TAG_NUMBER_GREATER_THAN_32767 = 9;		// S
+			public static final short TLV_SIZE_GREATER_THAN_32767 = 10;		// S
+			public static final short TLV_LENGTH_GREATER_THAN_32767 = 11;		// S
+			private static TLVException systemInstance;		// Ljavacardx/framework/tlv/TLVException;
+		}
+
+		.publicMethodTable 3 {
+			equals(Ljava/lang/Object;)Z;
+			getReason()S;
+			setReason(S)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					invokespecial 85;		// javacard/framework/CardRuntimeException.<init>(S)V
+					getstatic_a 86;		// reference javacardx/framework/tlv/TLVException.systemInstance
+					ifnonnull L3;
+				L1:	invokestatic 87;		// com/sun/javacard/impl/PrivAccess.getCurrentAppID()B
+					ifne L3;
+				L2:	aload_0;
+					putstatic_a 86;		// reference javacardx/framework/tlv/TLVException.systemInstance
+				L3:	return;
+		}
+
+		.method public static throwIt(S)V 1 {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 86;		// reference javacardx/framework/tlv/TLVException.systemInstance
+					ifnonnull L2;
+				L1:	invokestatic 88;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					invokevirtual 89;		// initTLVException()V
+				L2:	getstatic_a 86;		// reference javacardx/framework/tlv/TLVException.systemInstance
+					sload_0;
+					invokevirtual 90;		// setReason(S)V
+					getstatic_a 86;		// reference javacardx/framework/tlv/TLVException.systemInstance
+					athrow;
+		}
+
+	}
+
+}

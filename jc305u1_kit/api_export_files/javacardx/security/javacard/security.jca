@@ -1,0 +1,146 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:03 PDT 2015
+
+.package javacardx/security {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x5;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 1
+		staticMethodRef 1.5.99(Ljava/lang/Object;)V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertEqualsObj(Ljava/lang/Object;)V
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 2
+		staticMethodRef 1.5.101()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertTrue()V
+		// 3
+		staticMethodRef 1.5.102()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertFalse()V
+		// 4
+		staticMethodRef 1.5.105()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertNegative()V
+		// 5
+		staticMethodRef 1.5.106()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertPositive()V
+		// 6
+		staticMethodRef 1.5.107()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertZero()V
+		// 7
+		staticMethodRef 1.5.100(S)V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertEquals(S)V
+		// 8
+		staticMethodRef 1.5.103(S)V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertGreaterThan(S)V
+		// 9
+		staticMethodRef 1.5.104(S)V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertLessThan(S)V
+		// 10
+		staticMethodRef 1.5.108()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultReset()V
+	}
+
+	.class public final SensitiveResult 0 extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method private <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 0;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static assertEquals(Ljava/lang/Object;)V 0 {
+			.stack 1;
+			.locals 0;
+
+			.descriptor	Ljava/lang/Object;	0.0;
+
+				L0:	aload_0;
+					invokestatic 1;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertEqualsObj(Ljava/lang/Object;)V
+					return;
+		}
+
+		.method public static assertTrue()V 1 {
+			.stack 0;
+			.locals 0;
+
+				L0:	invokestatic 2;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertTrue()V
+					return;
+		}
+
+		.method public static assertFalse()V 2 {
+			.stack 0;
+			.locals 0;
+
+				L0:	invokestatic 3;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertFalse()V
+					return;
+		}
+
+		.method public static assertNegative()V 3 {
+			.stack 0;
+			.locals 0;
+
+				L0:	invokestatic 4;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertNegative()V
+					return;
+		}
+
+		.method public static assertPositive()V 4 {
+			.stack 0;
+			.locals 0;
+
+				L0:	invokestatic 5;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertPositive()V
+					return;
+		}
+
+		.method public static assertZero()V 5 {
+			.stack 0;
+			.locals 0;
+
+				L0:	invokestatic 6;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertZero()V
+					return;
+		}
+
+		.method public static assertEquals(S)V 6 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sload_0;
+					invokestatic 7;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertEquals(S)V
+					return;
+		}
+
+		.method public static assertGreaterThan(S)V 7 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sload_0;
+					invokestatic 8;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertGreaterThan(S)V
+					return;
+		}
+
+		.method public static assertLessThan(S)V 8 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sload_0;
+					invokestatic 9;		// com/sun/javacard/impl/NativeMethods.sensitiveResultAssertLessThan(S)V
+					return;
+		}
+
+		.method public static reset()V 9 {
+			.stack 0;
+			.locals 0;
+
+				L0:	invokestatic 10;		// com/sun/javacard/impl/NativeMethods.sensitiveResultReset()V
+					return;
+		}
+
+	}
+
+}

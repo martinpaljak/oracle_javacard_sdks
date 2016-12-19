@@ -1,0 +1,461 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:48:59 PDT 2015
+
+.package javacardx/biometry1toN {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x4;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1:0xE 1.0;		//com/sun/javacard/implBiometry
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 1
+		staticMethodRef Bio1toNBuilder/buildBioMatcher(SBB[BB)Ljavacardx/biometry1toN/OwnerBioMatcher;;
+		// 2
+		staticMethodRef Bio1toNException/throwIt(S)V;
+		// 3
+		staticMethodRef Bio1toNBuilder/isSunRid([B)Z;
+		// 4
+		.classRef 2.2;		// com/sun/javacard/implBiometry/PasswordBioMatcherImpl
+		// 5
+		staticMethodRef 2.2.0(SB)V;		// com/sun/javacard/implBiometry/PasswordBioMatcherImpl.<init>(SB)V
+		// 6
+		staticMethodRef Bio1toNBuilder/buildBioTemplateData(B[B)Ljavacardx/biometry1toN/OwnerBioTemplateData;;
+		// 7
+		.classRef 2.3;		// com/sun/javacard/implBiometry/PasswordBioTemplateDataImpl
+		// 8
+		staticMethodRef 2.3.0()V;		// com/sun/javacard/implBiometry/PasswordBioTemplateDataImpl.<init>()V
+		// 9
+		staticMethodRef 1.5.0(S)V;		// javacard/framework/CardRuntimeException.<init>(S)V
+		// 10
+		staticFieldRef Bio1toNException Bio1toNException/systemInstance;
+		// 11
+		staticMethodRef 3.12.19()B;		// com/sun/javacard/impl/PrivAccess.getCurrentAppID()B
+		// 12
+		staticMethodRef 3.12.2()Lcom/sun/javacard/impl/PrivAccess;;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+			.descriptor	Lcom/sun/javacard/impl/PrivAccess;	3.12;
+
+		// 13
+		virtualMethodRef 3.12.13()V;		// initBio1ToNException()V
+		// 14
+		virtualMethodRef 1.5.2(S)V;		// setReason(S)V
+	}
+
+	.interface public abstract BioMatcher 0 {
+
+		.fields {
+			public static final short MINIMUM_SUCCESSFUL_MATCH_SCORE = 16384;		// S
+			public static final short MATCH_NEEDS_MORE_DATA = -1;		// S
+		}
+
+		.method public abstract isInitialized()Z 0 {
+		}
+
+		.method public abstract isValidated()Z 1 {
+		}
+
+		.method public abstract reset()V 2 {
+		}
+
+		.method public abstract getTriesRemaining()B 3 {
+		}
+
+		.method public abstract getBioType()B 4 {
+		}
+
+		.method public abstract getVersion([BS)S 5 {
+		}
+
+		.method public abstract initMatch([BSS)S 6 {
+		}
+
+		.method public abstract match([BSS)S 7 {
+		}
+
+		.method public abstract getMaxNbOfBioTemplateData()S 8 {
+		}
+
+		.method public abstract getIndexOfLastMatchingBioTemplateData()S 9 {
+		}
+
+		.method public abstract getBioTemplateData(S)Ljavacardx/biometry1toN/BioTemplateData; 10 {
+		}
+
+	}
+
+	.interface public abstract BioTemplateData 1 {
+
+		.method public abstract getBioType()B 0 {
+		}
+
+		.method public abstract isInitialized()Z 1 {
+		}
+
+		.method public abstract getPublicData(S[BSS)S 2 {
+		}
+
+	}
+
+	.interface public abstract OwnerBioMatcher 2 {
+
+		.superInterfaces {
+			BioMatcher;
+		}
+
+		.method public abstract isInitialized()Z 0 {
+		}
+
+		.method public abstract isValidated()Z 1 {
+		}
+
+		.method public abstract reset()V 2 {
+		}
+
+		.method public abstract getTriesRemaining()B 3 {
+		}
+
+		.method public abstract getBioType()B 4 {
+		}
+
+		.method public abstract getVersion([BS)S 5 {
+		}
+
+		.method public abstract initMatch([BSS)S 6 {
+		}
+
+		.method public abstract match([BSS)S 7 {
+		}
+
+		.method public abstract getMaxNbOfBioTemplateData()S 8 {
+		}
+
+		.method public abstract getIndexOfLastMatchingBioTemplateData()S 9 {
+		}
+
+		.method public abstract getBioTemplateData(S)Ljavacardx/biometry1toN/BioTemplateData; 10 {
+		}
+
+		.method public abstract putBioTemplateData(SLjavacardx/biometry1toN/BioTemplateData;)V 11 {
+		}
+
+		.method public abstract resetUnblockAndSetTryLimit(B)V 12 {
+		}
+
+		.method public abstract getBioTemplateData(S)Ljavacardx/biometry1toN/OwnerBioTemplateData; 13 {
+		}
+
+	}
+
+	.interface public abstract OwnerBioTemplateData 3 {
+
+		.superInterfaces {
+			BioTemplateData;
+		}
+
+		.method public abstract getBioType()B 0 {
+		}
+
+		.method public abstract isInitialized()Z 1 {
+		}
+
+		.method public abstract getPublicData(S[BSS)S 2 {
+		}
+
+		.method public abstract init([BSS)V 3 {
+		}
+
+		.method public abstract update([BSS)V 4 {
+		}
+
+		.method public abstract doFinal()V 5 {
+		}
+
+	}
+
+	.interface public abstract SharedBioMatcher 4 {
+
+		.shareable;
+
+		.superInterfaces {
+			BioMatcher;
+			1.2;		// javacard/framework/Shareable
+		}
+
+		.method public abstract isInitialized()Z 0 {
+		}
+
+		.method public abstract isValidated()Z 1 {
+		}
+
+		.method public abstract reset()V 2 {
+		}
+
+		.method public abstract getTriesRemaining()B 3 {
+		}
+
+		.method public abstract getBioType()B 4 {
+		}
+
+		.method public abstract getVersion([BS)S 5 {
+		}
+
+		.method public abstract initMatch([BSS)S 6 {
+		}
+
+		.method public abstract match([BSS)S 7 {
+		}
+
+		.method public abstract getMaxNbOfBioTemplateData()S 8 {
+		}
+
+		.method public abstract getIndexOfLastMatchingBioTemplateData()S 9 {
+		}
+
+		.method public abstract getBioTemplateData(S)Ljavacardx/biometry1toN/BioTemplateData; 10 {
+		}
+
+	}
+
+	.interface public abstract SharedBioTemplateData 5 {
+
+		.shareable;
+
+		.superInterfaces {
+			BioTemplateData;
+			1.2;		// javacard/framework/Shareable
+		}
+
+		.method public abstract getBioType()B 0 {
+		}
+
+		.method public abstract isInitialized()Z 1 {
+		}
+
+		.method public abstract getPublicData(S[BSS)S 2 {
+		}
+
+	}
+
+	.class public Bio1toNBuilder 6 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte FACIAL_FEATURE = 1;		// B
+			public static final byte VOICE_PRINT = 2;		// B
+			public static final byte FINGERPRINT = 3;		// B
+			public static final byte IRIS_SCAN = 4;		// B
+			public static final byte RETINA_SCAN = 5;		// B
+			public static final byte HAND_GEOMETRY = 6;		// B
+			public static final byte SIGNATURE = 7;		// B
+			public static final byte KEYSTROKES = 8;		// B
+			public static final byte LIP_MOVEMENT = 9;		// B
+			public static final byte THERMAL_FACE = 10;		// B
+			public static final byte THERMAL_HAND = 11;		// B
+			public static final byte GAIT_STYLE = 12;		// B
+			public static final byte BODY_ODOR = 13;		// B
+			public static final byte DNA_SCAN = 14;		// B
+			public static final byte EAR_GEOMETRY = 15;		// B
+			public static final byte FINGER_GEOMETRY = 16;		// B
+			public static final byte PALM_GEOMETRY = 17;		// B
+			public static final byte VEIN_PATTERN = 18;		// B
+			public static final byte PASSWORD = 31;		// B
+			public static final byte DEFAULT_INITPARAM = 0;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method  <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 0;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static buildBioMatcher(SBB)Ljavacardx/biometry1toN/OwnerBioMatcher; 0 {
+			.stack 5;
+			.locals 0;
+
+				L0:	sload_0;
+					sload_1;
+					sload_2;
+					aconst_null;
+					sconst_0;
+					invokestatic 1;		// javacardx/biometry1toN/Bio1toNBuilder.buildBioMatcher(SBB[BB)Ljavacardx/biometry1toN/OwnerBioMatcher;
+					areturn;
+		}
+
+		.method public static buildBioMatcher(SBB[BB)Ljavacardx/biometry1toN/OwnerBioMatcher; 1 {
+			.stack 4;
+			.locals 0;
+
+				L0:	sload_0;
+					sconst_1;
+					if_scmplt L2;
+				L1:	sload_2;
+					sconst_1;
+					if_scmpge L3;
+				L2:	sconst_1;
+					invokestatic 2;		// javacardx/biometry1toN/Bio1toNException.throwIt(S)V
+				L3:	sload_1;
+					slookupswitch L8 1 31 L4;
+				L4:	aload_3;
+					invokestatic 3;		// javacardx/biometry1toN/Bio1toNBuilder.isSunRid([B)Z
+					ifeq L8;
+				L5:	sload_0;
+					bspush 50;
+					if_scmple L7;
+				L6:	bspush 6;
+					invokestatic 2;		// javacardx/biometry1toN/Bio1toNException.throwIt(S)V
+				L7:	new 4;		// com/sun/javacard/implBiometry/PasswordBioMatcherImpl
+					dup;
+					sload_0;
+					sload_2;
+					invokespecial 5;		// com/sun/javacard/implBiometry/PasswordBioMatcherImpl.<init>(SB)V
+					areturn;
+				L8:	sconst_3;
+					invokestatic 2;		// javacardx/biometry1toN/Bio1toNException.throwIt(S)V
+					aconst_null;
+					areturn;
+		}
+
+		.method public static buildBioTemplateData(B)Ljavacardx/biometry1toN/OwnerBioTemplateData; 2 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					aconst_null;
+					invokestatic 6;		// javacardx/biometry1toN/Bio1toNBuilder.buildBioTemplateData(B[B)Ljavacardx/biometry1toN/OwnerBioTemplateData;
+					areturn;
+		}
+
+		.method public static buildBioTemplateData(B[B)Ljavacardx/biometry1toN/OwnerBioTemplateData; 3 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					slookupswitch L3 1 31 L1;
+				L1:	aload_1;
+					invokestatic 3;		// javacardx/biometry1toN/Bio1toNBuilder.isSunRid([B)Z
+					ifeq L3;
+				L2:	new 7;		// com/sun/javacard/implBiometry/PasswordBioTemplateDataImpl
+					dup;
+					invokespecial 8;		// com/sun/javacard/implBiometry/PasswordBioTemplateDataImpl.<init>()V
+					areturn;
+				L3:	sconst_3;
+					invokestatic 2;		// javacardx/biometry1toN/Bio1toNException.throwIt(S)V
+					aconst_null;
+					areturn;
+		}
+
+		.method private static isSunRid([B)Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					ifnonnull L2;
+				L1:	sconst_1;
+					sreturn;
+				L2:	aload_0;
+					arraylength;
+					sconst_5;
+					if_scmpeq L4;
+				L3:	sconst_0;
+					sreturn;
+				L4:	aload_0;
+					sconst_0;
+					baload;
+					bspush -96;
+					if_scmpne L9;
+				L5:	aload_0;
+					sconst_1;
+					baload;
+					ifne L9;
+				L6:	aload_0;
+					sconst_2;
+					baload;
+					ifne L9;
+				L7:	aload_0;
+					sconst_3;
+					baload;
+					ifne L9;
+				L8:	aload_0;
+					sconst_4;
+					baload;
+					bspush 98;
+					if_scmpeq L10;
+				L9:	sconst_0;
+					sreturn;
+				L10:	sconst_1;
+					sreturn;
+		}
+
+	}
+
+	.class public Bio1toNException 7 extends 1.5 {		// extends javacard/framework/CardRuntimeException
+
+		.fields {
+			public static final short ILLEGAL_VALUE = 1;		// S
+			public static final short INVALID_DATA = 2;		// S
+			public static final short UNSUPPORTED_BIO_TYPE = 3;		// S
+			public static final short NO_BIO_TEMPLATE_ENROLLED = 4;		// S
+			public static final short ILLEGAL_USE = 5;		// S
+			public static final short BIO_TEMPLATE_DATA_CAPACITY_EXCEEDED = 6;		// S
+			public static final short MISMATCHED_BIO_TYPE = 7;		// S
+			private static Bio1toNException systemInstance;		// Ljavacardx/biometry1toN/Bio1toNException;
+		}
+
+		.publicMethodTable 3 {
+			equals(Ljava/lang/Object;)Z;
+			getReason()S;
+			setReason(S)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					invokespecial 9;		// javacard/framework/CardRuntimeException.<init>(S)V
+					getstatic_a 10;		// reference javacardx/biometry1toN/Bio1toNException.systemInstance
+					ifnonnull L3;
+				L1:	invokestatic 11;		// com/sun/javacard/impl/PrivAccess.getCurrentAppID()B
+					ifne L3;
+				L2:	aload_0;
+					putstatic_a 10;		// reference javacardx/biometry1toN/Bio1toNException.systemInstance
+				L3:	return;
+		}
+
+		.method public static throwIt(S)V 1 {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 10;		// reference javacardx/biometry1toN/Bio1toNException.systemInstance
+					ifnonnull L2;
+				L1:	invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					invokevirtual 13;		// initBio1ToNException()V
+				L2:	getstatic_a 10;		// reference javacardx/biometry1toN/Bio1toNException.systemInstance
+					sload_0;
+					invokevirtual 14;		// setReason(S)V
+					getstatic_a 10;		// reference javacardx/biometry1toN/Bio1toNException.systemInstance
+					athrow;
+		}
+
+	}
+
+}

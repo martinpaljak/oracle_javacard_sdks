@@ -1,0 +1,749 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:00 PDT 2015
+
+.package javacardx/crypto {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x1;
+	.version 1.6;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x2 1.6;		//javacard/security
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1:0xF 1.0;		//com/sun/javacard/crypto
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef 0.0[] Cipher$OneShot/actualInstance;
+		// 1
+		.classRef 2.14;		// com/sun/javacard/crypto/DESCBCISO9797M2Cipher
+		// 2
+		staticMethodRef 2.14.0(BBB)V;		// com/sun/javacard/crypto/DESCBCISO9797M2Cipher.<init>(BBB)V
+		// 3
+		.classRef 2.34;		// com/sun/javacard/crypto/AES128CBCCipher
+		// 4
+		staticMethodRef 2.34.0(BBB)V;		// com/sun/javacard/crypto/AES128CBCCipher.<init>(BBB)V
+		// 5
+		.classRef 2.39;		// com/sun/javacard/crypto/RSAPKCS1Cipher
+		// 6
+		staticMethodRef 2.39.0(BBB)V;		// com/sun/javacard/crypto/RSAPKCS1Cipher.<init>(BBB)V
+		// 7
+		.classRef 2.37;		// com/sun/javacard/crypto/AES128CCMCipher
+		// 8
+		staticMethodRef 2.37.0()V;		// com/sun/javacard/crypto/AES128CCMCipher.<init>()V
+		// 9
+		.classRef 2.3;		// com/sun/javacard/crypto/AES128GCMCipher
+		// 10
+		staticMethodRef 2.3.0()V;		// com/sun/javacard/crypto/AES128GCMCipher.<init>()V
+		// 11
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 12
+		staticFieldRef Cipher$OneShot Cipher$OneShot/systemInstance;
+		// 13
+		.classRef Cipher$OneShot;
+		// 14
+		staticMethodRef Cipher$OneShot/<init>()V;
+		// 15
+		staticMethodRef 3.5.32(Ljava/lang/Object;Z)V;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 16
+		staticFieldRef boolean[] Cipher$OneShot/opened;
+		// 17
+		staticMethodRef 4.8.12(SB)[Z;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+		// 18
+		staticMethodRef Cipher$OneShot/isClosed()Z;
+		// 19
+		staticMethodRef 3.5.29()B;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+		// 20
+		staticMethodRef 3.5.33(Ljava/lang/Object;B)V;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 21
+		staticMethodRef Cipher/getInstance(BBZ)Ljavacardx/crypto/Cipher;;
+		// 22
+		staticMethodRef Cipher$OneShot/setActual(Ljavacardx/crypto/Cipher;B)V;
+		// 23
+		staticMethodRef 4.13.1(S)V;		// javacard/framework/SystemException.throwIt(S)V
+		// 24
+		staticMethodRef 1.12.1(S)V;		// javacard/security/CryptoException.throwIt(S)V
+		// 25
+		staticMethodRef 3.5.30()B;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+		// 26
+		staticMethodRef 3.5.34(Ljava/lang/Object;)S;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 27
+		staticMethodRef Cipher/<init>()V;
+		// 28
+		staticMethodRef 4.8.14(SB)[Ljava/lang/Object;;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 29
+		staticMethodRef Cipher$OneShot/isActualClosed()Z;
+		// 30
+		staticMethodRef Cipher$OneShot/checkContext()Z;
+		// 31
+		staticMethodRef 3.13.2()V;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+		// 32
+		staticMethodRef 4.8.17()Z;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+		// 33
+		staticMethodRef 4.8.18()V;		// javacard/framework/JCSystem.requestObjectDeletion()V
+		// 34
+		.classRef Cipher;
+		// 35
+		virtualMethodRef Cipher/init(Ljavacard/security/Key;B)V;
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		// 36
+		virtualMethodRef Cipher/init(Ljavacard/security/Key;B[BSS)V;
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		// 37
+		virtualMethodRef Cipher/getAlgorithm()B;
+		// 38
+		virtualMethodRef Cipher/getCipherAlgorithm()B;
+		// 39
+		virtualMethodRef Cipher/getPaddingAlgorithm()B;
+		// 40
+		virtualMethodRef Cipher/doFinal([BSS[BS)S;
+	}
+
+	.interface public abstract KeyEncryption 0 {
+
+		.method public abstract getKeyCipher()Ljavacardx/crypto/Cipher; 0 {
+		}
+
+		.method public abstract setKeyCipher(Ljavacardx/crypto/Cipher;)V 1 {
+		}
+
+	}
+
+	.class public abstract Cipher 1 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte ALG_DES_CBC_NOPAD = 1;		// B
+			public static final byte ALG_DES_CBC_ISO9797_M1 = 2;		// B
+			public static final byte ALG_DES_CBC_ISO9797_M2 = 3;		// B
+			public static final byte ALG_DES_CBC_PKCS5 = 4;		// B
+			public static final byte ALG_DES_ECB_NOPAD = 5;		// B
+			public static final byte ALG_DES_ECB_ISO9797_M1 = 6;		// B
+			public static final byte ALG_DES_ECB_ISO9797_M2 = 7;		// B
+			public static final byte ALG_DES_ECB_PKCS5 = 8;		// B
+			public static final byte ALG_RSA_ISO14888 = 9;		// B
+			public static final byte ALG_RSA_PKCS1 = 10;		// B
+			public static final byte ALG_RSA_ISO9796 = 11;		// B
+			public static final byte ALG_RSA_NOPAD = 12;		// B
+			public static final byte ALG_AES_BLOCK_128_CBC_NOPAD = 13;		// B
+			public static final byte ALG_AES_BLOCK_128_ECB_NOPAD = 14;		// B
+			public static final byte ALG_RSA_PKCS1_OAEP = 15;		// B
+			public static final byte ALG_KOREAN_SEED_ECB_NOPAD = 16;		// B
+			public static final byte ALG_KOREAN_SEED_CBC_NOPAD = 17;		// B
+			public static final byte ALG_AES_BLOCK_192_CBC_NOPAD = 18;		// B
+			public static final byte ALG_AES_BLOCK_192_ECB_NOPAD = 19;		// B
+			public static final byte ALG_AES_BLOCK_256_CBC_NOPAD = 20;		// B
+			public static final byte ALG_AES_BLOCK_256_ECB_NOPAD = 21;		// B
+			public static final byte ALG_AES_CBC_ISO9797_M1 = 22;		// B
+			public static final byte ALG_AES_CBC_ISO9797_M2 = 23;		// B
+			public static final byte ALG_AES_CBC_PKCS5 = 24;		// B
+			public static final byte ALG_AES_ECB_ISO9797_M1 = 25;		// B
+			public static final byte ALG_AES_ECB_ISO9797_M2 = 26;		// B
+			public static final byte ALG_AES_ECB_PKCS5 = 27;		// B
+			public static final byte CIPHER_AES_CBC = 1;		// B
+			public static final byte CIPHER_AES_ECB = 2;		// B
+			public static final byte CIPHER_DES_CBC = 3;		// B
+			public static final byte CIPHER_DES_ECB = 4;		// B
+			public static final byte CIPHER_KOREAN_SEED_CBC = 5;		// B
+			public static final byte CIPHER_KOREAN_SEED_ECB = 6;		// B
+			public static final byte CIPHER_RSA = 7;		// B
+			public static final byte PAD_NULL = 0;		// B
+			public static final byte PAD_NOPAD = 1;		// B
+			public static final byte PAD_ISO9797_M1 = 2;		// B
+			public static final byte PAD_ISO9797_M2 = 3;		// B
+			public static final byte PAD_ISO9797_1_M1_ALG3 = 4;		// B
+			public static final byte PAD_ISO9797_1_M2_ALG3 = 5;		// B
+			public static final byte PAD_PKCS5 = 6;		// B
+			public static final byte PAD_PKCS1 = 7;		// B
+			public static final byte PAD_PKCS1_PSS = 8;		// B
+			public static final byte PAD_PKCS1_OAEP = 9;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA224 = 13;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA256 = 14;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA384 = 15;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA512 = 16;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA3_224 = 17;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA3_256 = 18;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA3_384 = 19;		// B
+			public static final byte PAD_PKCS1_OAEP_SHA3_512 = 20;		// B
+			public static final byte PAD_ISO9796 = 10;		// B
+			public static final byte PAD_ISO9796_MR = 11;		// B
+			public static final byte PAD_RFC2409 = 12;		// B
+			public static final byte MODE_DECRYPT = 1;		// B
+			public static final byte MODE_ENCRYPT = 2;		// B
+			public static final byte ALG_AES_CTR = -16;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			init(Ljavacard/security/Key;B)V;
+			init(Ljavacard/security/Key;B[BSS)V;
+			update([BSS[BS)S;
+			getCipherAlgorithm()B;
+			getPaddingAlgorithm()B;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final getInstance(BZ)Ljavacardx/crypto/Cipher; 0 {
+			.stack 5;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_2;
+					sload_1;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	sload_0;
+					slookupswitch L8 5 -13 L7 -12 L6 3 L3 10 L5 13 L4;
+				L3:	new 1;		// com/sun/javacard/crypto/DESCBCISO9797M2Cipher
+					dup;
+					sload_0;
+					sconst_3;
+					sconst_3;
+					invokespecial 2;		// com/sun/javacard/crypto/DESCBCISO9797M2Cipher.<init>(BBB)V
+					astore_2;
+					goto L9;
+				L4:	new 3;		// com/sun/javacard/crypto/AES128CBCCipher
+					dup;
+					sload_0;
+					sconst_1;
+					sconst_1;
+					invokespecial 4;		// com/sun/javacard/crypto/AES128CBCCipher.<init>(BBB)V
+					astore_2;
+					goto L9;
+				L5:	new 5;		// com/sun/javacard/crypto/RSAPKCS1Cipher
+					dup;
+					sload_0;
+					bspush 7;
+					bspush 7;
+					invokespecial 6;		// com/sun/javacard/crypto/RSAPKCS1Cipher.<init>(BBB)V
+					astore_2;
+					goto L9;
+				L6:	new 7;		// com/sun/javacard/crypto/AES128CCMCipher
+					dup;
+					invokespecial 8;		// com/sun/javacard/crypto/AES128CCMCipher.<init>()V
+					astore_2;
+					goto L9;
+				L7:	new 9;		// com/sun/javacard/crypto/AES128GCMCipher
+					dup;
+					invokespecial 10;		// com/sun/javacard/crypto/AES128GCMCipher.<init>()V
+					astore_2;
+					goto L9;
+				L8:	sconst_3;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L9:	aload_2;
+					areturn;
+		}
+
+		.method public static final getInstance(BBZ)Ljavacardx/crypto/Cipher; 2 {
+			.stack 5;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_3;
+					sload_2;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	sload_0;
+					slookupswitch L15 4 -12 L12 1 L6 3 L3 7 L9;
+				L3:	sload_1;
+					slookupswitch L5 1 3 L4;
+				L4:	new 1;		// com/sun/javacard/crypto/DESCBCISO9797M2Cipher
+					dup;
+					sconst_3;
+					sconst_3;
+					sconst_3;
+					invokespecial 2;		// com/sun/javacard/crypto/DESCBCISO9797M2Cipher.<init>(BBB)V
+					astore_3;
+					goto L15;
+				L5:	goto L15;
+				L6:	sload_1;
+					slookupswitch L8 1 1 L7;
+				L7:	new 3;		// com/sun/javacard/crypto/AES128CBCCipher
+					dup;
+					bspush 13;
+					sconst_1;
+					sconst_1;
+					invokespecial 4;		// com/sun/javacard/crypto/AES128CBCCipher.<init>(BBB)V
+					astore_3;
+					goto L15;
+				L8:	goto L15;
+				L9:	sload_1;
+					slookupswitch L11 1 7 L10;
+				L10:	new 5;		// com/sun/javacard/crypto/RSAPKCS1Cipher
+					dup;
+					bspush 10;
+					bspush 7;
+					bspush 7;
+					invokespecial 6;		// com/sun/javacard/crypto/RSAPKCS1Cipher.<init>(BBB)V
+					astore_3;
+					goto L15;
+				L11:	goto L15;
+				L12:	sload_1;
+					slookupswitch L14 1 1 L13;
+				L13:	new 7;		// com/sun/javacard/crypto/AES128CCMCipher
+					dup;
+					invokespecial 8;		// com/sun/javacard/crypto/AES128CCMCipher.<init>()V
+					astore_3;
+					goto L15;
+				L14:	goto L15;
+				L15:	aload_3;
+					ifnonnull L17;
+				L16:	sconst_3;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L17:	aload_3;
+					areturn;
+		}
+
+		.method protected <init>()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 11;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B)V 3 {
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B[BSS)V 4 {
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		}
+
+		.method public abstract getAlgorithm()B 2 {
+		}
+
+		.method public abstract getCipherAlgorithm()B 6 {
+		}
+
+		.method public abstract getPaddingAlgorithm()B 7 {
+		}
+
+		.method public abstract doFinal([BSS[BS)S 1 {
+		}
+
+		.method public abstract update([BSS[BS)S 5 {
+		}
+
+	}
+
+	.class public final Cipher$OneShot 2 extends Cipher {
+
+		.fields {
+			private 0.0[] actualInstance 0;		// [Ljava/lang/Object;
+			private static Cipher$OneShot systemInstance;		// Ljavacardx/crypto/Cipher$OneShot;
+			private static boolean[] opened;		// [Z
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			init(Ljavacard/security/Key;B)V;
+			init(Ljavacard/security/Key;B[BSS)V;
+			update([BSS[BS)S;
+			getCipherAlgorithm()B;
+			getPaddingAlgorithm()B;
+			close()V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final open(BB)Ljavacardx/crypto/Cipher$OneShot; 0 {
+			.stack 4;
+			.locals 1;
+
+				L0:	getstatic_a 12;		// reference javacardx/crypto/Cipher$OneShot.systemInstance
+					ifnonnull L2;
+				L1:	new 13;		// javacardx/crypto/Cipher$OneShot
+					dup;
+					invokespecial 14;		// javacardx/crypto/Cipher$OneShot.<init>()V
+					putstatic_a 12;		// reference javacardx/crypto/Cipher$OneShot.systemInstance
+					getstatic_a 12;		// reference javacardx/crypto/Cipher$OneShot.systemInstance
+					sconst_1;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L2:	getstatic_a 16;		// reference javacardx/crypto/Cipher$OneShot.opened
+					ifnonnull L4;
+				L3:	sconst_1;
+					sconst_2;
+					invokestatic 17;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+					putstatic_a 16;		// reference javacardx/crypto/Cipher$OneShot.opened
+					getstatic_a 16;		// reference javacardx/crypto/Cipher$OneShot.opened
+					sconst_1;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L4:	invokestatic 18;		// javacardx/crypto/Cipher$OneShot.isClosed()Z
+					ifeq L6;
+				L5:	invokestatic 19;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+					sstore_2;
+					getstatic_a 12;		// reference javacardx/crypto/Cipher$OneShot.systemInstance
+					sload_2;
+					invokestatic 20;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getstatic_a 12;		// reference javacardx/crypto/Cipher$OneShot.systemInstance
+					sload_0;
+					sload_1;
+					sconst_0;
+					invokestatic 21;		// javacardx/crypto/Cipher.getInstance(BBZ)Ljavacardx/crypto/Cipher;
+					sload_2;
+					invokespecial 22;		// javacardx/crypto/Cipher$OneShot.setActual(Ljavacardx/crypto/Cipher;B)V
+					goto L7;
+				L6:	sconst_5;
+					invokestatic 23;		// javacard/framework/SystemException.throwIt(S)V
+				L7:	getstatic_a 12;		// reference javacardx/crypto/Cipher$OneShot.systemInstance
+					areturn;
+		}
+
+		.method private static isClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 16;		// reference javacardx/crypto/Cipher$OneShot.opened
+					sconst_0;
+					baload;
+					ifne L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private isActualClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnonnull L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private checkContext()Z {
+			.stack 3;
+			.locals 1;
+
+				L0:	invokestatic 25;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+					sstore_1;
+					sload_1;
+					ifeq L2;
+				L1:	sload_1;
+					getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					invokestatic 26;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+					if_scmpne L3;
+				L2:	sconst_1;
+					goto L4;
+				L3:	sconst_0;
+				L4:	sreturn;
+		}
+
+		.method private setActual(Ljavacardx/crypto/Cipher;B)V {
+			.stack 3;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sload_2;
+					invokestatic 20;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aload_1;
+					aastore;
+					getstatic_a 16;		// reference javacardx/crypto/Cipher$OneShot.opened
+					sconst_0;
+					sconst_1;
+					bastore;
+					return;
+		}
+
+		.method private <init>()V {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 27;		// javacardx/crypto/Cipher.<init>()V
+					aload_0;
+					sconst_1;
+					sconst_2;
+					invokestatic 28;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+					putfield_a 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					return;
+		}
+
+		.method public close()V 8 {
+			.stack 3;
+			.locals 0;
+
+				L0:	invokestatic 18;		// javacardx/crypto/Cipher$OneShot.isClosed()Z
+					ifne L2;
+				L1:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L3;
+				L2:	return;
+				L3:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L5;
+				L4:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L5:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnull L8;
+				L6:	invokestatic 32;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+					ifeq L8;
+				L7:	invokestatic 33;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L8:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aconst_null;
+					aastore;
+					getstatic_a 16;		// reference javacardx/crypto/Cipher$OneShot.opened
+					sconst_0;
+					sconst_0;
+					bastore;
+					return;
+		}
+
+		.method public update([BSS[BS)S 5 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+					sconst_0;
+					sreturn;
+		}
+
+		.method public init(Ljavacard/security/Key;B)V 3 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+				L0:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 34;		// T_CLASSORINTERFACE javacardx/crypto/Cipher
+					aload_1;
+					sload_2;
+					invokevirtual 35;		// init(Ljavacard/security/Key;B)V
+					return;
+		}
+
+		.method public init(Ljavacard/security/Key;B[BSS)V 4 {
+			.stack 6;
+			.locals 0;
+
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+				L0:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 34;		// T_CLASSORINTERFACE javacardx/crypto/Cipher
+					aload_1;
+					sload_2;
+					aload_3;
+					sload 4;
+					sload 5;
+					invokevirtual 36;		// init(Ljavacard/security/Key;B[BSS)V
+					return;
+		}
+
+		.method public getAlgorithm()B 2 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 34;		// T_CLASSORINTERFACE javacardx/crypto/Cipher
+					invokevirtual 37;		// getAlgorithm()B
+					sreturn;
+		}
+
+		.method public getCipherAlgorithm()B 6 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 34;		// T_CLASSORINTERFACE javacardx/crypto/Cipher
+					invokevirtual 38;		// getCipherAlgorithm()B
+					sreturn;
+		}
+
+		.method public getPaddingAlgorithm()B 7 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 34;		// T_CLASSORINTERFACE javacardx/crypto/Cipher
+					invokevirtual 39;		// getPaddingAlgorithm()B
+					sreturn;
+		}
+
+		.method public doFinal([BSS[BS)S 1 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 29;		// javacardx/crypto/Cipher$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 24;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 30;		// javacardx/crypto/Cipher$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 31;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacardx/crypto/Cipher$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 34;		// T_CLASSORINTERFACE javacardx/crypto/Cipher
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					invokevirtual 40;		// doFinal([BSS[BS)S
+					sreturn;
+		}
+
+	}
+
+	.class public abstract AEADCipher 3 extends Cipher {
+
+		.fields {
+			public static final byte CIPHER_AES_GCM = -15;		// B
+			public static final byte CIPHER_AES_CCM = -14;		// B
+			public static final byte ALG_AES_GCM = -13;		// B
+			public static final byte ALG_AES_CCM = -12;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			init(Ljavacard/security/Key;B)V;
+			init(Ljavacard/security/Key;B[BSS)V;
+			update([BSS[BS)S;
+			getCipherAlgorithm()B;
+			getPaddingAlgorithm()B;
+			init(Ljavacard/security/Key;B[BSSSSS)V;
+			updateAAD([BSS)V;
+			retrieveTag([BSS)S;
+			verifyTag([BSSS)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method protected <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 27;		// javacardx/crypto/Cipher.<init>()V
+					return;
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B)V 3 {
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B[BSS)V 4 {
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B[BSSSSS)V 8 {
+			.descriptor	Ljavacard/security/Key;	1.0;
+
+		}
+
+		.method public abstract updateAAD([BSS)V 9 {
+		}
+
+		.method public abstract update([BSS[BS)S 5 {
+		}
+
+		.method public abstract doFinal([BSS[BS)S 1 {
+		}
+
+		.method public abstract retrieveTag([BSS)S 10 {
+		}
+
+		.method public abstract verifyTag([BSSS)Z 11 {
+		}
+
+	}
+
+}

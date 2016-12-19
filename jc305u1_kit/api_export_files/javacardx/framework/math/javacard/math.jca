@@ -1,0 +1,416 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:01 PDT 2015
+
+.package javacardx/framework/math {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x2;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef byte[] BigNumber/number;
+		// 1
+		instanceFieldRef byte[] BigNumber/maxValue;
+		// 2
+		staticMethodRef 1.5.81([BSS[BS)S;		// com/sun/javacard/impl/NativeMethods.convertToBCD([BSS[BS)S
+		// 3
+		staticMethodRef 1.5.82([BSS)Z;		// com/sun/javacard/impl/NativeMethods.isBCDFormat([BSS)Z
+		// 4
+		staticMethodRef BigNumber/getMaxBytesSupported()S;
+		// 5
+		staticMethodRef 1.5.83(SS)V;		// com/sun/javacard/impl/NativeMethods.checkForValidBNSize(SS)V
+		// 6
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 7
+		staticMethodRef 1.5.80([BSS[BS)S;		// com/sun/javacard/impl/NativeMethods.convertToHex([BSS[BS)S
+		// 8
+		staticMethodRef 2.16.3([BSSB)S;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+		// 9
+		staticMethodRef 1.5.84([BSSB[B[B)V;		// com/sun/javacard/impl/NativeMethods.setMaxBNValue([BSSB[B[B)V
+		// 10
+		staticMethodRef 1.5.85([BSSB[B[B)V;		// com/sun/javacard/impl/NativeMethods.initBigNumber([BSSB[B[B)V
+		// 11
+		staticMethodRef 1.5.86([BSSB[B[B)V;		// com/sun/javacard/impl/NativeMethods.addBigNumbers([BSSB[B[B)V
+		// 12
+		staticMethodRef 1.5.87([BSSB[B[B)V;		// com/sun/javacard/impl/NativeMethods.subtractBigNumbers([BSSB[B[B)V
+		// 13
+		staticMethodRef 1.5.88([BSSB[B[B)V;		// com/sun/javacard/impl/NativeMethods.multiplyBigNumbers([BSSB[B[B)V
+		// 14
+		staticMethodRef 1.5.98()V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultSetTagValUnassigned()V
+		// 15
+		staticMethodRef 1.5.89([BSSB[B)B;		// com/sun/javacard/impl/NativeMethods.compareBigNumbers([BSSB[B)B
+		// 16
+		staticMethodRef 1.5.96(S)V;		// com/sun/javacard/impl/NativeMethods.sensitiveResultSet(S)V
+		// 17
+		staticMethodRef 1.5.90([BSSB[B)V;		// com/sun/javacard/impl/NativeMethods.bigNumberToBytes([BSSB[B)V
+		// 18
+		staticMethodRef 1.5.91([BB)B;		// com/sun/javacard/impl/NativeMethods.getBNByteLength([BB)B
+		// 19
+		staticMethodRef 1.5.75([BSS)V;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+	}
+
+	.class public final BCDUtil 0 extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static getMaxBytesSupported()S 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	bspush 8;
+					sreturn;
+		}
+
+		.method public static convertToHex([BSS[BS)S 2 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					aload_3;
+					sload 4;
+					invokestatic 7;		// com/sun/javacard/impl/NativeMethods.convertToHex([BSS[BS)S
+					sreturn;
+		}
+
+		.method public static convertToBCD([BSS[BS)S 3 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					aload_3;
+					sload 4;
+					invokestatic 2;		// com/sun/javacard/impl/NativeMethods.convertToBCD([BSS[BS)S
+					sreturn;
+		}
+
+		.method public static isBCDFormat([BSS)Z 4 {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					invokestatic 3;		// com/sun/javacard/impl/NativeMethods.isBCDFormat([BSS)Z
+					sreturn;
+		}
+
+	}
+
+	.class public final BigNumber 1 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			 byte[] number 0;		// [B
+			 byte[] maxValue 1;		// [B
+			public static final byte FORMAT_BCD = 1;		// B
+			public static final byte FORMAT_HEX = 2;		// B
+			static final byte MAX_BYTES_SUPPORTED = 8;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			setMaximum([BSSB)V;
+			init([BSSB)V;
+			add([BSSB)V;
+			subtract([BSSB)V;
+			multiply([BSSB)V;
+			compareTo(Ljavacardx/framework/math/BigNumber;)B;
+			compareTo([BSSB)B;
+			toBytes([BSSB)V;
+			getByteLength(B)S;
+			reset()V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 4;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					invokestatic 4;		// javacardx/framework/math/BigNumber.getMaxBytesSupported()S
+					sload_1;
+					invokestatic 5;		// com/sun/javacard/impl/NativeMethods.checkForValidBNSize(SS)V
+					aload_0;
+					sload_1;
+					newarray 11;
+					putfield_a 0;		// reference javacardx/framework/math/BigNumber.number
+					aload_0;
+					sload_1;
+					newarray 11;
+					putfield_a 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					getfield_a_this 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					sconst_0;
+					sload_1;
+					sconst_m1;
+					invokestatic 8;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					pop;
+					return;
+		}
+
+		.method public setMaximum([BSSB)V 1 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					invokestatic 9;		// com/sun/javacard/impl/NativeMethods.setMaxBNValue([BSSB[B[B)V
+					return;
+		}
+
+		.method public static getMaxBytesSupported()S 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	bspush 8;
+					sreturn;
+		}
+
+		.method public init([BSSB)V 2 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					getfield_a_this 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.initBigNumber([BSSB[B[B)V
+					return;
+		}
+
+		.method public add([BSSB)V 3 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					getfield_a_this 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					invokestatic 11;		// com/sun/javacard/impl/NativeMethods.addBigNumbers([BSSB[B[B)V
+					return;
+		}
+
+		.method public subtract([BSSB)V 4 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					getfield_a_this 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					invokestatic 12;		// com/sun/javacard/impl/NativeMethods.subtractBigNumbers([BSSB[B[B)V
+					return;
+		}
+
+		.method public multiply([BSSB)V 5 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					getfield_a_this 1;		// reference javacardx/framework/math/BigNumber.maxValue
+					invokestatic 13;		// com/sun/javacard/impl/NativeMethods.multiplyBigNumbers([BSSB[B[B)V
+					return;
+		}
+
+		.method public compareTo(Ljavacardx/framework/math/BigNumber;)B 6 {
+			.stack 5;
+			.locals 1;
+
+				L0:	invokestatic 14;		// com/sun/javacard/impl/NativeMethods.sensitiveResultSetTagValUnassigned()V
+					aload_1;
+					getfield_a 0;		// reference javacardx/framework/math/BigNumber.number
+					sconst_0;
+					aload_1;
+					getfield_a 0;		// reference javacardx/framework/math/BigNumber.number
+					arraylength;
+					sconst_2;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.compareBigNumbers([BSSB[B)B
+					sstore_2;
+					sload_2;
+					invokestatic 16;		// com/sun/javacard/impl/NativeMethods.sensitiveResultSet(S)V
+					sload_2;
+					sreturn;
+		}
+
+		.method public compareTo([BSSB)B 7 {
+			.stack 5;
+			.locals 1;
+
+				L0:	invokestatic 14;		// com/sun/javacard/impl/NativeMethods.sensitiveResultSetTagValUnassigned()V
+					aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.compareBigNumbers([BSSB[B)B
+					sstore 5;
+					sload 5;
+					invokestatic 16;		// com/sun/javacard/impl/NativeMethods.sensitiveResultSet(S)V
+					sload 5;
+					sreturn;
+		}
+
+		.method public toBytes([BSSB)V 8 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sload_3;
+					sload 4;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					invokestatic 17;		// com/sun/javacard/impl/NativeMethods.bigNumberToBytes([BSSB[B)V
+					return;
+		}
+
+		.method public getByteLength(B)S 9 {
+			.stack 2;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					sload_1;
+					invokestatic 18;		// com/sun/javacard/impl/NativeMethods.getBNByteLength([BB)B
+					sreturn;
+		}
+
+		.method public reset()V 10 {
+			.stack 4;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					sconst_0;
+					getfield_a_this 0;		// reference javacardx/framework/math/BigNumber.number
+					arraylength;
+					sconst_0;
+					invokestatic 8;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					pop;
+					return;
+		}
+
+	}
+
+	.class public final ParityBit 2 extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static set([BSSZ)V 1 {
+			.stack 5;
+			.locals 3;
+
+				L0:	aload_0;
+					sload_1;
+					sload_2;
+					invokestatic 19;		// com/sun/javacard/impl/NativeMethods.checkArrayArgs([BSS)V
+					sload_1;
+					sstore 4;
+				L1:	sload 4;
+					sload_1;
+					sload_2;
+					sadd;
+					if_scmpge L11;
+				L2:	aload_0;
+					sload 4;
+					baload;
+					sconst_1;
+					sshr;
+					bspush 127;
+					sand;
+					sstore 5;
+					sconst_0;
+					sstore 6;
+				L3:	sload 5;
+					ifeq L7;
+				L4:	sload 5;
+					sconst_1;
+					sand;
+					sconst_1;
+					if_scmpne L6;
+				L5:	sconst_1;
+					sload 6;
+					ssub;
+					s2b;
+					sstore 6;
+				L6:	sload 5;
+					sconst_1;
+					sshr;
+					sstore 5;
+					goto L3;
+				L7:	aload_0;
+					sload 4;
+					aload_0;
+					sload 4;
+					baload;
+					sspush 254;
+					sand;
+					s2b;
+					sload_3;
+					ifeq L9;
+				L8:	sload 6;
+					goto L10;
+				L9:	sconst_1;
+					sload 6;
+					ssub;
+					s2b;
+				L10:	sor;
+					bastore;
+					sinc 4 1;
+					goto L1;
+				L11:	return;
+		}
+
+	}
+
+}

@@ -1,0 +1,3804 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:48:58 PDT 2015
+
+.package javacard/security {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x1:0x2;
+	.version 1.6;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1:0xF 1.0;		//com/sun/javacard/crypto
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef 0.0[] MessageDigest$OneShot/actualInstance;
+		// 1
+		instanceFieldRef 0.0[] InitializedMessageDigest$OneShot/actualInstance;
+		// 2
+		instanceFieldRef 0.0[] RandomData$OneShot/actualInstance;
+		// 3
+		instanceFieldRef 1.0 KeyPair/kp;
+		// 4
+		instanceFieldRef 0.0[] Signature$OneShot/actualInstance;
+		// 5
+		.classRef InitializedMessageDigest;
+		// 6
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 7
+		staticFieldRef MessageDigest$OneShot MessageDigest$OneShot/systemInstance;
+		// 8
+		.classRef MessageDigest$OneShot;
+		// 9
+		staticMethodRef MessageDigest$OneShot/<init>()V;
+		// 10
+		staticMethodRef 2.5.32(Ljava/lang/Object;Z)V;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 11
+		staticFieldRef boolean[] MessageDigest$OneShot/opened;
+		// 12
+		staticMethodRef 3.8.12(SB)[Z;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+		// 13
+		staticMethodRef MessageDigest$OneShot/isClosed()Z;
+		// 14
+		staticMethodRef 2.5.29()B;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+		// 15
+		staticMethodRef 2.5.33(Ljava/lang/Object;B)V;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 16
+		staticMethodRef MessageDigest/getInstance(BZ)Ljavacard/security/MessageDigest;;
+		// 17
+		staticMethodRef MessageDigest$OneShot/setActual(Ljavacard/security/MessageDigest;B)V;
+		// 18
+		staticMethodRef 3.13.1(S)V;		// javacard/framework/SystemException.throwIt(S)V
+		// 19
+		staticMethodRef CryptoException/throwIt(S)V;
+		// 20
+		staticMethodRef 2.5.30()B;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+		// 21
+		staticMethodRef 2.5.34(Ljava/lang/Object;)S;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 22
+		staticMethodRef MessageDigest/<init>()V;
+		// 23
+		staticMethodRef 3.8.14(SB)[Ljava/lang/Object;;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 24
+		staticMethodRef MessageDigest$OneShot/isActualClosed()Z;
+		// 25
+		staticMethodRef MessageDigest$OneShot/checkContext()Z;
+		// 26
+		staticMethodRef 2.13.2()V;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+		// 27
+		staticMethodRef 3.8.17()Z;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+		// 28
+		staticMethodRef 3.8.18()V;		// javacard/framework/JCSystem.requestObjectDeletion()V
+		// 29
+		.classRef MessageDigest;
+		// 30
+		virtualMethodRef MessageDigest/getAlgorithm()B;
+		// 31
+		virtualMethodRef MessageDigest/getLength()B;
+		// 32
+		virtualMethodRef MessageDigest/doFinal([BSS[BS)S;
+		// 33
+		virtualMethodRef MessageDigest/reset()V;
+		// 34
+		staticFieldRef InitializedMessageDigest$OneShot InitializedMessageDigest$OneShot/systemInstance;
+		// 35
+		.classRef InitializedMessageDigest$OneShot;
+		// 36
+		staticMethodRef InitializedMessageDigest$OneShot/<init>()V;
+		// 37
+		staticFieldRef boolean[] InitializedMessageDigest$OneShot/opened;
+		// 38
+		staticMethodRef InitializedMessageDigest$OneShot/isClosed()Z;
+		// 39
+		staticMethodRef MessageDigest/getInitializedMessageDigestInstance(BZ)Ljavacard/security/InitializedMessageDigest;;
+		// 40
+		staticMethodRef InitializedMessageDigest$OneShot/setActual(Ljavacard/security/InitializedMessageDigest;B)V;
+		// 41
+		.classRef 1.48;		// com/sun/javacard/crypto/SHAMessageDigest
+		// 42
+		staticMethodRef InitializedMessageDigest/<init>()V;
+		// 43
+		staticMethodRef InitializedMessageDigest$OneShot/isActualClosed()Z;
+		// 44
+		staticMethodRef InitializedMessageDigest$OneShot/checkContext()Z;
+		// 45
+		virtualMethodRef InitializedMessageDigest/setInitialDigest([BSS[BSS)V;
+		// 46
+		virtualMethodRef MessageDigest/getAlgorithm()B;
+		// 47
+		virtualMethodRef MessageDigest/getLength()B;
+		// 48
+		virtualMethodRef MessageDigest/doFinal([BSS[BS)S;
+		// 49
+		virtualMethodRef MessageDigest/reset()V;
+		// 50
+		staticMethodRef 3.5.0(S)V;		// javacard/framework/CardRuntimeException.<init>(S)V
+		// 51
+		staticFieldRef CryptoException CryptoException/systemInstance;
+		// 52
+		.classRef CryptoException;
+		// 53
+		staticMethodRef CryptoException/<init>(S)V;
+		// 54
+		virtualMethodRef 3.5.2(S)V;		// setReason(S)V
+		// 55
+		.classRef 1.19;		// com/sun/javacard/crypto/ECDHKeyAgreement
+		// 56
+		staticMethodRef 1.19.0(BZ)V;		// com/sun/javacard/crypto/ECDHKeyAgreement.<init>(BZ)V
+		// 57
+		.classRef 1.25;		// com/sun/javacard/crypto/FFDHKeyAgreement
+		// 58
+		staticMethodRef 1.25.0(BZ)V;		// com/sun/javacard/crypto/FFDHKeyAgreement.<init>(BZ)V
+		// 59
+		.classRef 1.16;		// com/sun/javacard/crypto/DESKeyEncryption
+		// 60
+		staticMethodRef 1.16.0(BS)V;		// com/sun/javacard/crypto/DESKeyEncryption.<init>(BS)V
+		// 61
+		.classRef 1.15;		// com/sun/javacard/crypto/DESKeyImpl
+		// 62
+		staticMethodRef 1.15.0(BS)V;		// com/sun/javacard/crypto/DESKeyImpl.<init>(BS)V
+		// 63
+		.classRef 1.33;		// com/sun/javacard/crypto/AESKeyEncryption
+		// 64
+		staticMethodRef 1.33.0(BS)V;		// com/sun/javacard/crypto/AESKeyEncryption.<init>(BS)V
+		// 65
+		.classRef 1.6;		// com/sun/javacard/crypto/AESKeyImpl
+		// 66
+		staticMethodRef 1.6.0(BS)V;		// com/sun/javacard/crypto/AESKeyImpl.<init>(BS)V
+		// 67
+		.classRef 1.24;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl
+		// 68
+		staticMethodRef 1.24.1(BS)V;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl.<init>(BS)V
+		// 69
+		.classRef 1.23;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl
+		// 70
+		staticMethodRef 1.23.1(BS)V;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl.<init>(BS)V
+		// 71
+		.classRef 1.31;		// com/sun/javacard/crypto/FFPublicKeyEncryption
+		// 72
+		staticMethodRef 1.31.0(BS)V;		// com/sun/javacard/crypto/FFPublicKeyEncryption.<init>(BS)V
+		// 73
+		.classRef 1.30;		// com/sun/javacard/crypto/FFPublicKeyImpl
+		// 74
+		staticMethodRef 1.30.0(BS)V;		// com/sun/javacard/crypto/FFPublicKeyImpl.<init>(BS)V
+		// 75
+		.classRef 1.29;		// com/sun/javacard/crypto/FFPrivateKeyEncryption
+		// 76
+		staticMethodRef 1.29.0(BS)V;		// com/sun/javacard/crypto/FFPrivateKeyEncryption.<init>(BS)V
+		// 77
+		.classRef 1.28;		// com/sun/javacard/crypto/FFPrivateKeyImpl
+		// 78
+		staticMethodRef 1.28.0(BS)V;		// com/sun/javacard/crypto/FFPrivateKeyImpl.<init>(BS)V
+		// 79
+		.classRef 1.44;		// com/sun/javacard/crypto/RSAPublicKeyEncryption
+		// 80
+		staticMethodRef 1.44.0(BS)V;		// com/sun/javacard/crypto/RSAPublicKeyEncryption.<init>(BS)V
+		// 81
+		.classRef 1.43;		// com/sun/javacard/crypto/RSAPublicKeyImpl
+		// 82
+		staticMethodRef 1.43.0(BS)V;		// com/sun/javacard/crypto/RSAPublicKeyImpl.<init>(BS)V
+		// 83
+		.classRef 1.42;		// com/sun/javacard/crypto/RSAPrivateKeyEncryption
+		// 84
+		staticMethodRef 1.42.0(BS)V;		// com/sun/javacard/crypto/RSAPrivateKeyEncryption.<init>(BS)V
+		// 85
+		.classRef 1.41;		// com/sun/javacard/crypto/RSAPrivateKeyImpl
+		// 86
+		staticMethodRef 1.41.0(BS)V;		// com/sun/javacard/crypto/RSAPrivateKeyImpl.<init>(BS)V
+		// 87
+		.classRef 1.22;		// com/sun/javacard/crypto/ECKeyImpl
+		// 88
+		staticMethodRef 1.22.0(BS)V;		// com/sun/javacard/crypto/ECKeyImpl.<init>(BS)V
+		// 89
+		staticMethodRef KeyBuilder/getKeyType(BB)B;
+		// 90
+		staticMethodRef KeyBuilder/buildKey(BSZ)Ljavacard/security/Key;;
+		// 91
+		staticMethodRef KeyBuilder/getSharedDomainKeyType(BB)B;
+		// 92
+		.classRef Key;
+		// 93
+		staticMethodRef 1.24.0(BLjavacard/security/Key;)V;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl.<init>(BLjavacard/security/Key;)V
+		// 94
+		staticMethodRef 1.23.0(BLjavacard/security/Key;)V;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl.<init>(BLjavacard/security/Key;)V
+		// 95
+		.classRef 1.51;		// com/sun/javacard/crypto/UtilityRandomData
+		// 96
+		staticMethodRef 1.51.0(B)V;		// com/sun/javacard/crypto/UtilityRandomData.<init>(B)V
+		// 97
+		staticFieldRef RandomData$OneShot RandomData$OneShot/systemInstance;
+		// 98
+		.classRef RandomData$OneShot;
+		// 99
+		staticMethodRef RandomData$OneShot/<init>()V;
+		// 100
+		staticFieldRef boolean[] RandomData$OneShot/opened;
+		// 101
+		staticMethodRef RandomData$OneShot/isClosed()Z;
+		// 102
+		staticMethodRef RandomData/getInstance(B)Ljavacard/security/RandomData;;
+		// 103
+		staticMethodRef RandomData$OneShot/setActual(Ljavacard/security/RandomData;B)V;
+		// 104
+		staticMethodRef 1.48.0(B)V;		// com/sun/javacard/crypto/SHAMessageDigest.<init>(B)V
+		// 105
+		staticMethodRef RandomData/<init>()V;
+		// 106
+		staticMethodRef RandomData$OneShot/isActualClosed()Z;
+		// 107
+		staticMethodRef RandomData$OneShot/checkContext()Z;
+		// 108
+		.classRef RandomData;
+		// 109
+		virtualMethodRef RandomData/getAlgorithm()B;
+		// 110
+		virtualMethodRef RandomData/generateData([BSS)V;
+		// 111
+		virtualMethodRef RandomData/nextBytes([BSS)S;
+		// 112
+		virtualMethodRef RandomData/setSeed([BSS)V;
+		// 113
+		.classRef 1.47;		// com/sun/javacard/crypto/SHA256MessageDigest
+		// 114
+		.classRef 1.0;		// com/sun/javacard/crypto/KeyPairInterfaceInternal
+		// 115
+		.classRef 1.38;		// com/sun/javacard/crypto/RSAKeyPair
+		// 116
+		staticMethodRef 1.38.1(BS)V;		// com/sun/javacard/crypto/RSAKeyPair.<init>(BS)V
+		// 117
+		.classRef 1.21;		// com/sun/javacard/crypto/ECKeyPair
+		// 118
+		staticMethodRef 1.21.1(BS)V;		// com/sun/javacard/crypto/ECKeyPair.<init>(BS)V
+		// 119
+		.classRef 1.27;		// com/sun/javacard/crypto/FFKeyPair
+		// 120
+		staticMethodRef 1.27.1(BS)V;		// com/sun/javacard/crypto/FFKeyPair.<init>(BS)V
+		// 121
+		.classRef PublicKey;
+		// 122
+		staticMethodRef 1.38.0(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V;		// com/sun/javacard/crypto/RSAKeyPair.<init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V
+		// 123
+		staticMethodRef 1.21.0(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V;		// com/sun/javacard/crypto/ECKeyPair.<init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V
+		// 124
+		staticMethodRef 1.27.0(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V;		// com/sun/javacard/crypto/FFKeyPair.<init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V
+		// 125
+		.classRef 1.18;		// com/sun/javacard/crypto/DESMAC8ISO9797M2Signature
+		// 126
+		staticMethodRef 1.18.0(BBBB)V;		// com/sun/javacard/crypto/DESMAC8ISO9797M2Signature.<init>(BBBB)V
+		// 127
+		.classRef 1.40;		// com/sun/javacard/crypto/RSAPKCS1Signature
+		// 128
+		staticMethodRef 1.40.0(BBBB)V;		// com/sun/javacard/crypto/RSAPKCS1Signature.<init>(BBBB)V
+		// 129
+		.classRef 1.20;		// com/sun/javacard/crypto/ECDSASignature
+		// 130
+		staticMethodRef 1.20.0(BBBB)V;		// com/sun/javacard/crypto/ECDSASignature.<init>(BBBB)V
+		// 131
+		.classRef 1.7;		// com/sun/javacard/crypto/AESMAC128NOPADSignature
+		// 132
+		staticMethodRef 1.7.0(BBBB)V;		// com/sun/javacard/crypto/AESMAC128NOPADSignature.<init>(BBBB)V
+		// 133
+		.classRef 1.45;		// com/sun/javacard/crypto/RSASHAISO9796MRSignature
+		// 134
+		staticMethodRef 1.45.0(BBBB)V;		// com/sun/javacard/crypto/RSASHAISO9796MRSignature.<init>(BBBB)V
+		// 135
+		.classRef 1.50;		// com/sun/javacard/crypto/AES128CMACSignature
+		// 136
+		staticMethodRef 1.50.0(BBBB)V;		// com/sun/javacard/crypto/AES128CMACSignature.<init>(BBBB)V
+		// 137
+		staticFieldRef Signature$OneShot Signature$OneShot/systemInstance;
+		// 138
+		.classRef Signature$OneShot;
+		// 139
+		staticMethodRef Signature$OneShot/<init>()V;
+		// 140
+		staticFieldRef boolean[] Signature$OneShot/opened;
+		// 141
+		staticMethodRef Signature$OneShot/isClosed()Z;
+		// 142
+		staticMethodRef Signature/getInstance(BBBZ)Ljavacard/security/Signature;;
+		// 143
+		staticMethodRef Signature$OneShot/setActual(Ljavacard/security/Signature;B)V;
+		// 144
+		staticMethodRef 1.47.0(B)V;		// com/sun/javacard/crypto/SHA256MessageDigest.<init>(B)V
+		// 145
+		staticMethodRef Signature/<init>()V;
+		// 146
+		staticMethodRef Signature$OneShot/isActualClosed()Z;
+		// 147
+		staticMethodRef Signature$OneShot/checkContext()Z;
+		// 148
+		.classRef Signature;
+		// 149
+		virtualMethodRef Signature/init(Ljavacard/security/Key;B)V;
+		// 150
+		virtualMethodRef Signature/init(Ljavacard/security/Key;B[BSS)V;
+		// 151
+		virtualMethodRef Signature/setInitialDigest([BSS[BSS)V;
+		// 152
+		virtualMethodRef Signature/getAlgorithm()B;
+		// 153
+		virtualMethodRef Signature/getMessageDigestAlgorithm()B;
+		// 154
+		virtualMethodRef Signature/getCipherAlgorithm()B;
+		// 155
+		virtualMethodRef Signature/getPaddingAlgorithm()B;
+		// 156
+		virtualMethodRef Signature/getLength()S;
+		// 157
+		virtualMethodRef Signature/sign([BSS[BS)S;
+		// 158
+		virtualMethodRef Signature/signPreComputedHash([BSS[BS)S;
+		// 159
+		virtualMethodRef Signature/verify([BSS[BSS)Z;
+		// 160
+		virtualMethodRef Signature/verifyPreComputedHash([BSS[BSS)Z;
+		// 161
+		.classRef 1.8;		// com/sun/javacard/crypto/CRC16
+		// 162
+		staticMethodRef 1.8.0()V;		// com/sun/javacard/crypto/CRC16.<init>()V
+		// 163
+		.classRef 1.9;		// com/sun/javacard/crypto/CRC32
+		// 164
+		staticMethodRef 1.9.0()V;		// com/sun/javacard/crypto/CRC32.<init>()V
+	}
+
+	.interface public abstract Key 0 {
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+	}
+
+	.interface public abstract SecretKey 4 {
+
+		.superInterfaces {
+			Key;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+	}
+
+	.interface public abstract DHKey 27 {
+
+		.method public abstract setP([BSS)V 0 {
+		}
+
+		.method public abstract setQ([BSS)V 1 {
+		}
+
+		.method public abstract setG([BSS)V 2 {
+		}
+
+		.method public abstract getP([BS)S 3 {
+		}
+
+		.method public abstract getQ([BS)S 4 {
+		}
+
+		.method public abstract getG([BS)S 5 {
+		}
+
+	}
+
+	.interface public abstract PrivateKey 2 {
+
+		.superInterfaces {
+			Key;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+	}
+
+	.interface public abstract PublicKey 3 {
+
+		.superInterfaces {
+			Key;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+	}
+
+	.interface public abstract DSAKey 1 {
+
+		.method public abstract getG([BS)S 0 {
+		}
+
+		.method public abstract getP([BS)S 1 {
+		}
+
+		.method public abstract getQ([BS)S 2 {
+		}
+
+		.method public abstract setG([BSS)V 3 {
+		}
+
+		.method public abstract setP([BSS)V 4 {
+		}
+
+		.method public abstract setQ([BSS)V 5 {
+		}
+
+	}
+
+	.interface public abstract DSAPrivateKey 5 {
+
+		.superInterfaces {
+			Key;
+			PrivateKey;
+			DSAKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract getG([BS)S 4 {
+		}
+
+		.method public abstract getP([BS)S 5 {
+		}
+
+		.method public abstract getQ([BS)S 6 {
+		}
+
+		.method public abstract setG([BSS)V 7 {
+		}
+
+		.method public abstract setP([BSS)V 8 {
+		}
+
+		.method public abstract setQ([BSS)V 9 {
+		}
+
+		.method public abstract getX([BS)S 10 {
+		}
+
+		.method public abstract setX([BSS)V 11 {
+		}
+
+	}
+
+	.interface public abstract DSAPublicKey 6 {
+
+		.superInterfaces {
+			Key;
+			PublicKey;
+			DSAKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract getG([BS)S 4 {
+		}
+
+		.method public abstract getP([BS)S 5 {
+		}
+
+		.method public abstract getQ([BS)S 6 {
+		}
+
+		.method public abstract setG([BSS)V 7 {
+		}
+
+		.method public abstract setP([BSS)V 8 {
+		}
+
+		.method public abstract setQ([BSS)V 9 {
+		}
+
+		.method public abstract getY([BS)S 10 {
+		}
+
+		.method public abstract setY([BSS)V 11 {
+		}
+
+	}
+
+	.interface public abstract ECKey 17 {
+
+		.method public abstract setFieldFP([BSS)V 0 {
+		}
+
+		.method public abstract setFieldF2M(S)V 1 {
+		}
+
+		.method public abstract setFieldF2M(SSS)V 2 {
+		}
+
+		.method public abstract setA([BSS)V 3 {
+		}
+
+		.method public abstract setB([BSS)V 4 {
+		}
+
+		.method public abstract setG([BSS)V 5 {
+		}
+
+		.method public abstract setR([BSS)V 6 {
+		}
+
+		.method public abstract setK(S)V 7 {
+		}
+
+		.method public abstract getField([BS)S 8 {
+		}
+
+		.method public abstract getA([BS)S 9 {
+		}
+
+		.method public abstract getB([BS)S 10 {
+		}
+
+		.method public abstract getG([BS)S 11 {
+		}
+
+		.method public abstract getR([BS)S 12 {
+		}
+
+		.method public abstract getK()S 13 {
+		}
+
+		.method public abstract copyDomainParametersFrom(Ljavacard/security/ECKey;)V 14 {
+		}
+
+	}
+
+	.interface public abstract ECPrivateKey 18 {
+
+		.superInterfaces {
+			Key;
+			PrivateKey;
+			ECKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setFieldFP([BSS)V 4 {
+		}
+
+		.method public abstract setFieldF2M(S)V 5 {
+		}
+
+		.method public abstract setFieldF2M(SSS)V 6 {
+		}
+
+		.method public abstract setA([BSS)V 7 {
+		}
+
+		.method public abstract setB([BSS)V 8 {
+		}
+
+		.method public abstract setG([BSS)V 9 {
+		}
+
+		.method public abstract setR([BSS)V 10 {
+		}
+
+		.method public abstract setK(S)V 11 {
+		}
+
+		.method public abstract getField([BS)S 12 {
+		}
+
+		.method public abstract getA([BS)S 13 {
+		}
+
+		.method public abstract getB([BS)S 14 {
+		}
+
+		.method public abstract getG([BS)S 15 {
+		}
+
+		.method public abstract getR([BS)S 16 {
+		}
+
+		.method public abstract getK()S 17 {
+		}
+
+		.method public abstract setS([BSS)V 18 {
+		}
+
+		.method public abstract getS([BS)S 19 {
+		}
+
+		.method public abstract copyDomainParametersFrom(Ljavacard/security/ECKey;)V 20 {
+		}
+
+	}
+
+	.interface public abstract ECPublicKey 19 {
+
+		.superInterfaces {
+			Key;
+			PublicKey;
+			ECKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setFieldFP([BSS)V 4 {
+		}
+
+		.method public abstract setFieldF2M(S)V 5 {
+		}
+
+		.method public abstract setFieldF2M(SSS)V 6 {
+		}
+
+		.method public abstract setA([BSS)V 7 {
+		}
+
+		.method public abstract setB([BSS)V 8 {
+		}
+
+		.method public abstract setG([BSS)V 9 {
+		}
+
+		.method public abstract setR([BSS)V 10 {
+		}
+
+		.method public abstract setK(S)V 11 {
+		}
+
+		.method public abstract getField([BS)S 12 {
+		}
+
+		.method public abstract getA([BS)S 13 {
+		}
+
+		.method public abstract getB([BS)S 14 {
+		}
+
+		.method public abstract getG([BS)S 15 {
+		}
+
+		.method public abstract getR([BS)S 16 {
+		}
+
+		.method public abstract getK()S 17 {
+		}
+
+		.method public abstract setW([BSS)V 18 {
+		}
+
+		.method public abstract getW([BS)S 19 {
+		}
+
+		.method public abstract copyDomainParametersFrom(Ljavacard/security/ECKey;)V 20 {
+		}
+
+	}
+
+	.interface public abstract HMACKey 23 {
+
+		.superInterfaces {
+			Key;
+			SecretKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setKey([BSS)V 4 {
+		}
+
+		.method public abstract getKey([BS)B 5 {
+		}
+
+	}
+
+	.interface public abstract DESKey 10 {
+
+		.superInterfaces {
+			Key;
+			SecretKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract getKey([BS)B 4 {
+		}
+
+		.method public abstract setKey([BS)V 5 {
+		}
+
+	}
+
+	.interface public abstract KoreanSEEDKey 24 {
+
+		.superInterfaces {
+			Key;
+			SecretKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setKey([BS)V 4 {
+		}
+
+		.method public abstract getKey([BS)B 5 {
+		}
+
+	}
+
+	.interface public abstract DHPrivateKey 28 {
+
+		.superInterfaces {
+			Key;
+			PrivateKey;
+			DHKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setP([BSS)V 4 {
+		}
+
+		.method public abstract setQ([BSS)V 5 {
+		}
+
+		.method public abstract setG([BSS)V 6 {
+		}
+
+		.method public abstract getP([BS)S 7 {
+		}
+
+		.method public abstract getQ([BS)S 8 {
+		}
+
+		.method public abstract getG([BS)S 9 {
+		}
+
+		.method public abstract setX([BSS)V 10 {
+		}
+
+		.method public abstract getX([BS)S 11 {
+		}
+
+	}
+
+	.interface public abstract DHPublicKey 29 {
+
+		.superInterfaces {
+			Key;
+			PublicKey;
+			DHKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setP([BSS)V 4 {
+		}
+
+		.method public abstract setQ([BSS)V 5 {
+		}
+
+		.method public abstract setG([BSS)V 6 {
+		}
+
+		.method public abstract getP([BS)S 7 {
+		}
+
+		.method public abstract getQ([BS)S 8 {
+		}
+
+		.method public abstract getG([BS)S 9 {
+		}
+
+		.method public abstract setY([BSS)V 10 {
+		}
+
+		.method public abstract getY([BS)S 11 {
+		}
+
+	}
+
+	.interface public abstract RSAPrivateCrtKey 7 {
+
+		.superInterfaces {
+			Key;
+			PrivateKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract getDP1([BS)S 4 {
+		}
+
+		.method public abstract getDQ1([BS)S 5 {
+		}
+
+		.method public abstract getP([BS)S 6 {
+		}
+
+		.method public abstract getPQ([BS)S 7 {
+		}
+
+		.method public abstract getQ([BS)S 8 {
+		}
+
+		.method public abstract setDP1([BSS)V 9 {
+		}
+
+		.method public abstract setDQ1([BSS)V 10 {
+		}
+
+		.method public abstract setP([BSS)V 11 {
+		}
+
+		.method public abstract setPQ([BSS)V 12 {
+		}
+
+		.method public abstract setQ([BSS)V 13 {
+		}
+
+	}
+
+	.interface public abstract RSAPrivateKey 8 {
+
+		.superInterfaces {
+			Key;
+			PrivateKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract getExponent([BS)S 4 {
+		}
+
+		.method public abstract getModulus([BS)S 5 {
+		}
+
+		.method public abstract setExponent([BSS)V 6 {
+		}
+
+		.method public abstract setModulus([BSS)V 7 {
+		}
+
+	}
+
+	.interface public abstract RSAPublicKey 9 {
+
+		.superInterfaces {
+			Key;
+			PublicKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract getExponent([BS)S 4 {
+		}
+
+		.method public abstract getModulus([BS)S 5 {
+		}
+
+		.method public abstract setExponent([BSS)V 6 {
+		}
+
+		.method public abstract setModulus([BSS)V 7 {
+		}
+
+	}
+
+	.interface public abstract AESKey 20 {
+
+		.superInterfaces {
+			Key;
+			SecretKey;
+		}
+
+		.method public abstract clearKey()V 0 {
+		}
+
+		.method public abstract getSize()S 1 {
+		}
+
+		.method public abstract getType()B 2 {
+		}
+
+		.method public abstract isInitialized()Z 3 {
+		}
+
+		.method public abstract setKey([BS)V 4 {
+		}
+
+		.method public abstract getKey([BS)B 5 {
+		}
+
+	}
+
+	.interface public abstract SignatureMessageRecovery 25 {
+
+		.method public abstract init(Ljavacard/security/Key;B)V 0 {
+		}
+
+		.method public abstract beginVerify([BSS)S 1 {
+		}
+
+		.method public abstract sign([BSS[BS[SS)S 2 {
+		}
+
+		.method public abstract verify([BSS)Z 3 {
+		}
+
+		.method public abstract getAlgorithm()B 4 {
+		}
+
+		.method public abstract getLength()S 5 {
+		}
+
+		.method public abstract update([BSS)V 6 {
+		}
+
+	}
+
+	.class public abstract MessageDigest 11 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte ALG_NULL = 0;		// B
+			public static final byte ALG_SHA = 1;		// B
+			public static final byte ALG_MD5 = 2;		// B
+			public static final byte ALG_RIPEMD160 = 3;		// B
+			public static final byte ALG_SHA_256 = 4;		// B
+			public static final byte ALG_SHA_384 = 5;		// B
+			public static final byte ALG_SHA_512 = 6;		// B
+			public static final byte ALG_SHA_224 = 7;		// B
+			public static final byte ALG_SHA3_224 = 8;		// B
+			public static final byte ALG_SHA3_256 = 9;		// B
+			public static final byte ALG_SHA3_384 = 10;		// B
+			public static final byte ALG_SHA3_512 = 11;		// B
+			public static final byte LENGTH_MD5 = 16;		// B
+			public static final byte LENGTH_RIPEMD160 = 20;		// B
+			public static final byte LENGTH_SHA = 20;		// B
+			public static final byte LENGTH_SHA_224 = 28;		// B
+			public static final byte LENGTH_SHA_256 = 32;		// B
+			public static final byte LENGTH_SHA_384 = 48;		// B
+			public static final byte LENGTH_SHA_512 = 64;		// B
+			public static final byte LENGTH_SHA3_224 = 28;		// B
+			public static final byte LENGTH_SHA3_256 = 32;		// B
+			public static final byte LENGTH_SHA3_384 = 48;		// B
+			public static final byte LENGTH_SHA3_512 = 64;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			getLength()B;
+			reset()V;
+			update([BSS)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final getInstance(BZ)Ljavacard/security/MessageDigest; 0 {
+			.stack 3;
+			.locals 1;
+
+				L0:	sload_1;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aconst_null;
+					astore_2;
+					sload_0;
+					slookupswitch L5 2 1 L3 4 L4;
+				L3:	new 41;		// com/sun/javacard/crypto/SHAMessageDigest
+					dup;
+					sload_0;
+					invokespecial 104;		// com/sun/javacard/crypto/SHAMessageDigest.<init>(B)V
+					astore_2;
+					goto L6;
+				L4:	new 113;		// com/sun/javacard/crypto/SHA256MessageDigest
+					dup;
+					sload_0;
+					invokespecial 144;		// com/sun/javacard/crypto/SHA256MessageDigest.<init>(B)V
+					astore_2;
+					goto L6;
+				L5:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L6:	aload_2;
+					areturn;
+		}
+
+		.method public static final getInitializedMessageDigestInstance(BZ)Ljavacard/security/InitializedMessageDigest; 2 {
+			.stack 3;
+			.locals 1;
+
+				L0:	sload_1;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aconst_null;
+					astore_2;
+					sload_0;
+					slookupswitch L5 2 1 L3 4 L4;
+				L3:	new 41;		// com/sun/javacard/crypto/SHAMessageDigest
+					dup;
+					sload_0;
+					invokespecial 104;		// com/sun/javacard/crypto/SHAMessageDigest.<init>(B)V
+					astore_2;
+					goto L6;
+				L4:	new 113;		// com/sun/javacard/crypto/SHA256MessageDigest
+					dup;
+					sload_0;
+					invokespecial 144;		// com/sun/javacard/crypto/SHA256MessageDigest.<init>(B)V
+					astore_2;
+					goto L6;
+				L5:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L6:	aload_2;
+					checkcast 0 5;		// T_CLASSORINTERFACE javacard/security/InitializedMessageDigest
+					areturn;
+		}
+
+		.method protected <init>()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public abstract getAlgorithm()B 2 {
+		}
+
+		.method public abstract getLength()B 3 {
+		}
+
+		.method public abstract doFinal([BSS[BS)S 1 {
+		}
+
+		.method public abstract update([BSS)V 5 {
+		}
+
+		.method public abstract reset()V 4 {
+		}
+
+	}
+
+	.class public final MessageDigest$OneShot 30 extends MessageDigest {
+
+		.fields {
+			private 0.0[] actualInstance 0;		// [Ljava/lang/Object;
+			private static MessageDigest$OneShot systemInstance;		// Ljavacard/security/MessageDigest$OneShot;
+			private static boolean[] opened;		// [Z
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			getLength()B;
+			reset()V;
+			update([BSS)V;
+			close()V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final open(B)Ljavacard/security/MessageDigest$OneShot; 0 {
+			.stack 3;
+			.locals 1;
+
+				L0:	getstatic_a 7;		// reference javacard/security/MessageDigest$OneShot.systemInstance
+					ifnonnull L2;
+				L1:	new 8;		// javacard/security/MessageDigest$OneShot
+					dup;
+					invokespecial 9;		// javacard/security/MessageDigest$OneShot.<init>()V
+					putstatic_a 7;		// reference javacard/security/MessageDigest$OneShot.systemInstance
+					getstatic_a 7;		// reference javacard/security/MessageDigest$OneShot.systemInstance
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L2:	getstatic_a 11;		// reference javacard/security/MessageDigest$OneShot.opened
+					ifnonnull L4;
+				L3:	sconst_1;
+					sconst_2;
+					invokestatic 12;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+					putstatic_a 11;		// reference javacard/security/MessageDigest$OneShot.opened
+					getstatic_a 11;		// reference javacard/security/MessageDigest$OneShot.opened
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L4:	invokestatic 13;		// javacard/security/MessageDigest$OneShot.isClosed()Z
+					ifeq L6;
+				L5:	invokestatic 14;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+					sstore_1;
+					getstatic_a 7;		// reference javacard/security/MessageDigest$OneShot.systemInstance
+					sload_1;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getstatic_a 7;		// reference javacard/security/MessageDigest$OneShot.systemInstance
+					sload_0;
+					sconst_0;
+					invokestatic 16;		// javacard/security/MessageDigest.getInstance(BZ)Ljavacard/security/MessageDigest;
+					sload_1;
+					invokespecial 17;		// javacard/security/MessageDigest$OneShot.setActual(Ljavacard/security/MessageDigest;B)V
+					goto L7;
+				L6:	sconst_5;
+					invokestatic 18;		// javacard/framework/SystemException.throwIt(S)V
+				L7:	getstatic_a 7;		// reference javacard/security/MessageDigest$OneShot.systemInstance
+					areturn;
+		}
+
+		.method private static isClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 11;		// reference javacard/security/MessageDigest$OneShot.opened
+					sconst_0;
+					baload;
+					ifne L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private isActualClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnonnull L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private checkContext()Z {
+			.stack 3;
+			.locals 1;
+
+				L0:	invokestatic 20;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+					sstore_1;
+					sload_1;
+					ifeq L2;
+				L1:	sload_1;
+					getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					invokestatic 21;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+					if_scmpne L3;
+				L2:	sconst_1;
+					goto L4;
+				L3:	sconst_0;
+				L4:	sreturn;
+		}
+
+		.method private setActual(Ljavacard/security/MessageDigest;B)V {
+			.stack 3;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sload_2;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aload_1;
+					aastore;
+					getstatic_a 11;		// reference javacard/security/MessageDigest$OneShot.opened
+					sconst_0;
+					sconst_1;
+					bastore;
+					return;
+		}
+
+		.method private <init>()V {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 22;		// javacard/security/MessageDigest.<init>()V
+					aload_0;
+					sconst_1;
+					sconst_2;
+					invokestatic 23;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+					putfield_a 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					return;
+		}
+
+		.method public close()V 6 {
+			.stack 3;
+			.locals 0;
+
+				L0:	invokestatic 13;		// javacard/security/MessageDigest$OneShot.isClosed()Z
+					ifne L2;
+				L1:	aload_0;
+					invokespecial 24;		// javacard/security/MessageDigest$OneShot.isActualClosed()Z
+					ifeq L3;
+				L2:	return;
+				L3:	aload_0;
+					invokespecial 25;		// javacard/security/MessageDigest$OneShot.checkContext()Z
+					ifne L5;
+				L4:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L5:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnull L8;
+				L6:	invokestatic 27;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+					ifeq L8;
+				L7:	invokestatic 28;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L8:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aconst_null;
+					aastore;
+					getstatic_a 11;		// reference javacard/security/MessageDigest$OneShot.opened
+					sconst_0;
+					sconst_0;
+					bastore;
+					return;
+		}
+
+		.method public getAlgorithm()B 2 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 24;		// javacard/security/MessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 25;		// javacard/security/MessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 29;		// T_CLASSORINTERFACE javacard/security/MessageDigest
+					invokevirtual 30;		// getAlgorithm()B
+					sreturn;
+		}
+
+		.method public getLength()B 3 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 24;		// javacard/security/MessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 25;		// javacard/security/MessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 29;		// T_CLASSORINTERFACE javacard/security/MessageDigest
+					invokevirtual 31;		// getLength()B
+					sreturn;
+		}
+
+		.method public doFinal([BSS[BS)S 1 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 24;		// javacard/security/MessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 25;		// javacard/security/MessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 29;		// T_CLASSORINTERFACE javacard/security/MessageDigest
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					invokevirtual 32;		// doFinal([BSS[BS)S
+					sreturn;
+		}
+
+		.method public update([BSS)V 5 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+					return;
+		}
+
+		.method public reset()V 4 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 24;		// javacard/security/MessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 25;		// javacard/security/MessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 0;		// reference javacard/security/MessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 29;		// T_CLASSORINTERFACE javacard/security/MessageDigest
+					invokevirtual 33;		// reset()V
+					return;
+		}
+
+	}
+
+	.class public abstract InitializedMessageDigest 26 extends MessageDigest {
+
+		.publicMethodTable 6 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			getLength()B;
+			reset()V;
+			update([BSS)V;
+			setInitialDigest([BSS[BSS)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method protected <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 22;		// javacard/security/MessageDigest.<init>()V
+					return;
+		}
+
+		.method public abstract setInitialDigest([BSS[BSS)V 6 {
+		}
+
+	}
+
+	.class public final InitializedMessageDigest$OneShot 31 extends InitializedMessageDigest {
+
+		.fields {
+			private 0.0[] actualInstance 0;		// [Ljava/lang/Object;
+			private static InitializedMessageDigest$OneShot systemInstance;		// Ljavacard/security/InitializedMessageDigest$OneShot;
+			private static boolean[] opened;		// [Z
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			doFinal([BSS[BS)S;
+			getAlgorithm()B;
+			getLength()B;
+			reset()V;
+			update([BSS)V;
+			setInitialDigest([BSS[BSS)V;
+			close()V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final open(B)Ljavacard/security/InitializedMessageDigest$OneShot; 0 {
+			.stack 3;
+			.locals 1;
+
+				L0:	getstatic_a 34;		// reference javacard/security/InitializedMessageDigest$OneShot.systemInstance
+					ifnonnull L2;
+				L1:	new 35;		// javacard/security/InitializedMessageDigest$OneShot
+					dup;
+					invokespecial 36;		// javacard/security/InitializedMessageDigest$OneShot.<init>()V
+					putstatic_a 34;		// reference javacard/security/InitializedMessageDigest$OneShot.systemInstance
+					getstatic_a 34;		// reference javacard/security/InitializedMessageDigest$OneShot.systemInstance
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L2:	getstatic_a 37;		// reference javacard/security/InitializedMessageDigest$OneShot.opened
+					ifnonnull L4;
+				L3:	sconst_1;
+					sconst_2;
+					invokestatic 12;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+					putstatic_a 37;		// reference javacard/security/InitializedMessageDigest$OneShot.opened
+					getstatic_a 37;		// reference javacard/security/InitializedMessageDigest$OneShot.opened
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L4:	invokestatic 38;		// javacard/security/InitializedMessageDigest$OneShot.isClosed()Z
+					ifeq L6;
+				L5:	invokestatic 14;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+					sstore_1;
+					getstatic_a 34;		// reference javacard/security/InitializedMessageDigest$OneShot.systemInstance
+					sload_1;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getstatic_a 34;		// reference javacard/security/InitializedMessageDigest$OneShot.systemInstance
+					sload_0;
+					sconst_0;
+					invokestatic 39;		// javacard/security/MessageDigest.getInitializedMessageDigestInstance(BZ)Ljavacard/security/InitializedMessageDigest;
+					sload_1;
+					invokespecial 40;		// javacard/security/InitializedMessageDigest$OneShot.setActual(Ljavacard/security/InitializedMessageDigest;B)V
+					goto L7;
+				L6:	sconst_5;
+					invokestatic 18;		// javacard/framework/SystemException.throwIt(S)V
+				L7:	getstatic_a 34;		// reference javacard/security/InitializedMessageDigest$OneShot.systemInstance
+					areturn;
+		}
+
+		.method private static isClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 37;		// reference javacard/security/InitializedMessageDigest$OneShot.opened
+					sconst_0;
+					baload;
+					ifne L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private isActualClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnonnull L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private checkContext()Z {
+			.stack 3;
+			.locals 1;
+
+				L0:	invokestatic 20;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+					sstore_1;
+					sload_1;
+					ifeq L2;
+				L1:	sload_1;
+					getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					invokestatic 21;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+					if_scmpne L3;
+				L2:	sconst_1;
+					goto L4;
+				L3:	sconst_0;
+				L4:	sreturn;
+		}
+
+		.method private setActual(Ljavacard/security/InitializedMessageDigest;B)V {
+			.stack 3;
+			.locals 0;
+
+				L0:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sload_2;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aload_1;
+					aastore;
+					getstatic_a 37;		// reference javacard/security/InitializedMessageDigest$OneShot.opened
+					sconst_0;
+					sconst_1;
+					bastore;
+					return;
+		}
+
+		.method private <init>()V {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 42;		// javacard/security/InitializedMessageDigest.<init>()V
+					aload_0;
+					sconst_1;
+					sconst_2;
+					invokestatic 23;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+					putfield_a 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					return;
+		}
+
+		.method public close()V 7 {
+			.stack 3;
+			.locals 0;
+
+				L0:	invokestatic 38;		// javacard/security/InitializedMessageDigest$OneShot.isClosed()Z
+					ifne L2;
+				L1:	aload_0;
+					invokespecial 43;		// javacard/security/InitializedMessageDigest$OneShot.isActualClosed()Z
+					ifeq L3;
+				L2:	return;
+				L3:	aload_0;
+					invokespecial 44;		// javacard/security/InitializedMessageDigest$OneShot.checkContext()Z
+					ifne L5;
+				L4:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L5:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnull L8;
+				L6:	invokestatic 27;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+					ifeq L8;
+				L7:	invokestatic 28;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L8:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aconst_null;
+					aastore;
+					getstatic_a 37;		// reference javacard/security/InitializedMessageDigest$OneShot.opened
+					sconst_0;
+					sconst_0;
+					bastore;
+					return;
+		}
+
+		.method public setInitialDigest([BSS[BSS)V 6 {
+			.stack 7;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 43;		// javacard/security/InitializedMessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 44;		// javacard/security/InitializedMessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 5;		// T_CLASSORINTERFACE javacard/security/InitializedMessageDigest
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					sload 6;
+					invokevirtual 45;		// setInitialDigest([BSS[BSS)V
+					return;
+		}
+
+		.method public getAlgorithm()B 2 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 43;		// javacard/security/InitializedMessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 44;		// javacard/security/InitializedMessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 5;		// T_CLASSORINTERFACE javacard/security/InitializedMessageDigest
+					invokevirtual 46;		// getAlgorithm()B
+					sreturn;
+		}
+
+		.method public getLength()B 3 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 43;		// javacard/security/InitializedMessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 44;		// javacard/security/InitializedMessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 5;		// T_CLASSORINTERFACE javacard/security/InitializedMessageDigest
+					invokevirtual 47;		// getLength()B
+					sreturn;
+		}
+
+		.method public doFinal([BSS[BS)S 1 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 43;		// javacard/security/InitializedMessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 44;		// javacard/security/InitializedMessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 5;		// T_CLASSORINTERFACE javacard/security/InitializedMessageDigest
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					invokevirtual 48;		// doFinal([BSS[BS)S
+					sreturn;
+		}
+
+		.method public reset()V 4 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 43;		// javacard/security/InitializedMessageDigest$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 44;		// javacard/security/InitializedMessageDigest$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 1;		// reference javacard/security/InitializedMessageDigest$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 5;		// T_CLASSORINTERFACE javacard/security/InitializedMessageDigest
+					invokevirtual 49;		// reset()V
+					return;
+		}
+
+		.method public update([BSS)V 5 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+					return;
+		}
+
+	}
+
+	.class public CryptoException 12 extends 3.5 {		// extends javacard/framework/CardRuntimeException
+
+		.fields {
+			public static final short ILLEGAL_VALUE = 1;		// S
+			public static final short UNINITIALIZED_KEY = 2;		// S
+			public static final short NO_SUCH_ALGORITHM = 3;		// S
+			public static final short INVALID_INIT = 4;		// S
+			public static final short ILLEGAL_USE = 5;		// S
+			private static CryptoException systemInstance;		// Ljavacard/security/CryptoException;
+		}
+
+		.publicMethodTable 3 {
+			equals(Ljava/lang/Object;)Z;
+			getReason()S;
+			setReason(S)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					invokespecial 50;		// javacard/framework/CardRuntimeException.<init>(S)V
+					getstatic_a 51;		// reference javacard/security/CryptoException.systemInstance
+					ifnonnull L2;
+				L1:	aload_0;
+					putstatic_a 51;		// reference javacard/security/CryptoException.systemInstance
+				L2:	return;
+		}
+
+		.method public static throwIt(S)V 1 {
+			.stack 3;
+			.locals 0;
+
+				L0:	getstatic_a 51;		// reference javacard/security/CryptoException.systemInstance
+					ifnonnull L2;
+				L1:	new 52;		// javacard/security/CryptoException
+					dup;
+					sconst_0;
+					invokespecial 53;		// javacard/security/CryptoException.<init>(S)V
+					pop;
+				L2:	getstatic_a 51;		// reference javacard/security/CryptoException.systemInstance
+					sload_0;
+					invokevirtual 54;		// setReason(S)V
+					getstatic_a 51;		// reference javacard/security/CryptoException.systemInstance
+					athrow;
+		}
+
+	}
+
+	.class public abstract KeyAgreement 22 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte ALG_EC_SVDP_DH = 1;		// B
+			public static final byte ALG_EC_SVDP_DH_KDF = 1;		// B
+			public static final byte ALG_EC_SVDP_DHC = 2;		// B
+			public static final byte ALG_EC_SVDP_DHC_KDF = 2;		// B
+			public static final byte ALG_EC_SVDP_DH_PLAIN = 3;		// B
+			public static final byte ALG_EC_SVDP_DHC_PLAIN = 4;		// B
+			public static final byte ALG_EC_PACE_GM = 5;		// B
+			public static final byte ALG_EC_SVDP_DH_PLAIN_XY = 6;		// B
+			public static final byte ALG_DH_PLAIN = 7;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			init(Ljavacard/security/PrivateKey;)V;
+			getAlgorithm()B;
+			generateSecret([BSS[BS)S;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final getInstance(BZ)Ljavacard/security/KeyAgreement; 0 {
+			.stack 4;
+			.locals 0;
+
+				L0:	sload_0;
+					stableswitch L3 1 7 L1 L1 L3 L3 L1 L1 L2;
+				L1:	new 55;		// com/sun/javacard/crypto/ECDHKeyAgreement
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 56;		// com/sun/javacard/crypto/ECDHKeyAgreement.<init>(BZ)V
+					areturn;
+				L2:	new 57;		// com/sun/javacard/crypto/FFDHKeyAgreement
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 58;		// com/sun/javacard/crypto/FFDHKeyAgreement.<init>(BZ)V
+					areturn;
+				L3:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+					aconst_null;
+					areturn;
+		}
+
+		.method protected <init>()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public abstract init(Ljavacard/security/PrivateKey;)V 1 {
+		}
+
+		.method public abstract getAlgorithm()B 2 {
+		}
+
+		.method public abstract generateSecret([BSS[BS)S 3 {
+		}
+
+	}
+
+	.class public KeyBuilder 13 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte TYPE_DES_TRANSIENT_RESET = 1;		// B
+			public static final byte TYPE_DES_TRANSIENT_DESELECT = 2;		// B
+			public static final byte TYPE_DES = 3;		// B
+			public static final byte TYPE_RSA_PUBLIC = 4;		// B
+			public static final byte TYPE_RSA_PRIVATE = 5;		// B
+			public static final byte TYPE_RSA_CRT_PRIVATE = 6;		// B
+			public static final byte TYPE_DSA_PUBLIC = 7;		// B
+			public static final byte TYPE_DSA_PRIVATE = 8;		// B
+			public static final byte TYPE_EC_F2M_PUBLIC = 9;		// B
+			public static final byte TYPE_EC_F2M_PRIVATE = 10;		// B
+			public static final byte TYPE_EC_FP_PUBLIC = 11;		// B
+			public static final byte TYPE_EC_FP_PRIVATE = 12;		// B
+			public static final byte TYPE_AES_TRANSIENT_RESET = 13;		// B
+			public static final byte TYPE_AES_TRANSIENT_DESELECT = 14;		// B
+			public static final byte TYPE_AES = 15;		// B
+			public static final byte TYPE_KOREAN_SEED_TRANSIENT_RESET = 16;		// B
+			public static final byte TYPE_KOREAN_SEED_TRANSIENT_DESELECT = 17;		// B
+			public static final byte TYPE_KOREAN_SEED = 18;		// B
+			public static final byte TYPE_HMAC_TRANSIENT_RESET = 19;		// B
+			public static final byte TYPE_HMAC_TRANSIENT_DESELECT = 20;		// B
+			public static final byte TYPE_HMAC = 21;		// B
+			public static final byte TYPE_RSA_PRIVATE_TRANSIENT_RESET = 22;		// B
+			public static final byte TYPE_RSA_PRIVATE_TRANSIENT_DESELECT = 23;		// B
+			public static final byte TYPE_RSA_CRT_PRIVATE_TRANSIENT_RESET = 24;		// B
+			public static final byte TYPE_RSA_CRT_PRIVATE_TRANSIENT_DESELECT = 25;		// B
+			public static final byte TYPE_DSA_PRIVATE_TRANSIENT_RESET = 26;		// B
+			public static final byte TYPE_DSA_PRIVATE_TRANSIENT_DESELECT = 27;		// B
+			public static final byte TYPE_EC_F2M_PRIVATE_TRANSIENT_RESET = 28;		// B
+			public static final byte TYPE_EC_F2M_PRIVATE_TRANSIENT_DESELECT = 29;		// B
+			public static final byte TYPE_EC_FP_PRIVATE_TRANSIENT_RESET = 30;		// B
+			public static final byte TYPE_EC_FP_PRIVATE_TRANSIENT_DESELECT = 31;		// B
+			public static final byte TYPE_DH_PUBLIC = 32;		// B
+			public static final byte TYPE_DH_PUBLIC_TRANSIENT_DESELECT = 33;		// B
+			public static final byte TYPE_DH_PUBLIC_TRANSIENT_RESET = 34;		// B
+			public static final byte TYPE_DH_PRIVATE = 35;		// B
+			public static final byte TYPE_DH_PRIVATE_TRANSIENT_DESELECT = 36;		// B
+			public static final byte TYPE_DH_PRIVATE_TRANSIENT_RESET = 37;		// B
+			public static final byte ALG_TYPE_DES = 1;		// B
+			public static final byte ALG_TYPE_AES = 2;		// B
+			public static final byte ALG_TYPE_DSA_PUBLIC = 3;		// B
+			public static final byte ALG_TYPE_DSA_PRIVATE = 4;		// B
+			public static final byte ALG_TYPE_EC_F2M_PUBLIC = 5;		// B
+			public static final byte ALG_TYPE_EC_F2M_PRIVATE = 6;		// B
+			public static final byte ALG_TYPE_EC_FP_PUBLIC = 7;		// B
+			public static final byte ALG_TYPE_EC_FP_PRIVATE = 8;		// B
+			public static final byte ALG_TYPE_HMAC = 9;		// B
+			public static final byte ALG_TYPE_KOREAN_SEED = 10;		// B
+			public static final byte ALG_TYPE_RSA_PUBLIC = 11;		// B
+			public static final byte ALG_TYPE_RSA_PRIVATE = 12;		// B
+			public static final byte ALG_TYPE_RSA_CRT_PRIVATE = 13;		// B
+			public static final byte ALG_TYPE_DH_PUBLIC = 14;		// B
+			public static final byte ALG_TYPE_DH_PRIVATE = 15;		// B
+			public static final byte ALG_TYPE_EC_F2M_PARAMETERS = 16;		// B
+			public static final byte ALG_TYPE_EC_FP_PARAMETERS = 17;		// B
+			public static final byte ALG_TYPE_DSA_PARAMETERS = 18;		// B
+			public static final byte ALG_TYPE_DH_PARAMETERS = 19;		// B
+			public static final short LENGTH_DES = 64;		// S
+			public static final short LENGTH_DES3_2KEY = 128;		// S
+			public static final short LENGTH_DES3_3KEY = 192;		// S
+			public static final short LENGTH_RSA_512 = 512;		// S
+			public static final short LENGTH_RSA_736 = 736;		// S
+			public static final short LENGTH_RSA_768 = 768;		// S
+			public static final short LENGTH_RSA_896 = 896;		// S
+			public static final short LENGTH_RSA_1024 = 1024;		// S
+			public static final short LENGTH_RSA_1280 = 1280;		// S
+			public static final short LENGTH_RSA_1536 = 1536;		// S
+			public static final short LENGTH_RSA_1984 = 1984;		// S
+			public static final short LENGTH_RSA_2048 = 2048;		// S
+			public static final short LENGTH_RSA_3072 = 3072;		// S
+			public static final short LENGTH_RSA_4096 = 4096;		// S
+			public static final short LENGTH_DSA_512 = 512;		// S
+			public static final short LENGTH_DSA_768 = 768;		// S
+			public static final short LENGTH_DSA_1024 = 1024;		// S
+			public static final short LENGTH_EC_FP_112 = 112;		// S
+			public static final short LENGTH_EC_F2M_113 = 113;		// S
+			public static final short LENGTH_EC_FP_128 = 128;		// S
+			public static final short LENGTH_EC_F2M_131 = 131;		// S
+			public static final short LENGTH_EC_FP_160 = 160;		// S
+			public static final short LENGTH_EC_F2M_163 = 163;		// S
+			public static final short LENGTH_EC_FP_192 = 192;		// S
+			public static final short LENGTH_EC_F2M_193 = 193;		// S
+			public static final short LENGTH_EC_FP_224 = 224;		// S
+			public static final short LENGTH_EC_FP_256 = 256;		// S
+			public static final short LENGTH_EC_FP_384 = 384;		// S
+			public static final short LENGTH_EC_FP_521 = 521;		// S
+			public static final short LENGTH_AES_128 = 128;		// S
+			public static final short LENGTH_AES_192 = 192;		// S
+			public static final short LENGTH_AES_256 = 256;		// S
+			public static final short LENGTH_KOREAN_SEED_128 = 128;		// S
+			public static final short LENGTH_HMAC_SHA_1_BLOCK_64 = 64;		// S
+			public static final short LENGTH_HMAC_SHA_256_BLOCK_64 = 64;		// S
+			public static final short LENGTH_HMAC_SHA_384_BLOCK_128 = 128;		// S
+			public static final short LENGTH_HMAC_SHA_512_BLOCK_128 = 128;		// S
+			public static final short LENGTH_DH_1024 = 1024;		// S
+			public static final short LENGTH_DH_2048 = 2048;		// S
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method private <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static buildKey(BSZ)Ljavacard/security/Key; 0 {
+			.stack 4;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_3;
+					sload_0;
+					stableswitch L47 1 37 L1 L1 L1 L35 L41 L47 L47 L47 L47 L47 L12 L12 L7 L7 L7 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L47 L24 L47 L22 L24 L47 L22;
+				L1:	sload_1;
+					bspush 64;
+					if_scmpeq L4;
+				L2:	sload_1;
+					sspush 128;
+					if_scmpeq L4;
+				L3:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L4:	sload_2;
+					ifeq L6;
+				L5:	new 59;		// com/sun/javacard/crypto/DESKeyEncryption
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 60;		// com/sun/javacard/crypto/DESKeyEncryption.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L6:	new 61;		// com/sun/javacard/crypto/DESKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 62;		// com/sun/javacard/crypto/DESKeyImpl.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L7:	sload_1;
+					sspush 128;
+					if_scmpeq L9;
+				L8:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L9:	sload_2;
+					ifeq L11;
+				L10:	new 63;		// com/sun/javacard/crypto/AESKeyEncryption
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 64;		// com/sun/javacard/crypto/AESKeyEncryption.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L11:	new 65;		// com/sun/javacard/crypto/AESKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 66;		// com/sun/javacard/crypto/AESKeyImpl.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L12:	sload_1;
+					bspush 112;
+					if_scmpeq L17;
+				L13:	sload_1;
+					sspush 128;
+					if_scmpeq L17;
+				L14:	sload_1;
+					sspush 160;
+					if_scmpeq L17;
+				L15:	sload_1;
+					sspush 192;
+					if_scmpeq L17;
+				L16:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L17:	sload_2;
+					ifeq L19;
+				L18:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L19:	sload_0;
+					bspush 11;
+					if_scmpne L21;
+				L20:	new 67;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 68;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L21:	new 69;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 70;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L22:	sload_1;
+					sspush 1024;
+					if_scmpeq L24;
+				L23:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L24:	sload_1;
+					sspush 1024;
+					if_scmpeq L27;
+				L25:	sload_1;
+					sspush 2048;
+					if_scmpeq L27;
+				L26:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L27:	sload_0;
+					stableswitch L34 32 37 L28 L34 L28 L31 L34 L31;
+				L28:	sload_2;
+					ifeq L30;
+				L29:	new 71;		// com/sun/javacard/crypto/FFPublicKeyEncryption
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 72;		// com/sun/javacard/crypto/FFPublicKeyEncryption.<init>(BS)V
+					astore_3;
+					goto_w L48;
+				L30:	new 73;		// com/sun/javacard/crypto/FFPublicKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 74;		// com/sun/javacard/crypto/FFPublicKeyImpl.<init>(BS)V
+					astore_3;
+					goto L48;
+				L31:	sload_2;
+					ifeq L33;
+				L32:	new 75;		// com/sun/javacard/crypto/FFPrivateKeyEncryption
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 76;		// com/sun/javacard/crypto/FFPrivateKeyEncryption.<init>(BS)V
+					astore_3;
+					goto L48;
+				L33:	new 77;		// com/sun/javacard/crypto/FFPrivateKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 78;		// com/sun/javacard/crypto/FFPrivateKeyImpl.<init>(BS)V
+					astore_3;
+					goto L48;
+				L34:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+					goto L48;
+				L35:	sload_1;
+					slookupswitch L37 1 512 L36;
+				L36:	goto L38;
+				L37:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L38:	sload_2;
+					ifeq L40;
+				L39:	new 79;		// com/sun/javacard/crypto/RSAPublicKeyEncryption
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 80;		// com/sun/javacard/crypto/RSAPublicKeyEncryption.<init>(BS)V
+					astore_3;
+					goto L48;
+				L40:	new 81;		// com/sun/javacard/crypto/RSAPublicKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 82;		// com/sun/javacard/crypto/RSAPublicKeyImpl.<init>(BS)V
+					astore_3;
+					goto L48;
+				L41:	sload_1;
+					slookupswitch L43 1 512 L42;
+				L42:	goto L44;
+				L43:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L44:	sload_2;
+					ifeq L46;
+				L45:	new 83;		// com/sun/javacard/crypto/RSAPrivateKeyEncryption
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 84;		// com/sun/javacard/crypto/RSAPrivateKeyEncryption.<init>(BS)V
+					astore_3;
+					goto L48;
+				L46:	new 85;		// com/sun/javacard/crypto/RSAPrivateKeyImpl
+					dup;
+					sload_0;
+					sload_1;
+					invokespecial 86;		// com/sun/javacard/crypto/RSAPrivateKeyImpl.<init>(BS)V
+					astore_3;
+					goto L48;
+				L47:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L48:	aload_3;
+					areturn;
+		}
+
+		.method public static buildKey(BBSZ)Ljavacard/security/Key; 1 {
+			.stack 4;
+			.locals 1;
+
+				L0:	sload_0;
+					stableswitch L12 16 19 L11 L1 L11 L11;
+				L1:	sload_1;
+					ifeq L3;
+				L2:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L3:	sload_2;
+					bspush 112;
+					if_scmpeq L8;
+				L4:	sload_2;
+					sspush 128;
+					if_scmpeq L8;
+				L5:	sload_2;
+					sspush 160;
+					if_scmpeq L8;
+				L6:	sload_2;
+					sspush 192;
+					if_scmpeq L8;
+				L7:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L8:	sload_3;
+					ifeq L10;
+				L9:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L10:	new 87;		// com/sun/javacard/crypto/ECKeyImpl
+					dup;
+					bspush 17;
+					sload_2;
+					invokespecial 88;		// com/sun/javacard/crypto/ECKeyImpl.<init>(BS)V
+					areturn;
+				L11:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+					goto L12;
+				L12:	sload_0;
+					sload_1;
+					invokestatic 89;		// javacard/security/KeyBuilder.getKeyType(BB)B
+					sstore 4;
+					sload 4;
+					ifne L14;
+				L13:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L14:	sload 4;
+					sload_2;
+					sload_3;
+					invokestatic 90;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
+					areturn;
+		}
+
+		.method private static getKeyType(BB)B {
+			.stack 1;
+			.locals 0;
+
+				L0:	sload_0;
+					stableswitch L31 1 15 L1 L6 L31 L31 L31 L31 L19 L22 L31 L31 L25 L28 L31 L15 L11;
+				L1:	sload_1;
+					stableswitch L5 0 2 L2 L4 L3;
+				L2:	sconst_3;
+					sreturn;
+				L3:	sconst_2;
+					sreturn;
+				L4:	sconst_1;
+					sreturn;
+				L5:	sconst_0;
+					sreturn;
+				L6:	sload_1;
+					stableswitch L10 0 2 L7 L9 L8;
+				L7:	bspush 15;
+					sreturn;
+				L8:	bspush 14;
+					sreturn;
+				L9:	bspush 13;
+					sreturn;
+				L10:	sconst_0;
+					sreturn;
+				L11:	sload_1;
+					slookupswitch L14 2 0 L12 1 L13;
+				L12:	bspush 35;
+					sreturn;
+				L13:	bspush 37;
+					sreturn;
+				L14:	sconst_0;
+					sreturn;
+				L15:	sload_1;
+					slookupswitch L18 2 0 L16 1 L17;
+				L16:	bspush 32;
+					sreturn;
+				L17:	bspush 34;
+					sreturn;
+				L18:	sconst_0;
+					sreturn;
+				L19:	sload_1;
+					ifeq L21;
+				L20:	sconst_0;
+					sreturn;
+				L21:	bspush 11;
+					sreturn;
+				L22:	sload_1;
+					ifeq L24;
+				L23:	sconst_0;
+					sreturn;
+				L24:	bspush 12;
+					sreturn;
+				L25:	sload_1;
+					ifeq L27;
+				L26:	sconst_0;
+					sreturn;
+				L27:	sconst_4;
+					sreturn;
+				L28:	sload_1;
+					ifeq L30;
+				L29:	sconst_0;
+					sreturn;
+				L30:	sconst_5;
+					sreturn;
+				L31:	sconst_0;
+					sreturn;
+		}
+
+		.method public static buildKeyWithSharedDomain(BBLjavacard/security/Key;Z)Ljavacard/security/Key; 2 {
+			.stack 4;
+			.locals 3;
+
+				L0:	aload_2;
+					ifnull L2;
+				L1:	aload_2;
+					instanceof 0 87;		// T_CLASSORINTERFACE com/sun/javacard/crypto/ECKeyImpl
+					ifne L3;
+				L2:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L3:	sload_0;
+					sload_1;
+					invokestatic 91;		// javacard/security/KeyBuilder.getSharedDomainKeyType(BB)B
+					sstore 4;
+					sload 4;
+					ifne L5;
+				L4:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L5:	aload_2;
+					invokeinterface 1 92 1;		// javacard/security/Key
+					sstore 5;
+					aconst_null;
+					astore 6;
+					sload 4;
+					slookupswitch L16 4 11 L6 12 L6 30 L6 31 L6;
+				L6:	sload 5;
+					bspush 112;
+					if_scmpeq L11;
+				L7:	sload 5;
+					sspush 128;
+					if_scmpeq L11;
+				L8:	sload 5;
+					sspush 160;
+					if_scmpeq L11;
+				L9:	sload 5;
+					sspush 192;
+					if_scmpeq L11;
+				L10:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L11:	sload_3;
+					ifeq L13;
+				L12:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L13:	sload 4;
+					bspush 11;
+					if_scmpne L15;
+				L14:	new 67;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl
+					dup;
+					sload 4;
+					aload_2;
+					invokespecial 93;		// com/sun/javacard/crypto/ECSharedDomainPublicKeyImpl.<init>(BLjavacard/security/Key;)V
+					astore 6;
+					goto L17;
+				L15:	new 69;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl
+					dup;
+					sload 4;
+					aload_2;
+					invokespecial 94;		// com/sun/javacard/crypto/ECSharedDomainPrivateKeyImpl.<init>(BLjavacard/security/Key;)V
+					astore 6;
+					goto L17;
+				L16:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L17:	aload 6;
+					areturn;
+		}
+
+		.method private static getSharedDomainKeyType(BB)B {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					slookupswitch L10 2 7 L1 8 L4;
+				L1:	sload_1;
+					ifeq L3;
+				L2:	sconst_0;
+					sreturn;
+				L3:	bspush 11;
+					sreturn;
+				L4:	sload_1;
+					ifne L6;
+				L5:	bspush 12;
+					sreturn;
+				L6:	sload_1;
+					sconst_2;
+					if_scmpne L8;
+				L7:	bspush 31;
+					sreturn;
+				L8:	sload_1;
+					sconst_1;
+					if_scmpne L10;
+				L9:	bspush 30;
+					sreturn;
+				L10:	sconst_0;
+					sreturn;
+		}
+
+	}
+
+	.class public abstract RandomData 14 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte ALG_PSEUDO_RANDOM = 1;		// B
+			public static final byte ALG_SECURE_RANDOM = 2;		// B
+			public static final byte ALG_TRNG = 3;		// B
+			public static final byte ALG_PRESEEDED_DRBG = 4;		// B
+			public static final byte ALG_FAST = 5;		// B
+			public static final byte ALG_KEYGENERATION = 6;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			generateData([BSS)V;
+			setSeed([BSS)V;
+			nextBytes([BSS)S;
+			getAlgorithm()B;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final getInstance(B)Ljavacard/security/RandomData; 0 {
+			.stack 3;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_1;
+					sload_0;
+					slookupswitch L2 1 1 L1;
+				L1:	new 95;		// com/sun/javacard/crypto/UtilityRandomData
+					dup;
+					sload_0;
+					invokespecial 96;		// com/sun/javacard/crypto/UtilityRandomData.<init>(B)V
+					astore_1;
+					goto L3;
+				L2:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L3:	aload_1;
+					areturn;
+		}
+
+		.method protected <init>()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public abstract generateData([BSS)V 1 {
+		}
+
+		.method public abstract nextBytes([BSS)S 3 {
+		}
+
+		.method public abstract setSeed([BSS)V 2 {
+		}
+
+		.method public abstract getAlgorithm()B 4 {
+		}
+
+	}
+
+	.class public final RandomData$OneShot 32 extends RandomData {
+
+		.fields {
+			private 0.0[] actualInstance 0;		// [Ljava/lang/Object;
+			private static RandomData$OneShot systemInstance;		// Ljavacard/security/RandomData$OneShot;
+			private static boolean[] opened;		// [Z
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			generateData([BSS)V;
+			setSeed([BSS)V;
+			nextBytes([BSS)S;
+			getAlgorithm()B;
+			close()V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final open(B)Ljavacard/security/RandomData$OneShot; 0 {
+			.stack 3;
+			.locals 1;
+
+				L0:	getstatic_a 97;		// reference javacard/security/RandomData$OneShot.systemInstance
+					ifnonnull L2;
+				L1:	new 98;		// javacard/security/RandomData$OneShot
+					dup;
+					invokespecial 99;		// javacard/security/RandomData$OneShot.<init>()V
+					putstatic_a 97;		// reference javacard/security/RandomData$OneShot.systemInstance
+					getstatic_a 97;		// reference javacard/security/RandomData$OneShot.systemInstance
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L2:	getstatic_a 100;		// reference javacard/security/RandomData$OneShot.opened
+					ifnonnull L4;
+				L3:	sconst_1;
+					sconst_2;
+					invokestatic 12;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+					putstatic_a 100;		// reference javacard/security/RandomData$OneShot.opened
+					getstatic_a 100;		// reference javacard/security/RandomData$OneShot.opened
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L4:	invokestatic 101;		// javacard/security/RandomData$OneShot.isClosed()Z
+					ifeq L6;
+				L5:	invokestatic 14;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+					sstore_1;
+					getstatic_a 97;		// reference javacard/security/RandomData$OneShot.systemInstance
+					sload_1;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getstatic_a 97;		// reference javacard/security/RandomData$OneShot.systemInstance
+					sload_0;
+					invokestatic 102;		// javacard/security/RandomData.getInstance(B)Ljavacard/security/RandomData;
+					sload_1;
+					invokespecial 103;		// javacard/security/RandomData$OneShot.setActual(Ljavacard/security/RandomData;B)V
+					goto L7;
+				L6:	sconst_5;
+					invokestatic 18;		// javacard/framework/SystemException.throwIt(S)V
+				L7:	getstatic_a 97;		// reference javacard/security/RandomData$OneShot.systemInstance
+					areturn;
+		}
+
+		.method private static isClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 100;		// reference javacard/security/RandomData$OneShot.opened
+					sconst_0;
+					baload;
+					ifne L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private isActualClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnonnull L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private checkContext()Z {
+			.stack 3;
+			.locals 1;
+
+				L0:	invokestatic 20;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+					sstore_1;
+					sload_1;
+					ifeq L2;
+				L1:	sload_1;
+					getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					invokestatic 21;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+					if_scmpne L3;
+				L2:	sconst_1;
+					goto L4;
+				L3:	sconst_0;
+				L4:	sreturn;
+		}
+
+		.method private setActual(Ljavacard/security/RandomData;B)V {
+			.stack 3;
+			.locals 0;
+
+				L0:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sload_2;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aload_1;
+					aastore;
+					getstatic_a 100;		// reference javacard/security/RandomData$OneShot.opened
+					sconst_0;
+					sconst_1;
+					bastore;
+					return;
+		}
+
+		.method private <init>()V {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 105;		// javacard/security/RandomData.<init>()V
+					aload_0;
+					sconst_1;
+					sconst_2;
+					invokestatic 23;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+					putfield_a 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					return;
+		}
+
+		.method public close()V 5 {
+			.stack 3;
+			.locals 0;
+
+				L0:	invokestatic 101;		// javacard/security/RandomData$OneShot.isClosed()Z
+					ifne L2;
+				L1:	aload_0;
+					invokespecial 106;		// javacard/security/RandomData$OneShot.isActualClosed()Z
+					ifeq L3;
+				L2:	return;
+				L3:	aload_0;
+					invokespecial 107;		// javacard/security/RandomData$OneShot.checkContext()Z
+					ifne L5;
+				L4:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L5:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnull L8;
+				L6:	invokestatic 27;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+					ifeq L8;
+				L7:	invokestatic 28;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L8:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aconst_null;
+					aastore;
+					getstatic_a 100;		// reference javacard/security/RandomData$OneShot.opened
+					sconst_0;
+					sconst_0;
+					bastore;
+					return;
+		}
+
+		.method public getAlgorithm()B 4 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 106;		// javacard/security/RandomData$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 107;		// javacard/security/RandomData$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 108;		// T_CLASSORINTERFACE javacard/security/RandomData
+					invokevirtual 109;		// getAlgorithm()B
+					sreturn;
+		}
+
+		.method public generateData([BSS)V 1 {
+			.stack 4;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 106;		// javacard/security/RandomData$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 107;		// javacard/security/RandomData$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 108;		// T_CLASSORINTERFACE javacard/security/RandomData
+					aload_1;
+					sload_2;
+					sload_3;
+					invokevirtual 110;		// generateData([BSS)V
+					return;
+		}
+
+		.method public nextBytes([BSS)S 3 {
+			.stack 4;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 106;		// javacard/security/RandomData$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 107;		// javacard/security/RandomData$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 108;		// T_CLASSORINTERFACE javacard/security/RandomData
+					aload_1;
+					sload_2;
+					sload_3;
+					invokevirtual 111;		// nextBytes([BSS)S
+					sreturn;
+		}
+
+		.method public setSeed([BSS)V 2 {
+			.stack 4;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 106;		// javacard/security/RandomData$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 107;		// javacard/security/RandomData$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 2;		// reference javacard/security/RandomData$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 108;		// T_CLASSORINTERFACE javacard/security/RandomData
+					aload_1;
+					sload_2;
+					sload_3;
+					invokevirtual 112;		// setSeed([BSS)V
+					return;
+		}
+
+	}
+
+	.class public final KeyPair 16 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			private 1.0 kp 0;		// Lcom/sun/javacard/crypto/KeyPairInterfaceInternal;
+			public static final byte ALG_RSA = 1;		// B
+			public static final byte ALG_RSA_CRT = 2;		// B
+			public static final byte ALG_DSA = 3;		// B
+			public static final byte ALG_EC_F2M = 4;		// B
+			public static final byte ALG_EC_FP = 5;		// B
+			public static final byte ALG_DH = 6;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			genKeyPair()V;
+			getPrivate()Ljavacard/security/PrivateKey;;
+			getPublic()Ljavacard/security/PublicKey;;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public final genKeyPair()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_a_this 3;		// reference javacard/security/KeyPair.kp
+					invokeinterface 1 114 2;		// com/sun/javacard/crypto/KeyPairInterfaceInternal
+					return;
+		}
+
+		.method public <init>(BS)V 0 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					sload_1;
+					slookupswitch L4 3 1 L1 5 L2 6 L3;
+				L1:	aload_0;
+					new 115;		// com/sun/javacard/crypto/RSAKeyPair
+					dup;
+					sload_1;
+					sload_2;
+					invokespecial 116;		// com/sun/javacard/crypto/RSAKeyPair.<init>(BS)V
+					putfield_a 3;		// reference javacard/security/KeyPair.kp
+					goto L5;
+				L2:	aload_0;
+					new 117;		// com/sun/javacard/crypto/ECKeyPair
+					dup;
+					sload_1;
+					sload_2;
+					invokespecial 118;		// com/sun/javacard/crypto/ECKeyPair.<init>(BS)V
+					putfield_a 3;		// reference javacard/security/KeyPair.kp
+					goto L5;
+				L3:	aload_0;
+					new 119;		// com/sun/javacard/crypto/FFKeyPair
+					dup;
+					sload_1;
+					sload_2;
+					invokespecial 120;		// com/sun/javacard/crypto/FFKeyPair.<init>(BS)V
+					putfield_a 3;		// reference javacard/security/KeyPair.kp
+					goto L5;
+				L4:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L5:	return;
+		}
+
+		.method public <init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V 1 {
+			.stack 5;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					aload_1;
+					ifnull L2;
+				L1:	aload_2;
+					ifnonnull L3;
+				L2:	sconst_1;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L3:	aload_1;
+					invokeinterface 1 121 2;		// javacard/security/PublicKey
+					slookupswitch L7 5 4 L4 11 L5 32 L6 33 L6 34 L6;
+				L4:	aload_0;
+					new 115;		// com/sun/javacard/crypto/RSAKeyPair
+					dup;
+					aload_1;
+					aload_2;
+					invokespecial 122;		// com/sun/javacard/crypto/RSAKeyPair.<init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V
+					putfield_a 3;		// reference javacard/security/KeyPair.kp
+					goto L8;
+				L5:	aload_0;
+					new 117;		// com/sun/javacard/crypto/ECKeyPair
+					dup;
+					aload_1;
+					aload_2;
+					invokespecial 123;		// com/sun/javacard/crypto/ECKeyPair.<init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V
+					putfield_a 3;		// reference javacard/security/KeyPair.kp
+					goto L8;
+				L6:	aload_0;
+					new 119;		// com/sun/javacard/crypto/FFKeyPair
+					dup;
+					aload_1;
+					aload_2;
+					invokespecial 124;		// com/sun/javacard/crypto/FFKeyPair.<init>(Ljavacard/security/PublicKey;Ljavacard/security/PrivateKey;)V
+					putfield_a 3;		// reference javacard/security/KeyPair.kp
+					goto L8;
+				L7:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L8:	return;
+		}
+
+		.method public getPublic()Ljavacard/security/PublicKey; 3 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_a_this 3;		// reference javacard/security/KeyPair.kp
+					invokeinterface 1 114 0;		// com/sun/javacard/crypto/KeyPairInterfaceInternal
+					areturn;
+		}
+
+		.method public getPrivate()Ljavacard/security/PrivateKey; 2 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_a_this 3;		// reference javacard/security/KeyPair.kp
+					invokeinterface 1 114 1;		// com/sun/javacard/crypto/KeyPairInterfaceInternal
+					areturn;
+		}
+
+	}
+
+	.class public abstract Signature 15 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte ALG_DES_MAC4_NOPAD = 1;		// B
+			public static final byte ALG_DES_MAC8_NOPAD = 2;		// B
+			public static final byte ALG_DES_MAC4_ISO9797_M1 = 3;		// B
+			public static final byte ALG_DES_MAC8_ISO9797_M1 = 4;		// B
+			public static final byte ALG_DES_MAC4_ISO9797_M2 = 5;		// B
+			public static final byte ALG_DES_MAC8_ISO9797_M2 = 6;		// B
+			public static final byte ALG_DES_MAC4_PKCS5 = 7;		// B
+			public static final byte ALG_DES_MAC8_PKCS5 = 8;		// B
+			public static final byte ALG_RSA_SHA_ISO9796 = 9;		// B
+			public static final byte ALG_RSA_SHA_PKCS1 = 10;		// B
+			public static final byte ALG_RSA_MD5_PKCS1 = 11;		// B
+			public static final byte ALG_RSA_RIPEMD160_ISO9796 = 12;		// B
+			public static final byte ALG_RSA_RIPEMD160_PKCS1 = 13;		// B
+			public static final byte ALG_DSA_SHA = 14;		// B
+			public static final byte ALG_RSA_SHA_RFC2409 = 15;		// B
+			public static final byte ALG_RSA_MD5_RFC2409 = 16;		// B
+			public static final byte ALG_ECDSA_SHA = 17;		// B
+			public static final byte ALG_AES_MAC_128_NOPAD = 18;		// B
+			public static final byte ALG_AES_CMAC_128 = 49;		// B
+			public static final byte ALG_DES_MAC4_ISO9797_1_M2_ALG3 = 19;		// B
+			public static final byte ALG_DES_MAC8_ISO9797_1_M2_ALG3 = 20;		// B
+			public static final byte ALG_RSA_SHA_PKCS1_PSS = 21;		// B
+			public static final byte ALG_RSA_MD5_PKCS1_PSS = 22;		// B
+			public static final byte ALG_RSA_RIPEMD160_PKCS1_PSS = 23;		// B
+			public static final byte ALG_HMAC_SHA1 = 24;		// B
+			public static final byte ALG_HMAC_SHA_256 = 25;		// B
+			public static final byte ALG_HMAC_SHA_384 = 26;		// B
+			public static final byte ALG_HMAC_SHA_512 = 27;		// B
+			public static final byte ALG_HMAC_MD5 = 28;		// B
+			public static final byte ALG_HMAC_RIPEMD160 = 29;		// B
+			public static final byte ALG_RSA_SHA_ISO9796_MR = 30;		// B
+			public static final byte ALG_RSA_RIPEMD160_ISO9796_MR = 31;		// B
+			public static final byte ALG_KOREAN_SEED_MAC_NOPAD = 32;		// B
+			public static final byte ALG_ECDSA_SHA_256 = 33;		// B
+			public static final byte ALG_ECDSA_SHA_384 = 34;		// B
+			public static final byte ALG_AES_MAC_192_NOPAD = 35;		// B
+			public static final byte ALG_AES_MAC_256_NOPAD = 36;		// B
+			public static final byte ALG_ECDSA_SHA_224 = 37;		// B
+			public static final byte ALG_ECDSA_SHA_512 = 38;		// B
+			public static final byte ALG_RSA_SHA_224_PKCS1 = 39;		// B
+			public static final byte ALG_RSA_SHA_256_PKCS1 = 40;		// B
+			public static final byte ALG_RSA_SHA_384_PKCS1 = 41;		// B
+			public static final byte ALG_RSA_SHA_512_PKCS1 = 42;		// B
+			public static final byte ALG_RSA_SHA_224_PKCS1_PSS = 43;		// B
+			public static final byte ALG_RSA_SHA_256_PKCS1_PSS = 44;		// B
+			public static final byte ALG_RSA_SHA_384_PKCS1_PSS = 45;		// B
+			public static final byte ALG_RSA_SHA_512_PKCS1_PSS = 46;		// B
+			public static final byte ALG_DES_MAC4_ISO9797_1_M1_ALG3 = 47;		// B
+			public static final byte ALG_DES_MAC8_ISO9797_1_M1_ALG3 = 48;		// B
+			public static final byte SIG_CIPHER_DES_MAC4 = 1;		// B
+			public static final byte SIG_CIPHER_DES_MAC8 = 2;		// B
+			public static final byte SIG_CIPHER_RSA = 3;		// B
+			public static final byte SIG_CIPHER_DSA = 4;		// B
+			public static final byte SIG_CIPHER_ECDSA = 5;		// B
+			public static final byte SIG_CIPHER_ECDSA_PLAIN = 9;		// B
+			public static final byte SIG_CIPHER_AES_MAC128 = 6;		// B
+			public static final byte SIG_CIPHER_AES_CMAC128 = 10;		// B
+			public static final byte SIG_CIPHER_HMAC = 7;		// B
+			public static final byte SIG_CIPHER_KOREAN_SEED_MAC = 8;		// B
+			public static final byte MODE_SIGN = 1;		// B
+			public static final byte MODE_VERIFY = 2;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			getAlgorithm()B;
+			getLength()S;
+			init(Ljavacard/security/Key;B)V;
+			init(Ljavacard/security/Key;B[BSS)V;
+			sign([BSS[BS)S;
+			update([BSS)V;
+			verify([BSS[BSS)Z;
+			setInitialDigest([BSS[BSS)V;
+			signPreComputedHash([BSS[BS)S;
+			verifyPreComputedHash([BSS[BSS)Z;
+			getMessageDigestAlgorithm()B;
+			getCipherAlgorithm()B;
+			getPaddingAlgorithm()B;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final getInstance(BZ)Ljavacard/security/Signature; 0 {
+			.stack 6;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore_2;
+					sload_1;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	sload_0;
+					slookupswitch L9 6 6 L3 10 L4 17 L5 18 L6 30 L7 49 L8;
+				L3:	new 125;		// com/sun/javacard/crypto/DESMAC8ISO9797M2Signature
+					dup;
+					sload_0;
+					sconst_0;
+					sconst_2;
+					sconst_3;
+					invokespecial 126;		// com/sun/javacard/crypto/DESMAC8ISO9797M2Signature.<init>(BBBB)V
+					astore_2;
+					goto L10;
+				L4:	new 127;		// com/sun/javacard/crypto/RSAPKCS1Signature
+					dup;
+					sload_0;
+					sconst_1;
+					sconst_3;
+					bspush 7;
+					invokespecial 128;		// com/sun/javacard/crypto/RSAPKCS1Signature.<init>(BBBB)V
+					astore_2;
+					goto L10;
+				L5:	new 129;		// com/sun/javacard/crypto/ECDSASignature
+					dup;
+					sload_0;
+					sconst_1;
+					sconst_5;
+					sconst_0;
+					invokespecial 130;		// com/sun/javacard/crypto/ECDSASignature.<init>(BBBB)V
+					astore_2;
+					goto L10;
+				L6:	new 131;		// com/sun/javacard/crypto/AESMAC128NOPADSignature
+					dup;
+					sload_0;
+					sconst_0;
+					bspush 6;
+					sconst_1;
+					invokespecial 132;		// com/sun/javacard/crypto/AESMAC128NOPADSignature.<init>(BBBB)V
+					astore_2;
+					goto L10;
+				L7:	new 133;		// com/sun/javacard/crypto/RSASHAISO9796MRSignature
+					dup;
+					sload_0;
+					sconst_1;
+					sconst_3;
+					bspush 11;
+					invokespecial 134;		// com/sun/javacard/crypto/RSASHAISO9796MRSignature.<init>(BBBB)V
+					astore_2;
+					goto L10;
+				L8:	new 135;		// com/sun/javacard/crypto/AES128CMACSignature
+					dup;
+					sload_0;
+					sconst_0;
+					bspush 10;
+					sconst_3;
+					invokespecial 136;		// com/sun/javacard/crypto/AES128CMACSignature.<init>(BBBB)V
+					astore_2;
+					goto L10;
+				L9:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L10:	aload_2;
+					areturn;
+		}
+
+		.method public static final getInstance(BBBZ)Ljavacard/security/Signature; 2 {
+			.stack 6;
+			.locals 1;
+
+				L0:	aconst_null;
+					astore 4;
+					sload_3;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	sload_0;
+					slookupswitch L23 2 0 L3 1 L14;
+				L3:	sload_1;
+					slookupswitch L13 3 2 L4 6 L7 10 L10;
+				L4:	sload_2;
+					slookupswitch L6 1 3 L5;
+				L5:	new 125;		// com/sun/javacard/crypto/DESMAC8ISO9797M2Signature
+					dup;
+					bspush 6;
+					sconst_0;
+					sconst_2;
+					sconst_3;
+					invokespecial 126;		// com/sun/javacard/crypto/DESMAC8ISO9797M2Signature.<init>(BBBB)V
+					astore 4;
+					goto_w L23;
+				L6:	goto_w L23;
+				L7:	sload_2;
+					slookupswitch L9 1 1 L8;
+				L8:	new 131;		// com/sun/javacard/crypto/AESMAC128NOPADSignature
+					dup;
+					bspush 18;
+					sconst_0;
+					bspush 6;
+					sconst_1;
+					invokespecial 132;		// com/sun/javacard/crypto/AESMAC128NOPADSignature.<init>(BBBB)V
+					astore 4;
+					goto_w L23;
+				L9:	goto L23;
+				L10:	sload_2;
+					slookupswitch L12 1 3 L11;
+				L11:	new 135;		// com/sun/javacard/crypto/AES128CMACSignature
+					dup;
+					bspush 49;
+					sconst_0;
+					bspush 10;
+					sconst_3;
+					invokespecial 136;		// com/sun/javacard/crypto/AES128CMACSignature.<init>(BBBB)V
+					astore 4;
+					goto L23;
+				L12:	goto L23;
+				L13:	goto L23;
+				L14:	sload_1;
+					slookupswitch L22 2 3 L15 5 L19;
+				L15:	sload_2;
+					slookupswitch L18 2 7 L16 11 L17;
+				L16:	new 127;		// com/sun/javacard/crypto/RSAPKCS1Signature
+					dup;
+					bspush 10;
+					sconst_1;
+					sconst_3;
+					bspush 7;
+					invokespecial 128;		// com/sun/javacard/crypto/RSAPKCS1Signature.<init>(BBBB)V
+					astore 4;
+					goto L23;
+				L17:	new 133;		// com/sun/javacard/crypto/RSASHAISO9796MRSignature
+					dup;
+					bspush 30;
+					sconst_1;
+					sconst_3;
+					bspush 11;
+					invokespecial 134;		// com/sun/javacard/crypto/RSASHAISO9796MRSignature.<init>(BBBB)V
+					astore 4;
+					goto L23;
+				L18:	goto L23;
+				L19:	sload_2;
+					slookupswitch L21 1 0 L20;
+				L20:	new 129;		// com/sun/javacard/crypto/ECDSASignature
+					dup;
+					bspush 17;
+					sconst_1;
+					sconst_5;
+					sconst_0;
+					invokespecial 130;		// com/sun/javacard/crypto/ECDSASignature.<init>(BBBB)V
+					astore 4;
+					goto L23;
+				L21:	goto L23;
+				L22:	goto L23;
+				L23:	aload 4;
+					ifnonnull L25;
+				L24:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L25:	aload 4;
+					areturn;
+		}
+
+		.method protected <init>()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B)V 3 {
+		}
+
+		.method public abstract init(Ljavacard/security/Key;B[BSS)V 4 {
+		}
+
+		.method public abstract setInitialDigest([BSS[BSS)V 8 {
+		}
+
+		.method public abstract getAlgorithm()B 1 {
+		}
+
+		.method public abstract getMessageDigestAlgorithm()B 11 {
+		}
+
+		.method public abstract getCipherAlgorithm()B 12 {
+		}
+
+		.method public abstract getPaddingAlgorithm()B 13 {
+		}
+
+		.method public abstract getLength()S 2 {
+		}
+
+		.method public abstract update([BSS)V 6 {
+		}
+
+		.method public abstract sign([BSS[BS)S 5 {
+		}
+
+		.method public abstract signPreComputedHash([BSS[BS)S 9 {
+		}
+
+		.method public abstract verify([BSS[BSS)Z 7 {
+		}
+
+		.method public abstract verifyPreComputedHash([BSS[BSS)Z 10 {
+		}
+
+	}
+
+	.class public final Signature$OneShot 33 extends Signature {
+
+		.fields {
+			private 0.0[] actualInstance 0;		// [Ljava/lang/Object;
+			private static Signature$OneShot systemInstance;		// Ljavacard/security/Signature$OneShot;
+			private static boolean[] opened;		// [Z
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			getAlgorithm()B;
+			getLength()S;
+			init(Ljavacard/security/Key;B)V;
+			init(Ljavacard/security/Key;B[BSS)V;
+			sign([BSS[BS)S;
+			update([BSS)V;
+			verify([BSS[BSS)Z;
+			setInitialDigest([BSS[BSS)V;
+			signPreComputedHash([BSS[BS)S;
+			verifyPreComputedHash([BSS[BSS)Z;
+			getMessageDigestAlgorithm()B;
+			getCipherAlgorithm()B;
+			getPaddingAlgorithm()B;
+			close()V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final open(BBB)Ljavacard/security/Signature$OneShot; 0 {
+			.stack 5;
+			.locals 1;
+
+				L0:	getstatic_a 137;		// reference javacard/security/Signature$OneShot.systemInstance
+					ifnonnull L2;
+				L1:	new 138;		// javacard/security/Signature$OneShot
+					dup;
+					invokespecial 139;		// javacard/security/Signature$OneShot.<init>()V
+					putstatic_a 137;		// reference javacard/security/Signature$OneShot.systemInstance
+					getstatic_a 137;		// reference javacard/security/Signature$OneShot.systemInstance
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L2:	getstatic_a 140;		// reference javacard/security/Signature$OneShot.opened
+					ifnonnull L4;
+				L3:	sconst_1;
+					sconst_2;
+					invokestatic 12;		// javacard/framework/JCSystem.makeTransientBooleanArray(SB)[Z
+					putstatic_a 140;		// reference javacard/security/Signature$OneShot.opened
+					getstatic_a 140;		// reference javacard/security/Signature$OneShot.opened
+					sconst_1;
+					invokestatic 10;		// com/sun/javacard/impl/NativeMethods.setJCREentry(Ljava/lang/Object;Z)V
+				L4:	invokestatic 141;		// javacard/security/Signature$OneShot.isClosed()Z
+					ifeq L6;
+				L5:	invokestatic 14;		// com/sun/javacard/impl/NativeMethods.getCurrentContext()B
+					sstore_3;
+					getstatic_a 137;		// reference javacard/security/Signature$OneShot.systemInstance
+					sload_3;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getstatic_a 137;		// reference javacard/security/Signature$OneShot.systemInstance
+					sload_0;
+					sload_1;
+					sload_2;
+					sconst_0;
+					invokestatic 142;		// javacard/security/Signature.getInstance(BBBZ)Ljavacard/security/Signature;
+					sload_3;
+					invokespecial 143;		// javacard/security/Signature$OneShot.setActual(Ljavacard/security/Signature;B)V
+					goto L7;
+				L6:	sconst_5;
+					invokestatic 18;		// javacard/framework/SystemException.throwIt(S)V
+				L7:	getstatic_a 137;		// reference javacard/security/Signature$OneShot.systemInstance
+					areturn;
+		}
+
+		.method public final update([BSS)V 6 {
+			.stack 1;
+			.locals 0;
+
+				L0:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+					return;
+		}
+
+		.method private static isClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 140;		// reference javacard/security/Signature$OneShot.opened
+					sconst_0;
+					baload;
+					ifne L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private isActualClosed()Z {
+			.stack 2;
+			.locals 0;
+
+				L0:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnonnull L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method private checkContext()Z {
+			.stack 3;
+			.locals 1;
+
+				L0:	invokestatic 20;		// com/sun/javacard/impl/NativeMethods.getPreviousContext()B
+					sstore_1;
+					sload_1;
+					ifeq L2;
+				L1:	sload_1;
+					getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					invokestatic 21;		// com/sun/javacard/impl/NativeMethods.getObjectContext(Ljava/lang/Object;)S
+					if_scmpne L3;
+				L2:	sconst_1;
+					goto L4;
+				L3:	sconst_0;
+				L4:	sreturn;
+		}
+
+		.method private setActual(Ljavacard/security/Signature;B)V {
+			.stack 3;
+			.locals 0;
+
+				L0:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sload_2;
+					invokestatic 15;		// com/sun/javacard/impl/NativeMethods.setObjectContext(Ljava/lang/Object;B)V
+					getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aload_1;
+					aastore;
+					getstatic_a 140;		// reference javacard/security/Signature$OneShot.opened
+					sconst_0;
+					sconst_1;
+					bastore;
+					return;
+		}
+
+		.method private <init>()V {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 145;		// javacard/security/Signature.<init>()V
+					aload_0;
+					sconst_1;
+					sconst_2;
+					invokestatic 23;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+					putfield_a 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					return;
+		}
+
+		.method public close()V 14 {
+			.stack 3;
+			.locals 0;
+
+				L0:	invokestatic 141;		// javacard/security/Signature$OneShot.isClosed()Z
+					ifne L2;
+				L1:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L3;
+				L2:	return;
+				L3:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L5;
+				L4:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L5:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					ifnull L8;
+				L6:	invokestatic 27;		// javacard/framework/JCSystem.isObjectDeletionSupported()Z
+					ifeq L8;
+				L7:	invokestatic 28;		// javacard/framework/JCSystem.requestObjectDeletion()V
+				L8:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aconst_null;
+					aastore;
+					getstatic_a 140;		// reference javacard/security/Signature$OneShot.opened
+					sconst_0;
+					sconst_0;
+					bastore;
+					return;
+		}
+
+		.method public init(Ljavacard/security/Key;B)V 3 {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					invokevirtual 149;		// init(Ljavacard/security/Key;B)V
+					return;
+		}
+
+		.method public init(Ljavacard/security/Key;B[BSS)V 4 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					aload_3;
+					sload 4;
+					sload 5;
+					invokevirtual 150;		// init(Ljavacard/security/Key;B[BSS)V
+					return;
+		}
+
+		.method public setInitialDigest([BSS[BSS)V 8 {
+			.stack 7;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					sload 6;
+					invokevirtual 151;		// setInitialDigest([BSS[BSS)V
+					return;
+		}
+
+		.method public getAlgorithm()B 1 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					invokevirtual 152;		// getAlgorithm()B
+					sreturn;
+		}
+
+		.method public getMessageDigestAlgorithm()B 11 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					invokevirtual 153;		// getMessageDigestAlgorithm()B
+					sreturn;
+		}
+
+		.method public getCipherAlgorithm()B 12 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					invokevirtual 154;		// getCipherAlgorithm()B
+					sreturn;
+		}
+
+		.method public getPaddingAlgorithm()B 13 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					invokevirtual 155;		// getPaddingAlgorithm()B
+					sreturn;
+		}
+
+		.method public getLength()S 2 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					invokevirtual 156;		// getLength()S
+					sreturn;
+		}
+
+		.method public sign([BSS[BS)S 5 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					invokevirtual 157;		// sign([BSS[BS)S
+					sreturn;
+		}
+
+		.method public signPreComputedHash([BSS[BS)S 9 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					invokevirtual 158;		// signPreComputedHash([BSS[BS)S
+					sreturn;
+		}
+
+		.method public verify([BSS[BSS)Z 7 {
+			.stack 7;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					sload 6;
+					invokevirtual 159;		// verify([BSS[BSS)Z
+					sreturn;
+		}
+
+		.method public verifyPreComputedHash([BSS[BSS)Z 10 {
+			.stack 7;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 146;		// javacard/security/Signature$OneShot.isActualClosed()Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aload_0;
+					invokespecial 147;		// javacard/security/Signature$OneShot.checkContext()Z
+					ifne L4;
+				L3:	invokestatic 26;		// com/sun/javacard/impl/SecurityExceptionHelper.throwSE()V
+				L4:	getfield_a_this 4;		// reference javacard/security/Signature$OneShot.actualInstance
+					sconst_0;
+					aaload;
+					checkcast 0 148;		// T_CLASSORINTERFACE javacard/security/Signature
+					aload_1;
+					sload_2;
+					sload_3;
+					aload 4;
+					sload 5;
+					sload 6;
+					invokevirtual 160;		// verifyPreComputedHash([BSS[BSS)Z
+					sreturn;
+		}
+
+	}
+
+	.class public abstract Checksum 21 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			public static final byte ALG_ISO3309_CRC16 = 1;		// B
+			public static final byte ALG_ISO3309_CRC32 = 2;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			init([BSS)V;
+			getAlgorithm()B;
+			doFinal([BSS[BS)S;
+			update([BSS)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final getInstance(BZ)Ljavacard/security/Checksum; 0 {
+			.stack 2;
+			.locals 1;
+
+				L0:	sload_1;
+					ifeq L2;
+				L1:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L2:	aconst_null;
+					astore_2;
+					sload_0;
+					slookupswitch L5 2 1 L3 2 L4;
+				L3:	new 161;		// com/sun/javacard/crypto/CRC16
+					dup;
+					invokespecial 162;		// com/sun/javacard/crypto/CRC16.<init>()V
+					astore_2;
+					goto L6;
+				L4:	new 163;		// com/sun/javacard/crypto/CRC32
+					dup;
+					invokespecial 164;		// com/sun/javacard/crypto/CRC32.<init>()V
+					astore_2;
+					goto L6;
+				L5:	sconst_3;
+					invokestatic 19;		// javacard/security/CryptoException.throwIt(S)V
+				L6:	aload_2;
+					areturn;
+		}
+
+		.method protected <init>()V 1 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 6;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public abstract init([BSS)V 1 {
+		}
+
+		.method public abstract getAlgorithm()B 2 {
+		}
+
+		.method public abstract doFinal([BSS[BS)S 3 {
+		}
+
+		.method public abstract update([BSS)V 4 {
+		}
+
+	}
+
+}

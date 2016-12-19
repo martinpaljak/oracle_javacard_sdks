@@ -1,0 +1,2605 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:48:57 PDT 2015
+
+.package javacard/framework/service {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x1:0x1:0x1;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x3 1.0;		//java/rmi
+		0xA0:0x0:0x0:0x0:0x62:0x3:0x1 1.0;		//com/sun/javacard/impl
+		0xA0:0x0:0x0:0x0:0x62:0x2:0x2 1.3;		//javacardx/biometry
+		0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x3 1.0;		//javacardx/framework/tlv
+		0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x1 1.1;		//javacardx/framework/util
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x2 1.6;		//javacard/security
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x2 1.0;		//java/io
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef byte RMIService/ref_type;
+		// 1
+		instanceFieldRef 2.0 RMIService/initialObject;
+		// 2
+		instanceFieldRef byte RMIService/next_invoke_instr;
+		// 3
+		instanceFieldRef 0.0[] RMIService/expArray;
+		// 4
+		instanceFieldRef byte RMIService/invoke_instr;
+		// 5
+		instanceFieldRef Service[] Dispatcher/services;
+		// 6
+		instanceFieldRef byte[] Dispatcher/servicePhases;
+		// 7
+		instanceFieldRef short Dispatcher/numServices;
+		// 8
+		staticMethodRef BasicService/isOutputState(Ljavacard/framework/APDU;)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 9
+		staticMethodRef 1.16.6([BSS)S;		// javacard/framework/Util.setShort([BSS)S
+		// 10
+		staticMethodRef 1.16.4([BS)S;		// javacard/framework/Util.getShort([BS)S
+		// 11
+		virtualMethodRef BasicService/setProcessed(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 12
+		staticMethodRef 3.12.2()Lcom/sun/javacard/impl/PrivAccess;;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+			.descriptor	Lcom/sun/javacard/impl/PrivAccess;	3.12;
+
+		// 13
+		virtualMethodRef 3.12.3()Z;		// selectingApplet()Z
+		// 14
+		staticMethodRef BasicService/<init>()V;
+		// 15
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 16
+		virtualMethodRef 1.10.11()B;		// getCurrentState()B
+		// 17
+		staticMethodRef BasicService/isInputState(Ljavacard/framework/APDU;)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 18
+		virtualMethodRef 0.0.0(Ljava/lang/Object;)Z;		// equals(Ljava/lang/Object;)Z
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 19
+		staticMethodRef 1.8.14(SB)[Ljava/lang/Object;;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 20
+		staticMethodRef ServiceException/throwIt(S)V;
+		// 21
+		virtualMethodRef BasicService/selectingApplet()Z;
+		// 22
+		staticMethodRef RMIService/processSelect(Ljavacard/framework/APDU;)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 23
+		staticMethodRef RMIService/processInvoke(Ljavacard/framework/APDU;)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 24
+		.classRef 0.5;		// java/lang/ArrayIndexOutOfBoundsException
+		// 25
+		virtualMethodRef BasicService/receiveInData(Ljavacard/framework/APDU;)S;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 26
+		virtualMethodRef BasicService/getP1(Ljavacard/framework/APDU;)B;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 27
+		virtualMethodRef BasicService/getP2(Ljavacard/framework/APDU;)B;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 28
+		virtualMethodRef 1.10.1()[B;		// getBuffer()[B
+		// 29
+		staticMethodRef RMIService/writeTagAndError(S[BS)S;
+		// 30
+		staticMethodRef RMIService/writeRef(Ljava/rmi/Remote;[BS)S;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 31
+		virtualMethodRef BasicService/setOutputLength(Ljavacard/framework/APDU;S)V;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 32
+		virtualMethodRef BasicService/succeed(Ljavacard/framework/APDU;)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 33
+		.classRef 0.1;		// java/lang/Throwable
+		// 34
+		virtualMethodRef 1.10.14()Z;		// isISOInterindustryCLA()Z
+		// 35
+		virtualMethodRef 1.10.12()Z;		// isCommandChainingCLA()Z
+		// 36
+		virtualMethodRef BasicService/getINS(Ljavacard/framework/APDU;)B;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 37
+		staticMethodRef RMIService/isExportedForSession(S)Z;
+		// 38
+		staticMethodRef RMINativeMethods/getRemoteMethodInfo(SS)I;
+		// 39
+		staticMethodRef RMINativeMethods/getReturnType(I)S;
+		// 40
+		staticMethodRef RMINativeMethods/rmi_invoker_void(IS[BB)V;
+		// 41
+		staticMethodRef RMINativeMethods/rmi_invoker_boolean(IS[BB)Z;
+		// 42
+		staticMethodRef RMINativeMethods/rmi_invoker_byte(IS[BB)B;
+		// 43
+		staticMethodRef RMINativeMethods/rmi_invoker_short(IS[BB)S;
+		// 44
+		staticMethodRef RMINativeMethods/rmi_invoker_int(IS[BB)I;
+		// 45
+		virtualMethodRef RMIService/writeInt(I[BS)S;
+		// 46
+		staticMethodRef RMINativeMethods/rmi_invoker_array(IS[BB)Ljava/lang/Object;;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 47
+		staticMethodRef RMIService/writeNullRef([BS)S;
+		// 48
+		staticMethodRef RMINativeMethods/writeArray(Ljava/lang/Object;[BS)S;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 49
+		staticMethodRef RMINativeMethods/rmi_invoker_reference(IS[BB)Ljava/lang/Object;;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 50
+		.classRef 2.0;		// java/rmi/Remote
+		// 51
+		staticMethodRef CardRemoteObject/isExported(Ljava/rmi/Remote;)Z;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 52
+		staticMethodRef 3.5.72(Ljava/lang/Object;)S;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		// 53
+		staticMethodRef RMIService/writeTagAndThrowable(Ljava/lang/Throwable;[BS)S;
+			.descriptor	Ljava/lang/Throwable;	0.1;
+
+		// 54
+		virtualMethodRef BasicService/succeedWithStatusWord(Ljavacard/framework/APDU;S)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 55
+		staticMethodRef RMINativeMethods/deleteAllTempArrays()V;
+		// 56
+		.classRef 0.9;		// java/lang/ArithmeticException
+		// 57
+		.classRef 0.11;		// java/lang/ArrayStoreException
+		// 58
+		.classRef 0.8;		// java/lang/ClassCastException
+		// 59
+		.classRef 0.4;		// java/lang/IndexOutOfBoundsException
+		// 60
+		.classRef 0.6;		// java/lang/NegativeArraySizeException
+		// 61
+		.classRef 0.7;		// java/lang/NullPointerException
+		// 62
+		.classRef 0.10;		// java/lang/SecurityException
+		// 63
+		.classRef 2.1;		// java/rmi/RemoteException
+		// 64
+		.classRef 8.0;		// java/io/IOException
+		// 65
+		.classRef 4.3;		// javacardx/biometry/BioException
+		// 66
+		.classRef 5.6;		// javacardx/framework/tlv/TLVException
+		// 67
+		.classRef 6.1;		// javacardx/framework/util/UtilException
+		// 68
+		.classRef 1.12;		// javacard/framework/APDUException
+		// 69
+		.classRef 1.7;		// javacard/framework/ISOException
+		// 70
+		.classRef 1.11;		// javacard/framework/PINException
+		// 71
+		.classRef 1.13;		// javacard/framework/SystemException
+		// 72
+		.classRef 1.14;		// javacard/framework/TransactionException
+		// 73
+		.classRef 1.15;		// javacard/framework/UserException
+		// 74
+		.classRef 7.12;		// javacard/security/CryptoException
+		// 75
+		.classRef ServiceException;
+		// 76
+		.classRef 1.5;		// javacard/framework/CardRuntimeException
+		// 77
+		.classRef 1.4;		// javacard/framework/CardException
+		// 78
+		.classRef 0.3;		// java/lang/RuntimeException
+		// 79
+		.classRef 0.2;		// java/lang/Exception
+		// 80
+		staticMethodRef RMINativeMethods/isAPIException(Ljava/lang/Throwable;)Z;
+			.descriptor	Ljava/lang/Throwable;	0.1;
+
+		// 81
+		virtualMethodRef 4.3.1()S;		// getReason()S
+		// 82
+		virtualMethodRef 5.6.1()S;		// getReason()S
+		// 83
+		virtualMethodRef 6.1.1()S;		// getReason()S
+		// 84
+		virtualMethodRef 1.12.1()S;		// getReason()S
+		// 85
+		virtualMethodRef 1.7.1()S;		// getReason()S
+		// 86
+		virtualMethodRef 1.11.1()S;		// getReason()S
+		// 87
+		staticMethodRef RMINativeMethods/getRMIErrorCode()S;
+		// 88
+		virtualMethodRef 1.13.1()S;		// getReason()S
+		// 89
+		virtualMethodRef 1.14.1()S;		// getReason()S
+		// 90
+		virtualMethodRef 1.15.1()S;		// getReason()S
+		// 91
+		virtualMethodRef 7.12.1()S;		// getReason()S
+		// 92
+		virtualMethodRef 1.5.1()S;		// getReason()S
+		// 93
+		virtualMethodRef 1.5.1()S;		// getReason()S
+		// 94
+		virtualMethodRef 1.4.1()S;		// getReason()S
+		// 95
+		staticMethodRef 1.8.7()B;		// javacard/framework/JCSystem.getTransactionDepth()B
+		// 96
+		staticMethodRef 3.5.92(S)Z;		// com/sun/javacard/impl/NativeMethods.isWithinTransactionLogs(S)Z
+		// 97
+		staticMethodRef 1.14.1(S)V;		// javacard/framework/TransactionException.throwIt(S)V
+		// 98
+		staticMethodRef RMIService/exportForSession(Ljava/rmi/Remote;)V;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 99
+		staticMethodRef RMINativeMethods/getAnticollisionString(Ljava/rmi/Remote;[BB)S;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 100
+		staticMethodRef RMINativeMethods/getClassNameAddress(Ljava/rmi/Remote;)I;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 101
+		virtualMethodRef 3.12.10(I[BB)B;		// getPkgNameForClass(I[BB)B
+		// 102
+		staticMethodRef RMINativeMethods/copyStringIntoBuffer(I[BS)S;
+		// 103
+		staticMethodRef RMINativeMethods/getRemoteInterfaceNumber(Ljava/rmi/Remote;)B;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 104
+		staticMethodRef RMINativeMethods/getRemoteInterfaceAddress(Ljava/rmi/Remote;B)I;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 105
+		virtualMethodRef 3.12.9(I)B;		// getPkgIDForAddress(I)B
+		// 106
+		staticMethodRef RMINativeMethods/copyInterfaceNameIntoBuffer(I[BS)S;
+		// 107
+		staticMethodRef CardRemoteObject/export(Ljava/rmi/Remote;)V;
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		// 108
+		staticFieldRef short[] CardRemoteObject/array;
+		// 109
+		virtualMethodRef 3.12.17(S)[S;		// initRemoteObjArray(S)[S
+		// 110
+		staticMethodRef CardRemoteObject/export(S)V;
+		// 111
+		staticMethodRef CardRemoteObject/unexport(S)V;
+		// 112
+		staticMethodRef 3.5.73(S)V;		// com/sun/javacard/impl/NativeMethods.checkAccess(S)V
+		// 113
+		staticMethodRef 1.13.1(S)V;		// javacard/framework/SystemException.throwIt(S)V
+		// 114
+		staticMethodRef CardRemoteObject/isExported(S)Z;
+		// 115
+		.classRef Service;
+		// 116
+		virtualMethodRef 1.10.6()S;		// setIncomingAndReceive()S
+		// 117
+		staticMethodRef BasicService/isErrorState(Ljavacard/framework/APDU;)Z;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		// 118
+		virtualMethodRef 1.10.7()S;		// setOutgoing()S
+		// 119
+		staticMethodRef 1.8.1()V;		// javacard/framework/JCSystem.beginTransaction()V
+		// 120
+		staticMethodRef 1.8.2()V;		// javacard/framework/JCSystem.commitTransaction()V
+		// 121
+		virtualMethodRef 1.10.9(S)V;		// setOutgoingLength(S)V
+		// 122
+		virtualMethodRef 1.10.4(SS)V;		// sendBytes(SS)V
+		// 123
+		staticMethodRef 1.7.1(S)V;		// javacard/framework/ISOException.throwIt(S)V
+		// 124
+		virtualMethodRef Dispatcher/dispatch(Ljavacard/framework/APDU;B)Ljava/lang/Exception;;
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+			.descriptor	Ljava/lang/Exception;	0.2;
+
+		// 125
+		staticMethodRef 1.5.0(S)V;		// javacard/framework/CardRuntimeException.<init>(S)V
+		// 126
+		staticFieldRef ServiceException ServiceException/systemInstance;
+		// 127
+		staticMethodRef 3.12.19()B;		// com/sun/javacard/impl/PrivAccess.getCurrentAppID()B
+		// 128
+		virtualMethodRef 3.12.16()V;		// initServiceException()V
+		// 129
+		virtualMethodRef 1.5.2(S)V;		// setReason(S)V
+	}
+
+	.interface public abstract Service 0 {
+
+		.method public abstract processDataIn(Ljavacard/framework/APDU;)Z 0 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract processCommand(Ljavacard/framework/APDU;)Z 1 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract processDataOut(Ljavacard/framework/APDU;)Z 2 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+	}
+
+	.interface public abstract SecurityService 1 {
+
+		.superInterfaces {
+			Service;
+		}
+
+		.fields {
+			public static final byte PROPERTY_INPUT_CONFIDENTIALITY = 1;		// B
+			public static final byte PROPERTY_INPUT_INTEGRITY = 2;		// B
+			public static final byte PROPERTY_OUTPUT_CONFIDENTIALITY = 4;		// B
+			public static final byte PROPERTY_OUTPUT_INTEGRITY = 8;		// B
+			public static final short PRINCIPAL_CARDHOLDER = 1;		// S
+			public static final short PRINCIPAL_CARD_ISSUER = 2;		// S
+			public static final short PRINCIPAL_APP_PROVIDER = 3;		// S
+		}
+
+		.method public abstract processDataIn(Ljavacard/framework/APDU;)Z 0 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract processCommand(Ljavacard/framework/APDU;)Z 1 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract processDataOut(Ljavacard/framework/APDU;)Z 2 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract isAuthenticated(S)Z 3 {
+		}
+
+		.method public abstract isChannelSecure(B)Z 4 {
+		}
+
+		.method public abstract isCommandSecure(B)Z 5 {
+		}
+
+	}
+
+	.interface public abstract RemoteService 2 {
+
+		.superInterfaces {
+			Service;
+		}
+
+		.method public abstract processDataIn(Ljavacard/framework/APDU;)Z 0 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract processCommand(Ljavacard/framework/APDU;)Z 1 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+		.method public abstract processDataOut(Ljavacard/framework/APDU;)Z 2 {
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+		}
+
+	}
+
+	.class  RMINativeMethods extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method  <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 15;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static native copyStringIntoBuffer(I[BS)S 0 {
+		}
+
+		.method public static native getClassNameAddress(Ljava/rmi/Remote;)I 1 {
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		}
+
+		.method public static native getRemoteMethodInfo(SS)I 2 {
+		}
+
+		.method public static native getReturnType(I)S 3 {
+		}
+
+		.method public static native deleteAllTempArrays()V 4 {
+		}
+
+		.method public static native isAPIException(Ljava/lang/Throwable;)Z 5 {
+			.descriptor	Ljava/lang/Throwable;	0.1;
+
+		}
+
+		.method public static native getAnticollisionString(Ljava/rmi/Remote;[BB)S 6 {
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		}
+
+		.method public static native getRemoteInterfaceNumber(Ljava/rmi/Remote;)B 7 {
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		}
+
+		.method public static native getRemoteInterfaceAddress(Ljava/rmi/Remote;B)I 8 {
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+		}
+
+		.method public static native copyInterfaceNameIntoBuffer(I[BS)S 9 {
+		}
+
+		.method public static native rmi_invoker_void(IS[BB)V 10 {
+		}
+
+		.method public static native rmi_invoker_boolean(IS[BB)Z 11 {
+		}
+
+		.method public static native rmi_invoker_byte(IS[BB)B 12 {
+		}
+
+		.method public static native rmi_invoker_short(IS[BB)S 13 {
+		}
+
+		.method public static native rmi_invoker_int(IS[BB)I 14 {
+		}
+
+		.method public static native rmi_invoker_reference(IS[BB)Ljava/lang/Object; 15 {
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static native rmi_invoker_array(IS[BB)Ljava/lang/Object; 16 {
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static native getRMIErrorCode()S 17 {
+		}
+
+		.method public static native writeArray(Ljava/lang/Object;[BS)S 18 {
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+	}
+
+	.class public BasicService 3 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			private static final byte INS_SELECT = -92;		// B
+			private static final byte APDU_CMD_MASK = -4;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			processDataIn(Ljavacard/framework/APDU;)Z;
+			processCommand(Ljavacard/framework/APDU;)Z;
+			processDataOut(Ljavacard/framework/APDU;)Z;
+			receiveInData(Ljavacard/framework/APDU;)S;
+			setProcessed(Ljavacard/framework/APDU;)V;
+			isProcessed(Ljavacard/framework/APDU;)Z;
+			setOutputLength(Ljavacard/framework/APDU;S)V;
+			getOutputLength(Ljavacard/framework/APDU;)S;
+			setStatusWord(Ljavacard/framework/APDU;S)V;
+			getStatusWord(Ljavacard/framework/APDU;)S;
+			fail(Ljavacard/framework/APDU;S)Z;
+			succeed(Ljavacard/framework/APDU;)Z;
+			succeedWithStatusWord(Ljavacard/framework/APDU;S)Z;
+			getCLA(Ljavacard/framework/APDU;)B;
+			getINS(Ljavacard/framework/APDU;)B;
+			getP1(Ljavacard/framework/APDU;)B;
+			getP2(Ljavacard/framework/APDU;)B;
+			selectingApplet()Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.implementedInterfaceInfoTable { 
+			.interface Service { 
+				1;		// processDataIn(Ljavacard/framework/APDU;)Z
+				2;		// processCommand(Ljavacard/framework/APDU;)Z
+				3;		// processDataOut(Ljavacard/framework/APDU;)Z
+			}
+
+		}
+
+		.method private isInputState(Ljavacard/framework/APDU;)Z {
+			.stack 2;
+			.locals 1;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sstore_2;
+					sload_2;
+					iflt L3;
+				L1:	sload_2;
+					sconst_2;
+					if_scmpgt L3;
+				L2:	sconst_1;
+					sreturn;
+				L3:	sconst_0;
+					sreturn;
+		}
+
+		.method private isOutputState(Ljavacard/framework/APDU;)Z {
+			.stack 2;
+			.locals 1;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sstore_2;
+					sload_2;
+					sconst_3;
+					if_scmplt L3;
+				L1:	sload_2;
+					bspush 6;
+					if_scmpgt L3;
+				L2:	sconst_1;
+					sreturn;
+				L3:	sconst_0;
+					sreturn;
+		}
+
+		.method private isErrorState(Ljavacard/framework/APDU;)Z {
+			.stack 1;
+			.locals 1;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sstore_2;
+					sload_2;
+					ifge L2;
+				L1:	sconst_1;
+					sreturn;
+				L2:	sconst_0;
+					sreturn;
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 15;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public processDataIn(Ljavacard/framework/APDU;)Z 1 {
+			.stack 1;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public processCommand(Ljavacard/framework/APDU;)Z 2 {
+			.stack 1;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public processDataOut(Ljavacard/framework/APDU;)Z 3 {
+			.stack 1;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	sconst_0;
+					sreturn;
+		}
+
+		.method public receiveInData(Ljavacard/framework/APDU;)S 4 {
+			.stack 3;
+			.locals 2;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 17;		// javacard/framework/service/BasicService.isInputState(Ljavacard/framework/APDU;)Z
+					ifeq L2;
+				L1:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sconst_1;
+					if_scmpne L3;
+				L2:	sconst_4;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L3:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					astore_2;
+					sspush 255;
+					aload_2;
+					sconst_4;
+					baload;
+					sand;
+					aload_2;
+					arraylength;
+					sconst_5;
+					ssub;
+					sspush 255;
+					sand;
+					if_scmple L5;
+				L4:	sconst_3;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L5:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					ifne L7;
+				L6:	aload_1;
+					invokevirtual 116;		// setIncomingAndReceive()S
+					sstore_3;
+				L7:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_4;
+					baload;
+					sreturn;
+		}
+
+		.method public setProcessed(Ljavacard/framework/APDU;)V 5 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 117;		// javacard/framework/service/BasicService.isErrorState(Ljavacard/framework/APDU;)Z
+					ifeq L2;
+				L1:	sconst_5;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sconst_3;
+					if_scmpge L4;
+				L3:	aload_1;
+					invokevirtual 118;		// setOutgoing()S
+					pop;
+				L4:	return;
+		}
+
+		.method public isProcessed(Ljavacard/framework/APDU;)Z 6 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 117;		// javacard/framework/service/BasicService.isErrorState(Ljavacard/framework/APDU;)Z
+					ifeq L2;
+				L1:	sconst_1;
+					sreturn;
+				L2:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sconst_3;
+					if_scmplt L4;
+				L3:	sconst_1;
+					goto L5;
+				L4:	sconst_0;
+				L5:	sreturn;
+		}
+
+		.method public setOutputLength(Ljavacard/framework/APDU;S)V 7 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	sload_2;
+					iflt L2;
+				L1:	sload_2;
+					aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					arraylength;
+					sconst_5;
+					ssub;
+					if_scmple L3;
+				L2:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L3:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_4;
+					sload_2;
+					s2b;
+					bastore;
+					return;
+		}
+
+		.method public getOutputLength(Ljavacard/framework/APDU;)S 8 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 8;		// javacard/framework/service/BasicService.isOutputState(Ljavacard/framework/APDU;)Z
+					ifne L2;
+				L1:	sconst_5;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_4;
+					baload;
+					sspush 255;
+					sand;
+					sreturn;
+		}
+
+		.method public setStatusWord(Ljavacard/framework/APDU;S)V 9 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_2;
+					sload_2;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					return;
+		}
+
+		.method public getStatusWord(Ljavacard/framework/APDU;)S 10 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 8;		// javacard/framework/service/BasicService.isOutputState(Ljavacard/framework/APDU;)Z
+					ifne L2;
+				L1:	sconst_5;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_2;
+					invokestatic 10;		// javacard/framework/Util.getShort([BS)S
+					sreturn;
+		}
+
+		.method public fail(Ljavacard/framework/APDU;S)Z 11 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokevirtual 11;		// setProcessed(Ljavacard/framework/APDU;)V
+					aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_4;
+					sconst_0;
+					bastore;
+					aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_2;
+					sload_2;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					sconst_1;
+					sreturn;
+		}
+
+		.method public succeed(Ljavacard/framework/APDU;)Z 12 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokevirtual 11;		// setProcessed(Ljavacard/framework/APDU;)V
+					aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_2;
+					sspush -28672;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					sconst_1;
+					sreturn;
+		}
+
+		.method public succeedWithStatusWord(Ljavacard/framework/APDU;S)Z 13 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokevirtual 11;		// setProcessed(Ljavacard/framework/APDU;)V
+					aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_2;
+					sload_2;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					sconst_1;
+					sreturn;
+		}
+
+		.method public getCLA(Ljavacard/framework/APDU;)B 14 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_0;
+					baload;
+					sreturn;
+		}
+
+		.method public getINS(Ljavacard/framework/APDU;)B 15 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_1;
+					baload;
+					sreturn;
+		}
+
+		.method public getP1(Ljavacard/framework/APDU;)B 16 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 17;		// javacard/framework/service/BasicService.isInputState(Ljavacard/framework/APDU;)Z
+					ifeq L2;
+				L1:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sconst_1;
+					if_scmpne L3;
+				L2:	sconst_4;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L3:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_2;
+					baload;
+					sreturn;
+		}
+
+		.method public getP2(Ljavacard/framework/APDU;)B 17 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokespecial 17;		// javacard/framework/service/BasicService.isInputState(Ljavacard/framework/APDU;)Z
+					ifeq L2;
+				L1:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sconst_1;
+					if_scmpne L3;
+				L2:	sconst_4;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L3:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					sconst_3;
+					baload;
+					sreturn;
+		}
+
+		.method public selectingApplet()Z 18 {
+			.stack 1;
+			.locals 0;
+
+				L0:	invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					invokevirtual 13;		// selectingApplet()Z
+					sreturn;
+		}
+
+	}
+
+	.class public RMIService 4 extends BasicService {
+
+		.fields {
+			 2.0 initialObject 0;		// Ljava/rmi/Remote;
+			private 0.0[] expArray 1;		// [Ljava/lang/Object;
+			private byte ref_type 2;		// B
+			 byte invoke_instr 3;		// B
+			 byte next_invoke_instr 4;		// B
+			public static final byte DEFAULT_RMI_INVOKE_INSTRUCTION = 56;		// B
+			private static final byte FCI_TAG = 111;		// B
+			private static final byte APPLICATION_TAG = 110;		// B
+			private static final byte RMI_TAG = 94;		// B
+			private static final short RMI_VERSION = 514;		// S
+			private static final byte NORMAL_TAG = -127;		// B
+			private static final byte EXCEPTION_TAG = -126;		// B
+			private static final byte EXCEPTION_SUBCLASS_TAG = -125;		// B
+			private static final byte ERROR_TAG = -103;		// B
+			private static final short OBJECT_ERROR = 1;		// S
+			private static final short METHOD_ERROR = 2;		// S
+			private static final short SIGNATURE_ERROR = 3;		// S
+			private static final short PARAM_RESOURCES_ERROR = 4;		// S
+			private static final short RESPONSE_RESOURCES_ERROR = 5;		// S
+			private static final short PROTOCOL_ERROR = 6;		// S
+			private static final short OTHER_ERROR = -1;		// S
+			private static final byte OBJECT_ID_OFFSET = 5;		// B
+			private static final byte METHOD_ID_OFFSET = 7;		// B
+			private static final byte PARAM_OFFSET = 9;		// B
+			private static final byte TAG_OFFSET = 5;		// B
+			private static final byte RESULT_OFFSET = 6;		// B
+			private static final byte TYPE_C = 1;		// B
+			private static final byte TYPE_I = 2;		// B
+			private static final byte UNDEFINED_TYPE = 0;		// B
+			private static final byte Throwable_Type = 0;		// B
+			private static final byte ArithmeticException_Type = 1;		// B
+			private static final byte ArrayIndexOutOfBoundsException_Type = 2;		// B
+			private static final byte ArrayStoreException_Type = 3;		// B
+			private static final byte ClassCastException_Type = 4;		// B
+			private static final byte Exception_Type = 5;		// B
+			private static final byte IndexOutOfBoundsException_Type = 6;		// B
+			private static final byte NegativeArraySizeException_Type = 7;		// B
+			private static final byte NullPointerException_Type = 8;		// B
+			private static final byte RuntimeException_Type = 9;		// B
+			private static final byte SecurityException_Type = 10;		// B
+			private static final byte java_io_IOException_Type = 11;		// B
+			private static final byte java_rmi_RemoteException_Type = 12;		// B
+			private static final byte APDUException_Type = 32;		// B
+			private static final byte CardException_Type = 33;		// B
+			private static final byte CardRuntimeException_Type = 34;		// B
+			private static final byte ISOException_Type = 35;		// B
+			private static final byte PINException_Type = 36;		// B
+			private static final byte SystemException_Type = 37;		// B
+			private static final byte TransactionException_Type = 38;		// B
+			private static final byte UserException_Type = 39;		// B
+			private static final byte CryptoException_Type = 48;		// B
+			private static final byte ServiceException_Type = 64;		// B
+			private static final byte BioException_Type = 80;		// B
+			private static final byte TLVException_Type = 112;		// B
+			private static final byte UtilException_Type = -128;		// B
+		}
+
+		.publicMethodTable 2 {
+			equals(Ljava/lang/Object;)Z;
+			processDataIn(Ljavacard/framework/APDU;)Z;
+			processCommand(Ljavacard/framework/APDU;)Z;
+			processDataOut(Ljavacard/framework/APDU;)Z;
+			receiveInData(Ljavacard/framework/APDU;)S;
+			setProcessed(Ljavacard/framework/APDU;)V;
+			isProcessed(Ljavacard/framework/APDU;)Z;
+			setOutputLength(Ljavacard/framework/APDU;S)V;
+			getOutputLength(Ljavacard/framework/APDU;)S;
+			setStatusWord(Ljavacard/framework/APDU;S)V;
+			getStatusWord(Ljavacard/framework/APDU;)S;
+			fail(Ljavacard/framework/APDU;S)Z;
+			succeed(Ljavacard/framework/APDU;)Z;
+			succeedWithStatusWord(Ljavacard/framework/APDU;S)Z;
+			getCLA(Ljavacard/framework/APDU;)B;
+			getINS(Ljavacard/framework/APDU;)B;
+			getP1(Ljavacard/framework/APDU;)B;
+			getP2(Ljavacard/framework/APDU;)B;
+			selectingApplet()Z;
+			setInvokeInstructionByte(B)V;
+		}
+
+		.packageMethodTable 0 {
+			writeInt(I[BS)S;
+		}
+
+		.implementedInterfaceInfoTable { 
+			.interface Service { 
+				1;		// processDataIn(Ljavacard/framework/APDU;)Z
+				2;		// processCommand(Ljavacard/framework/APDU;)Z
+				3;		// processDataOut(Ljavacard/framework/APDU;)Z
+			}
+
+			.interface RemoteService { 
+				1;		// processDataIn(Ljavacard/framework/APDU;)Z
+				2;		// processCommand(Ljavacard/framework/APDU;)Z
+				3;		// processDataOut(Ljavacard/framework/APDU;)Z
+			}
+
+		}
+
+		.method public <init>(Ljava/rmi/Remote;)V 0 {
+			.stack 3;
+			.locals 0;
+
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+				L0:	aload_0;
+					invokespecial 14;		// javacard/framework/service/BasicService.<init>()V
+					aload_0;
+					sconst_0;
+					putfield_b 0;		// byte javacard/framework/service/RMIService.ref_type
+					aload_0;
+					aconst_null;
+					putfield_a 1;		// reference javacard/framework/service/RMIService.initialObject
+					aload_0;
+					bspush 56;
+					putfield_b 2;		// byte javacard/framework/service/RMIService.next_invoke_instr
+					aload_1;
+					aconst_null;
+					invokevirtual 18;		// equals(Ljava/lang/Object;)Z
+					pop;
+					aload_0;
+					aload_1;
+					putfield_a 1;		// reference javacard/framework/service/RMIService.initialObject
+					aload_0;
+					bspush 8;
+					sconst_2;
+					invokestatic 19;		// javacard/framework/JCSystem.makeTransientObjectArray(SB)[Ljava/lang/Object;
+					putfield_a 3;		// reference javacard/framework/service/RMIService.expArray
+					return;
+		}
+
+		.method public setInvokeInstructionByte(B)V 19 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					putfield_b 2;		// byte javacard/framework/service/RMIService.next_invoke_instr
+					return;
+		}
+
+		.method public processCommand(Ljavacard/framework/APDU;)Z 2 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					invokevirtual 21;		// selectingApplet()Z
+					ifeq L2;
+				L1:	aload_0;
+					aload_1;
+					invokespecial 22;		// javacard/framework/service/RMIService.processSelect(Ljavacard/framework/APDU;)Z
+					sreturn;
+				L2:	aload_0;
+					aload_1;
+					invokespecial 23;		// javacard/framework/service/RMIService.processInvoke(Ljavacard/framework/APDU;)Z
+					sreturn;
+		}
+
+		.method private processSelect(Ljavacard/framework/APDU;)Z {
+			.stack 4;
+			.locals 8;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					invokevirtual 25;		// receiveInData(Ljavacard/framework/APDU;)S
+					pop;
+					aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					astore_2;
+					aload_0;
+					sconst_0;
+					putfield_b 0;		// byte javacard/framework/service/RMIService.ref_type
+					aload_0;
+					aload_1;
+					invokevirtual 26;		// getP1(Ljavacard/framework/APDU;)B
+					sstore_3;
+					aload_0;
+					aload_1;
+					invokevirtual 27;		// getP2(Ljavacard/framework/APDU;)B
+					bspush 16;
+					sand;
+					sstore 4;
+					sload_3;
+					sconst_4;
+					if_scmpne L6;
+				L1:	sload 4;
+					ifne L3;
+				L2:	aload_0;
+					sconst_1;
+					putfield_b 0;		// byte javacard/framework/service/RMIService.ref_type
+					goto L6;
+				L3:	sload 4;
+					bspush 16;
+					if_scmpne L5;
+				L4:	aload_0;
+					sconst_2;
+					putfield_b 0;		// byte javacard/framework/service/RMIService.ref_type
+					goto L6;
+				L5:	sconst_0;
+					sreturn;
+				L6:	aload_0;
+					getfield_b_this 2;		// byte javacard/framework/service/RMIService.next_invoke_instr
+					putfield_b 4;		// byte javacard/framework/service/RMIService.invoke_instr
+					aload_2;
+					sconst_5;
+					bspush 111;
+					bastore;
+					aload_2;
+					bspush 7;
+					bspush 110;
+					bastore;
+					aload_2;
+					bspush 9;
+					bspush 94;
+					bastore;
+					aload_2;
+					bspush 11;
+					sspush 514;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					pop;
+					aload_2;
+					bspush 13;
+					getfield_b_this 4;		// byte javacard/framework/service/RMIService.invoke_instr
+					bastore;
+					bspush 14;
+					sstore 5;
+				L7:	getfield_b_this 0;		// byte javacard/framework/service/RMIService.ref_type
+					ifne L9;
+				L8:	aload_0;
+					bspush 6;
+					aload_2;
+					sload 5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore 5;
+					goto L10;
+				L9:	aload_2;
+					sload 5;
+					sinc 5 1;
+					bspush -127;
+					bastore;
+					aload_0;
+					getfield_a_this 1;		// reference javacard/framework/service/RMIService.initialObject
+					aload_2;
+					sload 5;
+					invokespecial 30;		// javacard/framework/service/RMIService.writeRef(Ljava/rmi/Remote;[BS)S
+					sstore 5;
+				L10:	goto L12;
+				L11:	astore 6;
+					aload_0;
+					sconst_5;
+					aload_2;
+					bspush 14;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore 5;
+				L12:	sload 5;
+					bspush 11;
+					ssub;
+					sstore 6;
+					sload 6;
+					sconst_2;
+					sadd;
+					sstore 7;
+					sload 7;
+					sconst_2;
+					sadd;
+					sstore 8;
+					sload 8;
+					sconst_2;
+					sadd;
+					sstore 9;
+					aload_2;
+					bspush 6;
+					sload 8;
+					s2b;
+					bastore;
+					aload_2;
+					bspush 8;
+					sload 7;
+					s2b;
+					bastore;
+					aload_2;
+					bspush 10;
+					sload 6;
+					s2b;
+					bastore;
+					aload_0;
+					aload_1;
+					sload 9;
+					invokevirtual 31;		// setOutputLength(Ljavacard/framework/APDU;S)V
+					aload_0;
+					aload_1;
+					invokevirtual 32;		// succeed(Ljavacard/framework/APDU;)Z
+					pop;
+					sconst_1;
+					sreturn;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L7 L10 L11 24;
+			}
+		}
+
+		.method private processInvoke(Ljavacard/framework/APDU;)Z {
+			.stack 5;
+			.locals 18;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					astore_2;
+					aload_1;
+					invokevirtual 34;		// isISOInterindustryCLA()Z
+					ifeq L2;
+				L1:	sconst_0;
+					sreturn;
+				L2:	aload_1;
+					invokevirtual 35;		// isCommandChainingCLA()Z
+					ifeq L4;
+				L3:	sconst_0;
+					sreturn;
+				L4:	aload_0;
+					aload_1;
+					invokevirtual 36;		// getINS(Ljavacard/framework/APDU;)B
+					getfield_b_this 4;		// byte javacard/framework/service/RMIService.invoke_instr
+					if_scmpeq L6;
+				L5:	sconst_0;
+					sreturn;
+				L6:	getfield_b_this 0;		// byte javacard/framework/service/RMIService.ref_type
+					ifne L8;
+				L7:	sconst_0;
+					sreturn;
+				L8:	aload_0;
+					aload_1;
+					invokevirtual 25;		// receiveInData(Ljavacard/framework/APDU;)S
+					pop;
+				L9:	sconst_5;
+					sstore_3;
+					aload_2;
+					sconst_2;
+					invokestatic 10;		// javacard/framework/Util.getShort([BS)S
+					sspush 514;
+					if_scmpne L11;
+				L10:	aload_2;
+					sconst_4;
+					baload;
+					sconst_4;
+					if_scmpge L12;
+				L11:	aload_0;
+					bspush 6;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore_3;
+					goto_w L45;
+				L12:	aload_2;
+					sconst_5;
+					invokestatic 10;		// javacard/framework/Util.getShort([BS)S
+					sstore 4;
+					aload_0;
+					sload 4;
+					invokespecial 37;		// javacard/framework/service/RMIService.isExportedForSession(S)Z
+					ifne L14;
+				L13:	aload_0;
+					sconst_1;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore_3;
+					goto_w L45;
+				L14:	aload_2;
+					bspush 7;
+					invokestatic 10;		// javacard/framework/Util.getShort([BS)S
+					sstore 5;
+					sload 4;
+					sload 5;
+					invokestatic 38;		// javacard/framework/service/RMINativeMethods.getRemoteMethodInfo(SS)I
+					istore 6;
+					bspush 100;
+					sstore 8;
+					iload 6;
+					sipush -253;
+					icmp;
+					ifne L16;
+				L15:	aload_0;
+					sconst_2;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore_3;
+					goto L17;
+				L16:	iload 6;
+					invokestatic 39;		// javacard/framework/service/RMINativeMethods.getReturnType(I)S
+					sstore 8;
+				L17:	sconst_0;
+					sstore 9;
+				L18:	sload 8;
+					slookupswitch L40 11 1 L19 2 L20 3 L24 4 L25 5 L26 6 L33 10 L27 11 L27 12 L27 13 L27 100 L39;
+				L19:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 40;		// javacard/framework/service/RMINativeMethods.rmi_invoker_void(IS[BB)V
+					sconst_5;
+					sstore_3;
+					aload_2;
+					sload_3;
+					sinc 3 1;
+					bspush -127;
+					bastore;
+					goto_w L41;
+				L20:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 41;		// javacard/framework/service/RMINativeMethods.rmi_invoker_boolean(IS[BB)Z
+					sstore 10;
+					aload_2;
+					sconst_5;
+					bspush -127;
+					bastore;
+					sload 10;
+					ifeq L22;
+				L21:	aload_2;
+					bspush 6;
+					sconst_1;
+					bastore;
+					goto L23;
+				L22:	aload_2;
+					bspush 6;
+					sconst_0;
+					bastore;
+				L23:	bspush 7;
+					sstore_3;
+					goto_w L41;
+				L24:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 42;		// javacard/framework/service/RMINativeMethods.rmi_invoker_byte(IS[BB)B
+					sstore 11;
+					aload_2;
+					sconst_5;
+					bspush -127;
+					bastore;
+					bspush 6;
+					sstore_3;
+					aload_2;
+					sload_3;
+					sinc 3 1;
+					sload 11;
+					bastore;
+					goto_w L41;
+				L25:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 43;		// javacard/framework/service/RMINativeMethods.rmi_invoker_short(IS[BB)S
+					sstore 12;
+					aload_2;
+					sconst_5;
+					bspush -127;
+					bastore;
+					aload_2;
+					bspush 6;
+					sload 12;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sstore_3;
+					goto_w L41;
+				L26:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 44;		// javacard/framework/service/RMINativeMethods.rmi_invoker_int(IS[BB)I
+					istore 13;
+					aload_2;
+					sconst_5;
+					bspush -127;
+					bastore;
+					aload_0;
+					iload 13;
+					aload_2;
+					bspush 6;
+					invokevirtual 45;		// writeInt(I[BS)S
+					sstore_3;
+					goto_w L41;
+				L27:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 46;		// javacard/framework/service/RMINativeMethods.rmi_invoker_array(IS[BB)Ljava/lang/Object;
+					astore 15;
+					aload_2;
+					sconst_5;
+					bspush -127;
+					bastore;
+				L28:	aload 15;
+					ifnonnull L30;
+				L29:	aload_0;
+					aload_2;
+					bspush 6;
+					invokespecial 47;		// javacard/framework/service/RMIService.writeNullRef([BS)S
+					sstore_3;
+					goto L31;
+				L30:	aload 15;
+					aload_2;
+					bspush 6;
+					invokestatic 48;		// javacard/framework/service/RMINativeMethods.writeArray(Ljava/lang/Object;[BS)S
+					sstore_3;
+				L31:	goto L41;
+				L32:	astore 16;
+					aload_0;
+					sconst_5;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore_3;
+					goto L41;
+				L33:	iload 6;
+					sload 4;
+					aload_2;
+					bspush 9;
+					invokestatic 49;		// javacard/framework/service/RMINativeMethods.rmi_invoker_reference(IS[BB)Ljava/lang/Object;
+					checkcast 0 50;		// T_CLASSORINTERFACE java/rmi/Remote
+					astore 16;
+					aload 16;
+					invokestatic 51;		// javacard/framework/service/CardRemoteObject.isExported(Ljava/rmi/Remote;)Z
+					ifne L36;
+				L34:	aload_0;
+					aload 16;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					invokespecial 37;		// javacard/framework/service/RMIService.isExportedForSession(S)Z
+					ifne L36;
+				L35:	sconst_1;
+					sstore 9;
+					bspush 7;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L36:	aload_2;
+					sconst_5;
+					bspush -127;
+					bastore;
+					aload_0;
+					aload 16;
+					aload_2;
+					bspush 6;
+					invokespecial 30;		// javacard/framework/service/RMIService.writeRef(Ljava/rmi/Remote;[BS)S
+					sstore_3;
+				L37:	goto L41;
+				L38:	astore 17;
+					aload_0;
+					sconst_5;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore_3;
+					goto L41;
+				L39:	goto L41;
+				L40:	aload_0;
+					sconst_m1;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sstore_3;
+				L41:	goto L45;
+				L42:	astore 10;
+					sload 9;
+					sconst_1;
+					if_scmpne L44;
+				L43:	bspush 7;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L44:	aload_0;
+					aload 10;
+					aload_2;
+					sconst_5;
+					invokespecial 53;		// javacard/framework/service/RMIService.writeTagAndThrowable(Ljava/lang/Throwable;[BS)S
+					sstore_3;
+				L45:	aload_0;
+					aload_1;
+					sload_3;
+					sconst_5;
+					ssub;
+					invokevirtual 31;		// setOutputLength(Ljavacard/framework/APDU;S)V
+					aload_0;
+					aload_1;
+					sspush -28672;
+					invokevirtual 54;		// succeedWithStatusWord(Ljavacard/framework/APDU;S)Z
+					pop;
+					sconst_1;
+					sstore 18;
+				L46:	invokestatic 55;		// javacard/framework/service/RMINativeMethods.deleteAllTempArrays()V
+					sload 18;
+					sreturn;
+				L47:	astore 19;
+				L48:	invokestatic 55;		// javacard/framework/service/RMINativeMethods.deleteAllTempArrays()V
+					aload 19;
+					athrow;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L28 L31 L32 24;
+				L36 L37 L38 24;
+				L18 L41 L42 33;
+				L9 L46 L47 0;
+				L47 L48 L47 0;
+			}
+		}
+
+		.method private writeTagAndError(S[BS)S {
+			.stack 4;
+			.locals 0;
+
+				L0:	aload_2;
+					sload_3;
+					sinc 3 1;
+					bspush -103;
+					bastore;
+					aload_2;
+					sload_3;
+					sload_1;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sreturn;
+		}
+
+		.method private writeTagAndThrowable(Ljava/lang/Throwable;[BS)S {
+			.stack 4;
+			.locals 5;
+
+			.descriptor	Ljava/lang/Throwable;	0.1;
+
+				L0:	sconst_0;
+					sstore 4;
+					sconst_0;
+					sstore 5;
+					sconst_0;
+					sstore 6;
+					aload_1;
+					invokestatic 80;		// javacard/framework/service/RMINativeMethods.isAPIException(Ljava/lang/Throwable;)Z
+					ifeq L2;
+				L1:	bspush -126;
+					sstore 4;
+					goto L3;
+				L2:	bspush -125;
+					sstore 4;
+				L3:	aload_1;
+					athrow;
+				L4:	astore 7;
+					sconst_1;
+					sstore 5;
+					goto_w L33;
+				L5:	astore 7;
+					sconst_2;
+					sstore 5;
+					goto_w L33;
+				L6:	astore 7;
+					sconst_3;
+					sstore 5;
+					goto_w L33;
+				L7:	astore 7;
+					sconst_4;
+					sstore 5;
+					goto_w L33;
+				L8:	astore 7;
+					bspush 6;
+					sstore 5;
+					goto_w L33;
+				L9:	astore 7;
+					bspush 7;
+					sstore 5;
+					goto_w L33;
+				L10:	astore 7;
+					bspush 8;
+					sstore 5;
+					goto_w L33;
+				L11:	astore 7;
+					bspush 10;
+					sstore 5;
+					goto_w L33;
+				L12:	astore 7;
+					bspush 12;
+					sstore 5;
+					goto_w L33;
+				L13:	astore 7;
+					bspush 11;
+					sstore 5;
+					goto_w L33;
+				L14:	astore 7;
+					bspush 80;
+					sstore 5;
+					aload 7;
+					invokevirtual 81;		// getReason()S
+					sstore 6;
+					goto_w L33;
+				L15:	astore 7;
+					bspush 112;
+					sstore 5;
+					aload 7;
+					invokevirtual 82;		// getReason()S
+					sstore 6;
+					goto_w L33;
+				L16:	astore 7;
+					bspush -128;
+					sstore 5;
+					aload 7;
+					invokevirtual 83;		// getReason()S
+					sstore 6;
+					goto_w L33;
+				L17:	astore 7;
+					bspush 32;
+					sstore 5;
+					aload 7;
+					invokevirtual 84;		// getReason()S
+					sstore 6;
+					goto_w L33;
+				L18:	astore 7;
+					bspush 35;
+					sstore 5;
+					aload 7;
+					invokevirtual 85;		// getReason()S
+					sstore 6;
+					goto_w L33;
+				L19:	astore 7;
+					bspush 36;
+					sstore 5;
+					aload 7;
+					invokevirtual 86;		// getReason()S
+					sstore 6;
+					goto_w L33;
+				L20:	astore 7;
+					invokestatic 87;		// javacard/framework/service/RMINativeMethods.getRMIErrorCode()S
+					sstore 8;
+					sload 8;
+					sconst_3;
+					if_scmpeq L22;
+				L21:	sload 8;
+					sconst_4;
+					if_scmpne L23;
+				L22:	aload_0;
+					sload 8;
+					aload_2;
+					sconst_5;
+					invokespecial 29;		// javacard/framework/service/RMIService.writeTagAndError(S[BS)S
+					sreturn;
+				L23:	bspush 37;
+					sstore 5;
+					aload 7;
+					invokevirtual 88;		// getReason()S
+					sstore 6;
+					goto L33;
+				L24:	astore 7;
+					bspush 38;
+					sstore 5;
+					aload 7;
+					invokevirtual 89;		// getReason()S
+					sstore 6;
+					goto L33;
+				L25:	astore 7;
+					bspush 39;
+					sstore 5;
+					aload 7;
+					invokevirtual 90;		// getReason()S
+					sstore 6;
+					goto L33;
+				L26:	astore 7;
+					bspush 48;
+					sstore 5;
+					aload 7;
+					invokevirtual 91;		// getReason()S
+					sstore 6;
+					goto L33;
+				L27:	astore 7;
+					bspush 64;
+					sstore 5;
+					aload 7;
+					invokevirtual 92;		// getReason()S
+					sstore 6;
+					goto L33;
+				L28:	astore 7;
+					bspush 34;
+					sstore 5;
+					aload 7;
+					invokevirtual 93;		// getReason()S
+					sstore 6;
+					goto L33;
+				L29:	astore 7;
+					bspush 33;
+					sstore 5;
+					aload 7;
+					invokevirtual 94;		// getReason()S
+					sstore 6;
+					goto L33;
+				L30:	astore 7;
+					bspush 9;
+					sstore 5;
+					goto L33;
+				L31:	astore 7;
+					sconst_5;
+					sstore 5;
+					goto L33;
+				L32:	astore 7;
+					sconst_0;
+					sstore 5;
+				L33:	aload_2;
+					sload_3;
+					sinc 3 1;
+					sload 4;
+					bastore;
+					aload_2;
+					sload_3;
+					sinc 3 1;
+					sload 5;
+					bastore;
+					aload_2;
+					sload_3;
+					sload 6;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sreturn;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L3 L4 L4 56;
+				L3 L4 L5 24;
+				L3 L4 L6 57;
+				L3 L4 L7 58;
+				L3 L4 L8 59;
+				L3 L4 L9 60;
+				L3 L4 L10 61;
+				L3 L4 L11 62;
+				L3 L4 L12 63;
+				L3 L4 L13 64;
+				L3 L4 L14 65;
+				L3 L4 L15 66;
+				L3 L4 L16 67;
+				L3 L4 L17 68;
+				L3 L4 L18 69;
+				L3 L4 L19 70;
+				L3 L4 L20 71;
+				L3 L4 L24 72;
+				L3 L4 L25 73;
+				L3 L4 L26 74;
+				L3 L4 L27 75;
+				L3 L4 L28 76;
+				L3 L4 L29 77;
+				L3 L4 L30 78;
+				L3 L4 L31 79;
+				L3 L4 L32 33;
+			}
+		}
+
+		.method private writeRef(Ljava/rmi/Remote;[BS)S {
+			.stack 5;
+			.locals 8;
+
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+				L0:	aload_1;
+					ifnonnull L2;
+				L1:	aload_0;
+					aload_2;
+					sload_3;
+					invokespecial 47;		// javacard/framework/service/RMIService.writeNullRef([BS)S
+					sreturn;
+				L2:	aload_1;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					sstore 4;
+					aload_1;
+					invokestatic 51;		// javacard/framework/service/CardRemoteObject.isExported(Ljava/rmi/Remote;)Z
+					ifne L5;
+				L3:	aload_0;
+					sload 4;
+					invokespecial 37;		// javacard/framework/service/RMIService.isExportedForSession(S)Z
+					ifne L5;
+				L4:	aload_0;
+					aload_2;
+					sload_3;
+					invokespecial 47;		// javacard/framework/service/RMIService.writeNullRef([BS)S
+					sreturn;
+				L5:	invokestatic 95;		// javacard/framework/JCSystem.getTransactionDepth()B
+					ifeq L8;
+				L6:	sload 4;
+					invokestatic 96;		// com/sun/javacard/impl/NativeMethods.isWithinTransactionLogs(S)Z
+					ifeq L8;
+				L7:	sconst_1;
+					invokestatic 97;		// javacard/framework/TransactionException.throwIt(S)V
+				L8:	aload_0;
+					aload_1;
+					invokespecial 98;		// javacard/framework/service/RMIService.exportForSession(Ljava/rmi/Remote;)V
+					aload_2;
+					sload_3;
+					sload 4;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sstore_3;
+					aload_1;
+					aload_2;
+					sload_3;
+					s2b;
+					invokestatic 99;		// javacard/framework/service/RMINativeMethods.getAnticollisionString(Ljava/rmi/Remote;[BB)S
+					sstore_3;
+					getfield_b_this 0;		// byte javacard/framework/service/RMIService.ref_type
+					sconst_1;
+					if_scmpne L10;
+				L9:	aload_1;
+					invokestatic 100;		// javacard/framework/service/RMINativeMethods.getClassNameAddress(Ljava/rmi/Remote;)I
+					istore 5;
+					invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					iload 5;
+					aload_2;
+					sload_3;
+					s2b;
+					invokevirtual 101;		// getPkgNameForClass(I[BB)B
+					sstore_3;
+					iload 5;
+					aload_2;
+					sload_3;
+					invokestatic 102;		// javacard/framework/service/RMINativeMethods.copyStringIntoBuffer(I[BS)S
+					sstore_3;
+					goto L16;
+				L10:	aload_1;
+					invokestatic 103;		// javacard/framework/service/RMINativeMethods.getRemoteInterfaceNumber(Ljava/rmi/Remote;)B
+					sstore 5;
+					aload_2;
+					sload_3;
+					sinc 3 1;
+					sload 5;
+					bastore;
+					sconst_m1;
+					sstore 7;
+					sconst_0;
+					sstore 8;
+				L11:	sload 8;
+					sload 5;
+					if_scmpge L16;
+				L12:	aload_1;
+					sload 8;
+					invokestatic 104;		// javacard/framework/service/RMINativeMethods.getRemoteInterfaceAddress(Ljava/rmi/Remote;B)I
+					istore 9;
+					invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					iload 9;
+					invokevirtual 105;		// getPkgIDForAddress(I)B
+					sstore 11;
+					sload 11;
+					sload 7;
+					if_scmpne L14;
+				L13:	aload_2;
+					sload_3;
+					sinc 3 1;
+					sconst_0;
+					bastore;
+					goto L15;
+				L14:	invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					iload 9;
+					aload_2;
+					sload_3;
+					s2b;
+					invokevirtual 101;		// getPkgNameForClass(I[BB)B
+					sstore_3;
+				L15:	sload 11;
+					sstore 7;
+					iload 9;
+					aload_2;
+					sload_3;
+					invokestatic 106;		// javacard/framework/service/RMINativeMethods.copyInterfaceNameIntoBuffer(I[BS)S
+					sstore_3;
+					sload 8;
+					sconst_1;
+					sadd;
+					s2b;
+					sstore 8;
+					goto L11;
+				L16:	sload_3;
+					sreturn;
+		}
+
+		.method private writeNullRef([BS)S {
+			.stack 3;
+			.locals 0;
+
+				L0:	aload_1;
+					sload_2;
+					sconst_m1;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sreturn;
+		}
+
+		.method private exportForSession(Ljava/rmi/Remote;)V {
+			.stack 3;
+			.locals 2;
+
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+				L0:	aload_1;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					sstore_2;
+					aload_0;
+					sload_2;
+					invokespecial 37;		// javacard/framework/service/RMIService.isExportedForSession(S)Z
+					ifne L5;
+				L1:	sconst_0;
+					sstore_3;
+				L2:	getfield_a_this 3;		// reference javacard/framework/service/RMIService.expArray
+					sload_3;
+					aaload;
+					ifnonnull L4;
+				L3:	getfield_a_this 3;		// reference javacard/framework/service/RMIService.expArray
+					sload_3;
+					aload_1;
+					aastore;
+					return;
+				L4:	sinc 3 1;
+					goto L2;
+				L5:	return;
+		}
+
+		.method private isExportedForSession(S)Z {
+			.stack 2;
+			.locals 1;
+
+				L0:	sconst_0;
+					sstore_2;
+				L1:	sload_2;
+					getfield_a_this 3;		// reference javacard/framework/service/RMIService.expArray
+					arraylength;
+					if_scmpge L5;
+				L2:	getfield_a_this 3;		// reference javacard/framework/service/RMIService.expArray
+					sload_2;
+					aaload;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					sload_1;
+					if_scmpne L4;
+				L3:	sconst_1;
+					sreturn;
+				L4:	sinc 2 1;
+					goto L1;
+				L5:	sconst_0;
+					sreturn;
+		}
+
+		.method  writeInt(I[BS)S 128 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_3;
+					sload 4;
+					iload_1;
+					bipush 16;
+					ishr;
+					i2s;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sstore 4;
+					aload_3;
+					sload 4;
+					iload_1;
+					i2s;
+					invokestatic 9;		// javacard/framework/Util.setShort([BSS)S
+					sreturn;
+		}
+
+	}
+
+	.class public CardRemoteObject 5 extends 0.0 {		// extends java/lang/Object
+
+		.remote;
+
+		.fields {
+			private static final short MAX_OBJECTS = 16;		// S
+			private static short[] array;		// [S
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.implementedInterfaceInfoTable { 
+			.interface 2.0 { 		// java/rmi/Remote
+			}
+
+		}
+
+		.implementedRemoteInterfaceInfoTable { 
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 15;		// java/lang/Object.<init>()V
+					aload_0;
+					invokestatic 107;		// javacard/framework/service/CardRemoteObject.export(Ljava/rmi/Remote;)V
+					return;
+		}
+
+		.method public static export(Ljava/rmi/Remote;)V 1 {
+			.stack 2;
+			.locals 1;
+
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+				L0:	getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					ifnonnull L2;
+				L1:	invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					bspush 16;
+					invokevirtual 109;		// initRemoteObjArray(S)[S
+					putstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+				L2:	aload_0;
+					ifnonnull L4;
+				L3:	return;
+				L4:	aload_0;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					sstore_1;
+					sload_1;
+					invokestatic 110;		// javacard/framework/service/CardRemoteObject.export(S)V
+					return;
+		}
+
+		.method public static unexport(Ljava/rmi/Remote;)V 2 {
+			.stack 1;
+			.locals 1;
+
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+				L0:	aload_0;
+					ifnonnull L2;
+				L1:	return;
+				L2:	aload_0;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					sstore_1;
+					sload_1;
+					invokestatic 111;		// javacard/framework/service/CardRemoteObject.unexport(S)V
+					return;
+		}
+
+		.method private static unexport(S)V {
+			.stack 3;
+			.locals 1;
+
+				L0:	sload_0;
+					invokestatic 112;		// com/sun/javacard/impl/NativeMethods.checkAccess(S)V
+					getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					ifnonnull L2;
+				L1:	return;
+				L2:	sconst_0;
+					sstore_1;
+				L3:	sload_1;
+					bspush 16;
+					if_scmpge L7;
+				L4:	getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					sload_1;
+					saload;
+					sload_0;
+					if_scmpne L6;
+				L5:	getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					sload_1;
+					sconst_0;
+					sastore;
+				L6:	sinc 1 1;
+					goto L3;
+				L7:	return;
+		}
+
+		.method private static export(S)V {
+			.stack 3;
+			.locals 1;
+
+				L0:	sload_0;
+					invokestatic 112;		// com/sun/javacard/impl/NativeMethods.checkAccess(S)V
+					sconst_0;
+					sstore_1;
+				L1:	sload_1;
+					bspush 16;
+					if_scmpge L5;
+				L2:	getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					sload_1;
+					saload;
+					ifne L4;
+				L3:	getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					sload_1;
+					sload_0;
+					sastore;
+					return;
+				L4:	sinc 1 1;
+					goto L1;
+				L5:	sconst_5;
+					invokestatic 113;		// javacard/framework/SystemException.throwIt(S)V
+					return;
+		}
+
+		.method static isExported(Ljava/rmi/Remote;)Z {
+			.stack 1;
+			.locals 1;
+
+			.descriptor	Ljava/rmi/Remote;	2.0;
+
+				L0:	aload_0;
+					ifnonnull L2;
+				L1:	sconst_1;
+					sreturn;
+				L2:	aload_0;
+					invokestatic 52;		// com/sun/javacard/impl/NativeMethods.getObjectID(Ljava/lang/Object;)S
+					sstore_1;
+					sload_1;
+					invokestatic 114;		// javacard/framework/service/CardRemoteObject.isExported(S)Z
+					sreturn;
+		}
+
+		.method private static isExported(S)Z {
+			.stack 2;
+			.locals 1;
+
+				L0:	sload_0;
+					invokestatic 112;		// com/sun/javacard/impl/NativeMethods.checkAccess(S)V
+					getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					ifnonnull L2;
+				L1:	sconst_0;
+					sreturn;
+				L2:	sconst_0;
+					sstore_1;
+				L3:	sload_1;
+					bspush 16;
+					if_scmpge L7;
+				L4:	getstatic_a 108;		// reference javacard/framework/service/CardRemoteObject.array
+					sload_1;
+					saload;
+					sload_0;
+					if_scmpne L6;
+				L5:	sconst_1;
+					sreturn;
+				L6:	sinc 1 1;
+					goto L3;
+				L7:	sconst_0;
+					sreturn;
+		}
+
+	}
+
+	.class public Dispatcher 6 extends 0.0 {		// extends java/lang/Object
+
+		.fields {
+			private Service[] services 0;		// [Ljavacard/framework/service/Service;
+			private byte[] servicePhases 1;		// [B
+			private short numServices 2;		// S
+			public static final byte PROCESS_NONE = 0;		// B
+			public static final byte PROCESS_INPUT_DATA = 1;		// B
+			public static final byte PROCESS_COMMAND = 2;		// B
+			public static final byte PROCESS_OUTPUT_DATA = 3;		// B
+		}
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+			addService(Ljavacard/framework/service/Service;B)V;
+			removeService(Ljavacard/framework/service/Service;B)V;
+			dispatch(Ljavacard/framework/APDU;B)Ljava/lang/Exception;;
+			process(Ljavacard/framework/APDU;)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 15;		// java/lang/Object.<init>()V
+					sload_1;
+					ifge L2;
+				L1:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L2:	aload_0;
+					sload_1;
+					anewarray 115;		// javacard/framework/service/Service
+					putfield_a 5;		// reference javacard/framework/service/Dispatcher.services
+					aload_0;
+					sload_1;
+					newarray 11;
+					putfield_a 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					aload_0;
+					sconst_0;
+					putfield_s 7;		// short javacard/framework/service/Dispatcher.numServices
+					return;
+		}
+
+		.method public addService(Ljavacard/framework/service/Service;B)V 1 {
+			.stack 5;
+			.locals 1;
+
+				L0:	sload_2;
+					iflt L2;
+				L1:	sload_2;
+					sconst_3;
+					if_scmple L3;
+				L2:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L3:	aload_1;
+					ifnonnull L5;
+				L4:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L5:	sconst_0;
+					sstore_3;
+				L6:	sload_3;
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					if_scmpge L11;
+				L7:	getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload_3;
+					aaload;
+					aload_1;
+					if_acmpne L10;
+				L8:	getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload_3;
+					baload;
+					sload_2;
+					if_scmpne L10;
+				L9:	return;
+				L10:	sinc 3 1;
+					goto L6;
+				L11:	getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					arraylength;
+					if_scmplt L13;
+				L12:	sconst_2;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L13:	sconst_0;
+					sstore_3;
+					invokestatic 95;		// javacard/framework/JCSystem.getTransactionDepth()B
+					ifne L15;
+				L14:	sconst_1;
+					sstore_3;
+					invokestatic 119;		// javacard/framework/JCSystem.beginTransaction()V
+				L15:	getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					sload_2;
+					bastore;
+					getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					aload_0;
+					dup;
+					getfield_s 7;		// short javacard/framework/service/Dispatcher.numServices
+					dup_x 18;
+					sconst_1;
+					sadd;
+					putfield_s 7;		// short javacard/framework/service/Dispatcher.numServices
+					aload_1;
+					aastore;
+					sload_3;
+					ifeq L17;
+				L16:	invokestatic 120;		// javacard/framework/JCSystem.commitTransaction()V
+				L17:	return;
+		}
+
+		.method public removeService(Ljavacard/framework/service/Service;B)V 2 {
+			.stack 5;
+			.locals 3;
+
+				L0:	aload_1;
+					ifnonnull L2;
+				L1:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L2:	sload_2;
+					iflt L4;
+				L3:	sload_2;
+					sconst_3;
+					if_scmple L5;
+				L4:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L5:	sconst_0;
+					sstore_3;
+				L6:	sload_3;
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					if_scmpge L18;
+				L7:	getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload_3;
+					aaload;
+					aload_1;
+					if_acmpne L17;
+				L8:	getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload_3;
+					baload;
+					sload_2;
+					if_scmpne L17;
+				L9:	sconst_0;
+					sstore 4;
+					invokestatic 95;		// javacard/framework/JCSystem.getTransactionDepth()B
+					ifne L11;
+				L10:	sconst_1;
+					sstore 4;
+					invokestatic 119;		// javacard/framework/JCSystem.beginTransaction()V
+				L11:	sload_3;
+					sstore 5;
+				L12:	sload 5;
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					sconst_1;
+					ssub;
+					if_scmpge L14;
+				L13:	getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload 5;
+					getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload 5;
+					sconst_1;
+					sadd;
+					aaload;
+					aastore;
+					getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload 5;
+					getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload 5;
+					sconst_1;
+					sadd;
+					baload;
+					bastore;
+					sinc 5 1;
+					goto L12;
+				L14:	aload_0;
+					dup;
+					getfield_s 7;		// short javacard/framework/service/Dispatcher.numServices
+					sconst_1;
+					ssub;
+					putfield_s 7;		// short javacard/framework/service/Dispatcher.numServices
+					sload 4;
+					ifeq L16;
+				L15:	invokestatic 120;		// javacard/framework/JCSystem.commitTransaction()V
+				L16:	return;
+				L17:	sinc 3 1;
+					goto L6;
+				L18:	return;
+		}
+
+		.method public dispatch(Ljavacard/framework/APDU;B)Ljava/lang/Exception; 3 {
+			.stack 3;
+			.locals 2;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+			.descriptor	Ljava/lang/Exception;	0.2;
+
+				L0:	sload_2;
+					sconst_1;
+					if_scmplt L2;
+				L1:	sload_2;
+					sconst_3;
+					if_scmple L3;
+				L2:	sconst_1;
+					invokestatic 20;		// javacard/framework/service/ServiceException.throwIt(S)V
+				L3:	aload_1;
+					invokevirtual 28;		// getBuffer()[B
+					astore_3;
+				L4:	sconst_0;
+					sstore 4;
+				L5:	sload 4;
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					if_scmpge L12;
+				L6:	sload_2;
+					sconst_1;
+					if_scmple L8;
+				L7:	goto L12;
+				L8:	getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload 4;
+					baload;
+					sconst_1;
+					if_scmpne L11;
+				L9:	getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload 4;
+					aaload;
+					aload_1;
+					invokeinterface 2 115 0;		// javacard/framework/service/Service
+					ifeq L11;
+				L10:	goto L12;
+				L11:	sinc 4 1;
+					goto L5;
+				L12:	sconst_0;
+					sstore 4;
+				L13:	sload 4;
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					if_scmpge L20;
+				L14:	sload_2;
+					sconst_2;
+					if_scmple L16;
+				L15:	goto L20;
+				L16:	getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload 4;
+					baload;
+					sconst_2;
+					if_scmpne L19;
+				L17:	getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload 4;
+					aaload;
+					aload_1;
+					invokeinterface 2 115 1;		// javacard/framework/service/Service
+					ifeq L19;
+				L18:	goto L20;
+				L19:	sinc 4 1;
+					goto L13;
+				L20:	aload_1;
+					invokevirtual 16;		// getCurrentState()B
+					sconst_3;
+					if_scmpge L23;
+				L21:	aconst_null;
+				L22:	areturn;
+				L23:	sconst_0;
+					sstore 4;
+				L24:	sload 4;
+					getfield_s_this 7;		// short javacard/framework/service/Dispatcher.numServices
+					if_scmpge L29;
+				L25:	getfield_a_this 6;		// reference javacard/framework/service/Dispatcher.servicePhases
+					sload 4;
+					baload;
+					sconst_3;
+					if_scmpne L28;
+				L26:	getfield_a_this 5;		// reference javacard/framework/service/Dispatcher.services
+					sload 4;
+					aaload;
+					aload_1;
+					invokeinterface 2 115 2;		// javacard/framework/service/Service
+					ifeq L28;
+				L27:	goto L29;
+				L28:	sinc 4 1;
+					goto L24;
+				L29:	goto L31;
+				L30:	astore 4;
+					aload 4;
+					areturn;
+				L31:	aload_3;
+					sconst_4;
+					baload;
+					sspush 255;
+					sand;
+					sstore 4;
+					aload_1;
+					sload 4;
+					invokevirtual 121;		// setOutgoingLength(S)V
+					aload_1;
+					sconst_5;
+					sload 4;
+					invokevirtual 122;		// sendBytes(SS)V
+					aload_3;
+					sconst_2;
+					invokestatic 10;		// javacard/framework/Util.getShort([BS)S
+					invokestatic 123;		// javacard/framework/ISOException.throwIt(S)V
+					aconst_null;
+					areturn;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L4 L22 L30 79;
+				L23 L29 L30 79;
+			}
+		}
+
+		.method public process(Ljavacard/framework/APDU;)V 4 {
+			.stack 3;
+			.locals 1;
+
+			.descriptor	Ljavacard/framework/APDU;	1.10;
+
+				L0:	aload_0;
+					aload_1;
+					sconst_1;
+					invokevirtual 124;		// dispatch(Ljavacard/framework/APDU;B)Ljava/lang/Exception;
+					astore_2;
+					aload_2;
+					ifnonnull L2;
+				L1:	sspush 27904;
+					invokestatic 123;		// javacard/framework/ISOException.throwIt(S)V
+					goto L3;
+				L2:	sspush 28416;
+					invokestatic 123;		// javacard/framework/ISOException.throwIt(S)V
+				L3:	return;
+		}
+
+	}
+
+	.class public ServiceException 7 extends 1.5 {		// extends javacard/framework/CardRuntimeException
+
+		.fields {
+			public static final short ILLEGAL_PARAM = 1;		// S
+			public static final short DISPATCH_TABLE_FULL = 2;		// S
+			public static final short COMMAND_DATA_TOO_LONG = 3;		// S
+			public static final short CANNOT_ACCESS_IN_COMMAND = 4;		// S
+			public static final short CANNOT_ACCESS_OUT_COMMAND = 5;		// S
+			public static final short COMMAND_IS_FINISHED = 6;		// S
+			public static final short REMOTE_OBJECT_NOT_EXPORTED = 7;		// S
+			private static ServiceException systemInstance;		// Ljavacard/framework/service/ServiceException;
+		}
+
+		.publicMethodTable 3 {
+			equals(Ljava/lang/Object;)Z;
+			getReason()S;
+			setReason(S)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					invokespecial 125;		// javacard/framework/CardRuntimeException.<init>(S)V
+					getstatic_a 126;		// reference javacard/framework/service/ServiceException.systemInstance
+					ifnonnull L3;
+				L1:	invokestatic 127;		// com/sun/javacard/impl/PrivAccess.getCurrentAppID()B
+					ifne L3;
+				L2:	aload_0;
+					putstatic_a 126;		// reference javacard/framework/service/ServiceException.systemInstance
+				L3:	return;
+		}
+
+		.method public static throwIt(S)V 1 {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 126;		// reference javacard/framework/service/ServiceException.systemInstance
+					ifnonnull L2;
+				L1:	invokestatic 12;		// com/sun/javacard/impl/PrivAccess.getPrivAccess()Lcom/sun/javacard/impl/PrivAccess;
+					invokevirtual 128;		// initServiceException()V
+				L2:	getstatic_a 126;		// reference javacard/framework/service/ServiceException.systemInstance
+					sload_0;
+					invokevirtual 129;		// setReason(S)V
+					getstatic_a 126;		// reference javacard/framework/service/ServiceException.systemInstance
+					athrow;
+		}
+
+	}
+
+}

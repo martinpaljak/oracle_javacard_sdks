@@ -1,0 +1,117 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:02 PDT 2015
+
+.package javacardx/framework/util/intx {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x1:0x1;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef JCint/makeInt(BBBB)I;
+		// 1
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+	}
+
+	.class public final JCint 0 extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final makeInt(BBBB)I 0 {
+			.stack 6;
+			.locals 0;
+
+				L0:	sload_0;
+					s2i;
+					bipush 24;
+					ishl;
+					sload_1;
+					s2i;
+					bipush 16;
+					ishl;
+					iipush 16711680;
+					iand;
+					ior;
+					sload_2;
+					s2i;
+					bipush 8;
+					ishl;
+					iipush 65280;
+					iand;
+					ior;
+					sload_3;
+					s2i;
+					sipush 255;
+					iand;
+					ior;
+					ireturn;
+		}
+
+		.method public static final makeInt(SS)I 1 {
+			.stack 6;
+			.locals 0;
+
+				L0:	sload_0;
+					s2i;
+					bipush 16;
+					ishl;
+					sload_1;
+					s2i;
+					iipush 65535;
+					iand;
+					ior;
+					ireturn;
+		}
+
+		.method public static final getInt([BS)I 2 {
+			.stack 6;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					baload;
+					aload_0;
+					sload_1;
+					sconst_1;
+					sadd;
+					baload;
+					aload_0;
+					sload_1;
+					sconst_2;
+					sadd;
+					baload;
+					aload_0;
+					sload_1;
+					sconst_3;
+					sadd;
+					baload;
+					invokestatic 0;		// javacardx/framework/util/intx/JCint.makeInt(BBBB)I
+					ireturn;
+		}
+
+		.method public static final native setInt([BSI)S 3 {
+		}
+
+		.method  <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 1;		// java/lang/Object.<init>()V
+					return;
+		}
+
+		.method public static native makeTransientIntArray(SB)[I 4 {
+		}
+
+	}
+
+}

@@ -1,0 +1,44 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:48:56 PDT 2015
+
+.package java/rmi {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x0:0x3;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x2 1.0;		//java/io
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef 1.0.0()V;		// java/io/IOException.<init>()V
+	}
+
+	.interface public abstract Remote 0 {
+
+		.remote;
+
+	}
+
+	.class public RemoteException 1 extends 1.0 {		// extends java/io/IOException
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>()V 0 {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 0;		// java/io/IOException.<init>()V
+					return;
+		}
+
+	}
+
+}

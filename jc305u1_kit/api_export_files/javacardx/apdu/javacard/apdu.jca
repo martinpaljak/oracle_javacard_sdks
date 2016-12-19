@@ -1,0 +1,16 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:02 PDT 2015
+
+.package javacardx/apdu {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x9;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+	}
+
+	.interface public abstract ExtendedLength 0 {
+
+	}
+
+}

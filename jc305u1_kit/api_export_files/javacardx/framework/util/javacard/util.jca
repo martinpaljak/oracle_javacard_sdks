@@ -1,0 +1,123 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:01 PDT 2015
+
+.package javacardx/framework/util {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x1;
+	.version 1.1;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.6;		//javacard/framework
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+		// 1
+		staticMethodRef 1.5.0(S)V;		// javacard/framework/CardRuntimeException.<init>(S)V
+		// 2
+		staticFieldRef UtilException UtilException/systemInstance;
+		// 3
+		virtualMethodRef 1.5.2(S)V;		// setReason(S)V
+	}
+
+	.class public final ArrayLogic 0 extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static final native arrayCopyRepack(Ljava/lang/Object;SSLjava/lang/Object;S)S 0 {
+			.descriptor	Ljava/lang/Object;	0.0;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static final native arrayCopyRepackNonAtomic(Ljava/lang/Object;SSLjava/lang/Object;S)S 1 {
+			.descriptor	Ljava/lang/Object;	0.0;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static final native arrayFillGeneric(Ljava/lang/Object;SSLjava/lang/Object;S)S 5 {
+			.descriptor	Ljava/lang/Object;	0.0;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static final native arrayFillGenericNonAtomic(Ljava/lang/Object;SSLjava/lang/Object;S)S 2 {
+			.descriptor	Ljava/lang/Object;	0.0;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static final native arrayCompareGeneric(Ljava/lang/Object;SLjava/lang/Object;SS)B 3 {
+			.descriptor	Ljava/lang/Object;	0.0;
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method public static final native arrayFindGeneric(Ljava/lang/Object;S[BS)S 4 {
+			.descriptor	Ljava/lang/Object;	0.0;
+
+		}
+
+		.method  <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 0;		// java/lang/Object.<init>()V
+					return;
+		}
+
+	}
+
+	.class public UtilException 1 extends 1.5 {		// extends javacard/framework/CardRuntimeException
+
+		.fields {
+			public static final short ILLEGAL_VALUE = 1;		// S
+			public static final short TYPE_MISMATCHED = 2;		// S
+			private static UtilException systemInstance;		// Ljavacardx/framework/util/UtilException;
+		}
+
+		.publicMethodTable 3 {
+			equals(Ljava/lang/Object;)Z;
+			getReason()S;
+			setReason(S)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public <init>(S)V 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	aload_0;
+					sload_1;
+					invokespecial 1;		// javacard/framework/CardRuntimeException.<init>(S)V
+					getstatic_a 2;		// reference javacardx/framework/util/UtilException.systemInstance
+					ifnonnull L2;
+				L1:	aload_0;
+					putstatic_a 2;		// reference javacardx/framework/util/UtilException.systemInstance
+				L2:	return;
+		}
+
+		.method public static throwIt(S)V 1 {
+			.stack 2;
+			.locals 0;
+
+				L0:	getstatic_a 2;		// reference javacardx/framework/util/UtilException.systemInstance
+					sload_0;
+					invokevirtual 3;		// setReason(S)V
+					getstatic_a 2;		// reference javacardx/framework/util/UtilException.systemInstance
+					athrow;
+		}
+
+	}
+
+}

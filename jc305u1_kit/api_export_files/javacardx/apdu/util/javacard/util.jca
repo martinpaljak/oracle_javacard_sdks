@@ -1,0 +1,152 @@
+// converted by version  [v3.0.5]
+// on Mon Aug 17 10:49:03 PDT 2015
+
+.package javacardx/apdu/util {
+	.aid 0xA0:0x0:0x0:0x0:0x62:0x2:0x9:0x1;
+	.version 1.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+	}
+
+	.constantPool {
+		// 0
+		staticMethodRef APDUUtil/isValidCLA(B)Z;
+		// 1
+		staticMethodRef APDUUtil/isISOInterindustryCLA(B)Z;
+		// 2
+		staticMethodRef 0.0.0()V;		// java/lang/Object.<init>()V
+	}
+
+	.class public APDUUtil 0 extends 0.0 {		// extends java/lang/Object
+
+		.publicMethodTable 1 {
+			equals(Ljava/lang/Object;)Z;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method public static getCLAChannel(B)B 0 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					invokestatic 0;		// javacardx/apdu/util/APDUUtil.isValidCLA(B)Z
+					ifeq L4;
+				L1:	sload_0;
+					bspush 64;
+					sand;
+					bspush 64;
+					if_scmpne L3;
+				L2:	sload_0;
+					bspush 15;
+					sand;
+					sconst_4;
+					sadd;
+					s2b;
+					sreturn;
+				L3:	sload_0;
+					sconst_3;
+					sand;
+					sreturn;
+				L4:	sconst_0;
+					sreturn;
+		}
+
+		.method public static isSecureMessagingCLA(B)Z 1 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					invokestatic 0;		// javacardx/apdu/util/APDUUtil.isValidCLA(B)Z
+					ifeq L10;
+				L1:	sload_0;
+					bspush 64;
+					sand;
+					bspush 64;
+					if_scmpne L6;
+				L2:	sload_0;
+					bspush 32;
+					sand;
+					ifeq L4;
+				L3:	sconst_1;
+					goto L5;
+				L4:	sconst_0;
+				L5:	sreturn;
+				L6:	sload_0;
+					bspush 12;
+					sand;
+					ifeq L8;
+				L7:	sconst_1;
+					goto L9;
+				L8:	sconst_0;
+				L9:	sreturn;
+				L10:	sconst_0;
+					sreturn;
+		}
+
+		.method public static isCommandChainingCLA(B)Z 2 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					invokestatic 0;		// javacardx/apdu/util/APDUUtil.isValidCLA(B)Z
+					ifeq L3;
+				L1:	sload_0;
+					bspush 16;
+					sand;
+					ifeq L3;
+				L2:	sconst_1;
+					goto L4;
+				L3:	sconst_0;
+				L4:	sreturn;
+		}
+
+		.method public static isISOInterindustryCLA(B)Z 3 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					sspush 128;
+					sand;
+					ifne L2;
+				L1:	sconst_1;
+					goto L3;
+				L2:	sconst_0;
+				L3:	sreturn;
+		}
+
+		.method public static isValidCLA(B)Z 4 {
+			.stack 2;
+			.locals 0;
+
+				L0:	sload_0;
+					sconst_m1;
+					if_scmpeq L4;
+				L1:	sload_0;
+					invokestatic 1;		// javacardx/apdu/util/APDUUtil.isISOInterindustryCLA(B)Z
+					ifeq L3;
+				L2:	sload_0;
+					sspush 224;
+					sand;
+					bspush 32;
+					if_scmpeq L4;
+				L3:	sconst_1;
+					goto L5;
+				L4:	sconst_0;
+				L5:	sreturn;
+		}
+
+		.method private <init>()V {
+			.stack 1;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 2;		// java/lang/Object.<init>()V
+					return;
+		}
+
+	}
+
+}
