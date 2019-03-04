@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 1.1a for Windows">
+	<TITLE>Java Card 2.1.1 API Specification - Parameter Checking </TITLE>
+</HEAD>
+
+<BODY>
+
+<P><A HREF="Copyright.html">Copyright Note</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="packages.html">Java Card 2.1
+API</A>
+<H1>Java Card 2.1.1 API Specification - Parameter Checking</H1>
+<H2>Policy</H2>
+<P>All Java Card API implementations must conform to the Java model of parameter checking. That is, the API code
+should not check for those parameter errors which the VM is expected to detect. These include all parameter errors,
+such as null pointers, index out of bounds, and so forth, that result in standard runtime exceptions. The runtime
+exceptions that are thrown by the Java Card VM are:
+
+<UL>
+	<LI>ArithmeticException
+	<LI>ArrayStoreException
+	<LI>ClassCastException
+	<LI>IndexOutOfBoundsException
+	<LI>ArrayIndexOutOfBoundsException
+	<LI>NegativeArraySizeException
+	<LI>NullPointerException
+	<LI>SecurityException
+</UL>
+
+<H2>Exceptions to the Policy</H2>
+<P>In some cases, it may be necessary to explicitly check parameters. These exceptions to the policy are documented
+in the Java Card API specification. A Java Card API implementation must not perform parameter checking with the
+intent to avoid runtime exceptions, unless this is clearly specified by the Java Card API specification. <BR>
+&nbsp;
+
+
+<BLOCKQUOTE>
+	<P><STRONG>Note:</STRONG> If multiple erroneous input parameters exist, any one of several runtime exceptions will
+	be thrown by the VM. Java programmers rely on this behavior, but they do not rely on getting a specific exception.
+	It is not necessary (nor is it reasonable or practical) to document the precise error handling for all possible
+	combinations of equivalence classes of erroneous inputs. The value of this behavior is that the logic error in
+	the calling program is detected and exposed via the runtime exception mechanism, rather than being masked by a
+	normal return.
+	</BLOCKQUOTE>
+
+</BODY>
+
+</HTML>
