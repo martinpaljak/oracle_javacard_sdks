@@ -1,0 +1,397 @@
+/*
+ * Copyright (c) 1998, 2021, Oracle and/or its affiliates. All rights reserved.
+ * Use is subject to license terms.
+ *
+ * SCCS: %W% %E%
+ */
+
+
+/* font tag overwrite */
+font {
+	font-family:Arial, Helvetica, FreeSans, "Luxi-sans", "Nimbus Sans L", sans-serif;
+	font-size:14px;
+}
+/* font family */
+body, input, select, textarea, button {
+	font-family:Arial, Helvetica, FreeSans, "Luxi-sans", "Nimbus Sans L", sans-serif;
+	font-size:100%;
+}
+code, kbd, tt, pre {
+	font-family:Monaco, Courier, "Courier New";
+	font-size:110%;
+}
+/* generic */
+body {
+	color:#000;
+}
+a {
+	color:#666;
+	text-decoration:none
+}
+a.href {
+	color:#666;
+	text-decoration:none
+}
+a.hover {
+	color:#F00;
+	text-decoration:none
+}
+a.visited {
+	color:#999;
+	text-decoration:none
+}
+a.link {
+	color:#F00;
+	text-decoration:none
+}
+
+ol, ul {
+	margin:1ex;
+	padding-left:1ex;
+}
+li {
+	margin:1ex;
+	padding-left:0ex
+}
+dl {
+	margin:1.6ex;
+	padding-left:0ex;
+}
+dt {
+	margin:1ex;
+	padding-left:0ex
+}
+
+tr {vertical-align:top;}
+
+table tr th {
+	background:#E5E5E6;
+	font-size:90%;
+	text-align:left;
+	vertical-align:top;
+	padding-left:1ex;
+}
+caption {
+	font-weight:bold;
+	font-size:85%;
+}
+/* hr */
+hr.light {
+	background:#E3E3E3;
+	color:#E3E3E3;
+	height:2px;
+	padding:0;
+	border:0
+}
+hr.red {
+	background:#F00;
+	color:#F00;
+	height:2px;
+	padding:0;
+	border:0
+}
+
+div.MastheadPane {
+	height: 45px;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	overflow: hidden;
+	border-bottom: 3px #F00;
+	margin: 0;
+	text-decoration:none;
+}
+div.MastheadDateBuild {
+	height: 90px;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	overflow: visible;
+	border-bottom: 3px #F00;
+        text-decoration:none;
+}
+.MastheadPane tr td {
+	background:#fff;
+	background-color:#FFF;
+        padding: 0px;
+	margin: 0px;
+}
+.MastheadPane tr th {
+	background:#fff;
+	background-color:#FFF;
+        padding: 0px;
+	margin: 0px;
+}
+.MastheadDateBuild tr th {
+	background:#fff;
+	background-color:#FFF;
+	padding: 0px;
+	margin: 0px;
+}
+.MastheadDateBuild tr td {
+	background:#fff;
+	background-color:#FFF;
+	padding: 0px;
+	margin: 0px;
+}
+
+table.MastheadTable {
+	width: 100%;
+	border-collapse:collapse;
+	padding: 0px;
+	margin: 0px;
+    background:#FFF;
+	background-color:#FFF
+}
+table.MastheadDateBuild {
+	width: 100%;
+	border-collapse:collapse;
+	margin: 0px;
+	padding: 0px;
+	background:#FFF;
+}
+div.MastheadPane a {
+	color: rgb(127, 127, 127);
+	background:#FFF;
+}
+
+th.smallLogo {
+	width: 130px;
+	align: right;
+}
+td.smallLogo {
+	width: 130px;
+	align: right;
+}
+td.javaLogo {
+	width: 100px;
+	text-align: right;
+}
+.smallLogo img {
+	padding-right: 15px;
+}
+tr.breadcrumbbar {
+	margin: 0px;
+	height: 15px;
+}
+tr.titlebar {
+	height: 55px;
+	padding: 0px;
+	background-color:#FFF;
+}
+h4.contentpage-doctitle {
+	color:  rgb(127, 127, 127);
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	font-size: 120%;
+	font-weight: bold;
+	text-align: left;
+	padding: 0px;
+	width: auto;
+}
+
+p.breadcrumb a {
+	color: rgb(255, 0, 0);
+	font-weight: bold;
+}
+p.breadcrumb {
+	margin-bottom: 20px
+}
+div.MainContent a:visited {
+	color: rgb(127, 127, 127)
+}
+div.MainContent a {
+	color: rgb(0, 0, 0);
+	text-decoration:none
+}
+div.embeddedtoc {
+	margin: 0ex;
+}
+.embeddedtoc a {
+	color:#666;
+	text-decoration:none
+}
+.embeddedtoc a.href {
+	color:#666;
+	text-decoration:none
+}
+.embeddedtoc a.hover {
+	color:#F00;
+	text-decoration:none
+}
+.embeddedtoc a.visited {
+	color:#999;
+	text-decoration:none
+}
+.embeddedtoc a.link {
+	color:#666;
+	text-decoration:none
+}
+.embeddedtoc p {
+	margin-top: -1ex;
+}
+.embeddedtoc p.level1 a {
+	color: (127,127,127);
+	font-size: 100%;
+}
+.embeddedtoc p.level2 a {
+	color: rgb(127,127,127);
+	font-size: 90%;
+	margin-left: 3ex;
+}
+.embeddedtoc p.level3 a {
+	color: rgb(127,127,127);
+	font-size: 85%;
+	margin-left: 6ex;
+}
+.embeddedtoc p.level4 a {
+	color: rgb(127,127,127);
+	font-size: 85%;
+	margin-left: 9ex;
+}
+.embeddedtoc p.level5 a {
+	color: rgb(70,70,70);
+	font-size: 85%;
+	margin-left: 12ex;
+}
+div.BodyStyle {
+	width: 100%;
+	top: 100px;
+	right: 0;
+	bottom: 20px;
+	left: 0px;
+	margin: 0px;
+	overflow: hidden;
+	font-family:Arial, Helvetica, FreeSans, "Luxi-sans", "Nimbus Sans L", sans-serif;
+}
+BodyStyle a.href {
+	text-decoration:none
+}
+BodyStyle a.hover {
+	color:#F00
+}
+BodyStyle a.visited {
+	color:#999
+}
+BodyStyle a.link {
+	color:#666
+}
+
+p.navtop, p.navtop a  {
+	font-size:85%;
+}
+
+body {
+	padding: 1.5em;
+	margin: 0;
+	background-color: white;
+	font-size:14px;
+}
+h1+p, h2+p, h3+p, h4+p, h5+p {
+	margin-top: 0;
+}
+code, pre {
+	color: black;
+}
+pre {
+	background-color: #efefef;
+	border: 1px solid #ccc;
+	padding: 0.5em;
+	overflow: hidden;
+	font-size: 110%;
+}
+a img {
+	border-style: none;
+}
+div.TitleDiv {
+	margin-top: 30px;
+}
+h2.DocTitle {
+	color: rgb(127, 127, 127);
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	font-size: 115%;
+	font-weight: bold;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none
+}
+h3.SubTitle {
+	color: rgb(127, 127, 127);
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none
+}
+h4.TitleDate {
+	color: rgb(127, 127, 127);
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none
+}
+.BodyStyle tr thead th {
+	text-align:left;
+	background-color:#fefefe;
+}
+.BodyStyle h1 {
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	color: rgb(127, 127, 127);
+}
+.BodyStyle h2 {
+	font-size: 125%;
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	color: rgb(127, 127, 127);
+}
+.BodyStyle h3 {
+	font-size: 115%;
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	margin-top: 1.25em;
+	color: rgb(127, 127, 127);
+	margin-bottom: 0.5em;
+}
+.BodyStyle h4 {
+	font-size: 105%;
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	color: rgb(127, 127, 127);
+}
+.BodyStyle h5 {
+	font-size: 95%;
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	color: rgb(127, 127, 127);
+}
+.BodyStyle h6 {
+	font-size: 85%;
+	font-family: "Univers LT Std", Univers, Arial, Helvetica, sans-serif;
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	color: rgb(127, 127, 127);
+}
+.BodyStyle table {
+	font-size:100%;
+        border-color:#CCC;
+	width:100%;
+	border:solid;
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	border-bottom:medium; 
+	border-width:medium;
+
+}

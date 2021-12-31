@@ -1,0 +1,92 @@
+<!--
+Copyright (c) 1998, 2021, Oracle and/or its affiliates. All rights reserved.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    </head>
+    <body>
+        <h1>String Annotation Processor</h1>
+        The string annotation processor handles the <a href="javacardx/annotations/StringDef.html">javacardx.annotations.StringDef</a>
+        and <a href="javacardx/annotations/StringPool.html">javacardx.annotations.StringPool</a> annotations.
+        <h2>Syntax</h2>
+        The string annotation processor can be invoked automatically by javac
+        when compiling Java Card Classic application or library sources as follows:
+        <pre>
+            javac -processor com.oracle.javacard.stringproc.StringConstantsProcessor \
+                -processorpath "<i>JCDK_HOME</i>/lib/tools.jar;<i>JCDK_HOME</i>/lib/api_classic_annotations.jar" \
+                <i>ANY-OTHER-JAVAC-OPTIONS</i> <i>FILES-TO-COMPILE</i>
+        </pre>
+        Where <i>JCDK_HOME</i> points to the root directory where the Java Card 3 SDK is installed.
+        <p>
+            The string annotation processor generates the source files for the string constant pool classes
+            defined in the application or library source files to be compiled. These generated source files
+            are created in the same directory where <code>javac</code> puts the class files.
+        </p>
+        <h2>Example of Generated Classes</h2>
+        For the following annotated library class:
+        <pre>
+        package com.sun.jcclassic.samples.stringlib;
+
+        import javacardx.annotations.*;
+
+        <i>@StringPool(value = {
+            @StringDef(name = "Hello", value = "Hello California!")},
+            export = true,
+            name = "LibStrings")</i>
+        public class StringHandlingLib {
+           ...
+        }
+        </pre>
+        the annotation processor will generate the following string constant pool class:
+        <pre>
+        package com.sun.jcclassic.samples.stringlib;
+
+        public final class LibStrings {
+
+            public final byte[] Hello = new byte[] {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x43, 0x61, 0x6c, 0x69, 0x66, 0x6f, 0x72, 0x6e, 0x69, 0x61, 0x21, };
+
+            public LibStrings() {
+            }
+        }
+        </pre>
+        <p />
+        For the following annotated applet class:
+        <pre>
+        package com.sun.jcclassic.samples.stringapp;
+
+        import javacardx.annotations.*;
+
+        <i>@StringPool(value = {
+               @StringDef(name = "S1", value = "Hello World!"),
+               @StringDef(name = "S1_expected", value = "llo "),
+               @StringDef(name = "S2", reference = "com.sun.jcclassic.samples.stringlib.LibStrings.Hello")
+            },
+           name = "AppStrings")</i>
+        public class StringHandlingApp extends Applet {
+           ...
+        }
+        </pre>
+        the annotation processor will generate the following string constant pool class:
+        <pre>
+        package com.sun.jcclassic.samples.stringapp;
+
+        final class AppStrings {
+            private static com.sun.jcclassic.samples.stringlib.LibStrings __x0;
+
+            static final byte[] S1 = new byte[] {0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x21, };
+            static final byte[] S1_expected = new byte[] {0x6c, 0x6c, 0x6f, 0x20, };
+            static byte[] S2;
+
+            static void importLibConstants() {
+                __x0 = new com.sun.jcclassic.samples.stringlib.LibStrings();
+                S2 = __x0.Hello;
+            }
+        }
+        </pre>
+
+        <a href="COPYRIGHT_jcspecs.html">Copyright</a> &copy; 1998, 2021, Oracle and/or its affiliates. All rights reserved.
+    </body>
+</html>

@@ -1,0 +1,10 @@
+com.sun.javacard.clientlib
+com.sun.javacard.javax.smartcard.rmiclient
+com.sun.javacard.rmiclientlib
+javacard.framework
+javacard.framework.service
+javacard.security
+javacardx.biometry
+javacardx.external
+javacardx.framework.tlv
+javacardx.framework.util
