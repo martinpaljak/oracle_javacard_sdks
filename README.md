@@ -8,6 +8,9 @@
 ## Usage
     git submodule add https://github.com/martinpaljak/oracle_javacard_sdks sdks
 
+## Maven usage
+Addressable Maven dependencies via [mvn.javacard.pro](https://mvn.javacard.pro/) as artefacts in [/vendors](https://mvn.javacard.pro/vendors/vnd/oracle) tree. See [javacard-maven-plugin](https://github.com/martinpaljak/javacard-maven-plugin).
+
 ## NOTES:
 - JavaCard API version is not always the same as the SDK version! For example SDK 3.0.3 includes JavaCard API 3.0.1.
 - 3.0.5 updates are stored for educational purposes. Always use the latest!
